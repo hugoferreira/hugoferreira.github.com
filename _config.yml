@@ -1,0 +1,22 @@
+# Site settings
+title: hugo.sereno.ferreira
+subtitle: "Hacking life, the binary way"
+author: "Hugo Sereno Ferreira"
+description: This is a blog about software, some mathematics, and the occasional philosophy. Not necessarily in that order
+keywords: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sequi nobis pariatur architecto debitis? Deserunt, perferendis aspernatur ab expedita! Illum voluptatem modi soluta expedita aperiam asperiores magni, voluptate sed odit."
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://username.github.io" # the base hostname & protocol for your site
+
+twitter_username: ferreira_hugo
+github_username: hugoferreira
+linkedin_username: hugoserenoferreira
+simple_search: http://google.com/search
+markdown: kramdown
+
+#gems:
+# - octopress-date-format
+# - octopress-social
+# - octopress-quote-tag
+# - octopress-solarized
+#My gem

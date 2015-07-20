@@ -1,0 +1,12 @@
+---
+layout: post
+title: "And so it (re-)Begins..."
+date: 2013-02-18 00:38
+comments: true
+external-url:
+categories: misc
+---
+
+It was back in 2011 the last time I took the trouble of updating my old wordpress blog. I was just finishing my [PhD thesis](http://goo.gl/b1MER) and so the last post was something like "Yay, I finished it".
+
+But, looking back, I never really took the trouble of setting up a real programmer's blog. So, allow me to try to change that :-) Here's a true Hacker's blog done on top of [Octopress](http://octopress.org/) and hosted at Github. Let the posts start rolling...
