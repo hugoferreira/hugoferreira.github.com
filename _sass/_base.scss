@@ -37,6 +37,7 @@ ul, ol, dl, figure,
 img {
     max-width: 100%;
     vertical-align: middle;
+
 }
 
 
@@ -129,8 +130,11 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
-    background-color: #eee;
+    font-size: 14px;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    color: #c7254e;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
 
 code {
@@ -140,25 +144,19 @@ code {
 pre {
     padding: 8px 12px;
     overflow-x: scroll;
+    background-color: #eee;
+    color: #3D3D3D;
+    border-radius: 8px;
 
     > code {
+        color: #3D3D3D;
+        background-color: #eee;
         border: 0;
         padding-right: 0;
         padding-left: 0;
     }
 }
 
-table {
-  border-top: 1px solid $alt-color;
-  background-color: #fff5f5;
-  margin: 0 auto;
-  border-bottom: 1px solid $alt-color;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-spacing: 32px 2px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
 
 /**
  * Wrapper
