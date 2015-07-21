@@ -148,7 +148,17 @@ pre {
     }
 }
 
-
+table {
+  border-top: 1px solid $alt-color;
+  background-color: #fff5f5;
+  margin: 0 auto;
+  border-bottom: 1px solid $alt-color;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-spacing: 32px 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 
 /**
  * Wrapper
