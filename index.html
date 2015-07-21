@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div style="height:51px;"></div>
+<div style="height:30px;"></div>
 <div class="home">
    <div class="content-col-wrapper">
       <div class="content-col  content-col-1">
@@ -10,24 +10,21 @@ layout: default
             description
           </div>
           -->
-          <p></p>
             <ul class="post-list">
               {% for post in site.posts %}
-                <div id="menu" style="height:30px; width:670px; float:left; border-bottom: 1px dashed #eee; padding-top: 5px;">
+                <div id="menu" style="height: 30px; width:670px; float:left; border-bottom: 1px dashed #eee; padding-top: 5px;">
                   <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                 </div>
 
-                <div id="content" style="height:30px; width:100px; float:left;border-bottom: 1px dashed #eee; padding-top: 5px;">
+                <div id="content" style="text-align: right; height: 30px; width:100px; float:left; border-bottom: 1px dashed #eee; padding-top: 5px;">
                   <span class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span>
                 </div>
-
               {% endfor %}
             </ul>
           </div>
 
-      <div class="content-col  content-col-2">
-          {% include tweet.html %}
-          <p>
+      <div class="content-col content-col-2">
+        {% include tweet.html %}
       </div>
     </div>
 </div>
