@@ -6,7 +6,7 @@ description: This is a blog about software, some mathematics, and the occasional
 keywords: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sequi nobis pariatur architecto debitis? Deserunt, perferendis aspernatur ab expedita! Illum voluptatem modi soluta expedita aperiam asperiores magni, voluptate sed odit."
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://username.github.io" # the base hostname & protocol for your site
+url: "http://hugoferreira.github.io" # the base hostname & protocol for your site
 
 twitter_username: ferreira_hugo
 github_username: hugoferreira
