@@ -64,14 +64,18 @@
       padding-left: 25px; } }
 
 .wrapper-v3 {
-  max-width: calc(1100px - (30px * 2));
+  max-width: calc(1160px);
   margin-right: auto;
-  margin-left: auto; }
-  @media screen and (max-width: 1100px) {
-    .wrapper-v3 {
-      max-width: calc(1100px - (30px));
-      padding-right: 15px;
-      padding-left: 15px; } }
+  margin-left: auto;
+}
+
+@media screen and (max-width: 1160px) {
+  .wrapper-v3 {
+    max-width: calc(1160px);
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
 
 .wrapper-v4 {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -237,18 +241,18 @@
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(40% - (#{$spacing-unit} / 2));
+    width:         calc(40% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
-    width:         calc(30% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(20% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(40% - (#{$spacing-unit} / 2));
+    width:         calc(40% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
@@ -359,7 +363,7 @@
 
     table {
       border-top: 1px solid $alt-color;
-      background-color: #fff5f5;
+      background-color: $alt-color-light;
       margin: 0 auto;
       border-bottom: 1px solid $alt-color;
       margin-top: 20px;

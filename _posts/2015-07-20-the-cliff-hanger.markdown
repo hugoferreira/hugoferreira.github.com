@@ -9,7 +9,9 @@ categories: fun mathematics
 
 From where he stands, one step toward the cliff would send the drunken man over the edge. He takes random steps, either toward or away from the cliff. At any step his probability of taking a step away is $$^2/_3$$, of a step toward the cliff $$^1/_3$$. What is his chance of escaping the cliff?
 
-**Solution.** Let $$p$$ be the probability of moving towards the cliff ($$←$$), and $$q$$ of moving away ($$→$$). Then:
+## Solution
+
+Let $$p$$ be the probability of moving towards the cliff ($$←$$), and $$q$$ of moving away ($$→$$). Then:
 
 | outcome               | probability |
 |-----------------------|-------------|

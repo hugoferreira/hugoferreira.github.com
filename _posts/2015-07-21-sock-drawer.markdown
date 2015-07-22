@@ -28,7 +28,7 @@ Due to [linearity of expectation](http://www.cse.iitd.ac.in/~mohanty/col106/Reso
 $$\sum_{k=1}^N{(k + 1)\left(\prod_{i=1}^k{\frac{N + 1 - i}{N + M + 1 - i}}\right)\frac{M}{N + M - k}} +
 \sum_{k=1}^M{(k + 1)\prod_{i=1}^k{\frac{M + 1 - i}{N + M + 1 - i}}\frac{N}{N + M - k}}$$
 
-Which, for the given values of $N$ and $M$, gives a result of $^{279}/_{95}$, or $2.93684$.
+Which, for the given values of $N$ and $M$, gives a result of $^{279}/_{95}$, or 2.93684.
 
 ## Solution B
 
