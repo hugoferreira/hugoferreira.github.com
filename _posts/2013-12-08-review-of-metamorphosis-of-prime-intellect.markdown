@@ -11,7 +11,7 @@ There are basically two schools of thought concerning post-singularity and the i
 
 The other school is portrayed in [this book](http://localroger.com/prime-intellect/) by Roger Williams. Post-Humanism is an aberration to the human condition; it is hopeless, and cold, and meaningless. Artificial intelligence, no matter how advanced, is fundamentally flawed, self-centred and mindless. The classical vision that machines obey rigorously to pre-programmed laws, leads to the typical situation of misinterpreting Isaac Asimov's panacea. Machines are then compelled to impose immortality on humanity. The result? Without pain, humans become obsessed with it. Without death, humans become obsessed with it [^2]. The world portrayed by this school is incapable of imagining intelligence beyond human stupidity [^3], and reduces our drives — the dreams that have discovered wonders of the universe with just the power of our imagination — to basic urges.
 
-Nonetheless, it is a very good book from an otherwise unknown author. It is very well-written, literally engaging, and portrays an increasingly important subject for the XXI technology. It is, however, from my perspective, philosophically simplistic and intellectually limited.
+Nonetheless, it is a very good book from an otherwise unknown author. It is very well-written, literally engaging, and portrays an increasingly important subject for the XXI technology. It is, however, from my perspective, philosophically simplistic and intellectually limited [^4].
 
 ---
 
@@ -20,3 +20,5 @@ Nonetheless, it is a very good book from an otherwise unknown author. It is very
   [^1]: See [Permutation City](https://en.wikipedia.org/wiki/Permutation_City).
 
   [^3]: A recent rant by Greg Egan on the typical patterns seen when portraying artificial intelligence (and _sci-fi_ in general) can be seen [here](http://gregegan.customer.netspace.net.au/ESSAYS/NISF/NISF.html).
+
+  [^4]: By that I don't mean the author, but the principles in light of what we know today. To be fair, the author has written a very good [post scriptum](http://localroger.com/prime-intellect/mopitech.html) on the choices he made when writing the story. 
