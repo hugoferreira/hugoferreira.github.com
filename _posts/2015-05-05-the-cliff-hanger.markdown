@@ -1,13 +1,13 @@
 ---
 layout: post
 title: The Cliff-Hanger
-date: 2015-07-20 19:03
+date: 2015-05-05 19:03
 comments: true
 external-url:
 categories: fun mathematics
 ---
 
-From where he stands, one step toward the cliff would send the drunken man over the edge. He takes random steps, either toward or away from the cliff. At any step his probability of taking a step away is $$^2/_3$$, of a step toward the cliff $$^1/_3$$. What is his chance of escaping the cliff?
+Joseph is coming from "queima das fitas" and is a little tipsy. He stands near a cliff doing... something. If he takes one more step forward, he falls over the edge. He takes *a series of infinite random steps* either towards the cliff ($$p=1/3$$) or away ($$q=1-p=^2/_3$$). What is his chance of escaping the cliff?
 
 ## Solution
 

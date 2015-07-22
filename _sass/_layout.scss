@@ -372,4 +372,23 @@
       padding-top: 5px;
       padding-bottom: 5px;
     }
+
+    ul {
+      position: relative;
+      padding: 0;
+      margin-left: 0;
+
+      > li:before {
+        position: absolute;
+        content: "•";
+        color: $alt-color;
+        left: -1.3em;
+      }
+
+      li {
+        padding-left: 0em;
+        margin-bottom: 0;
+        list-style: none;
+      }
+    }
 }
