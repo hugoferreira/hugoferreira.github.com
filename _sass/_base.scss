@@ -116,6 +116,8 @@ blockquote {
     margin-bottom: 20px;
     border-left: 2px solid lighten($alt-color, 10%);
     padding-left: $spacing-unit / 2;
+    margin-left: -$spacing-unit / 2 - 2;
+
     font-style: oblique;
 
     > :last-child {
@@ -123,6 +125,15 @@ blockquote {
     }
 }
 
+.sidenote {
+    margin-left: -210px;
+    position: absolute;
+    width: 190px;
+    right: auto;
+    text-align: right;
+    font-size: 0.8em;
+    line-height: 1.77em;
+}
 
 /**
  * Code formatting

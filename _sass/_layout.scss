@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-    min-height: 74px;
+    min-height: 16px;
     // Positioning context for the mobile navigation icon
     position: relative;
     background-color: $alt-color;
@@ -371,6 +371,8 @@
       padding-top: 5px;
       padding-bottom: 5px;
     }
+
+    tbody:before {line-height:1em; content:"\200C"; display:block;}
 
     ul {
       position: relative;

@@ -7,7 +7,7 @@ external-url:
 categories: software functional-programming object-oriented-programming
 ---
 
-"*The limits of my language mean the limits of my world.*" -- Ludwig Wittgenstein
+> The limits of my language mean the limits of my world. -- Ludwig Wittgenstein
 
 Computer (and computing) science (CS) is a very peculiar field of research when compared to other sciences, particularly concerning themes such as *software engineering* and *system's architecture*. For starters, it has little more than 80 years, which puts it into an interesting proposition when compared to Physics or Mathematics: having a "conversation" with key personalities is not that unrealistic. Unlike Aristotle, Isaac Newton or Albert Einstein, many of the "genius" behind computer science are still living among us; a gentle evidence of its youth.
 
@@ -41,7 +41,7 @@ But discussing programming languages is hard... We know that people tend to *def
 
 So why give a 60 year old concept any importance? The above was tried and claimed years ago, and yet, imperative (and OO) languages are now the norm. Perhaps once we understand what Functional Programming enables us to do today (instead of discussing semantics over what it is), we will come to understand what Paul Graham once said [^36]:
 
-"*... the short explanation of why this 1950s language is not obsolete is that it was not technology but math, and math doesn't get stale. The right thing to compare Lisp to is not 1950s hardware, but, say, the Quicksort algorithm, which was discovered in 1960 and is still the fastest general-purpose sort.*"
+> ... the short explanation of why this 1950s language is not obsolete is that it was not technology but math, and math doesn't get stale. The right thing to compare Lisp to is not 1950s hardware, but, say, the Quicksort algorithm, which was discovered in 1960 and is still the fastest general-purpose sort.
 
   [^36]: Another key personality that made such bold assertions was turing laureate Alan Kay, the father of Object-Oriented programming, who once said he regarded LISP as the "Maxwell’s Equations of Software" (see [this interview](http://queue.acm.org/detail.cfm?id=1039523)).
 
@@ -51,7 +51,7 @@ So, without much ado, here's the top 5 reasons *Why (Post-)Functional Programmin
 
 ### Reason N. 5 They scale! ###
 
-*"The way the processor industry is going, is to add more and more cores, but nobody knows how to program those things. I mean, two, yeah; four, not really; eight, forget it."* -- Steve Jobs
+> The way the processor industry is going, is to add more and more cores, but nobody knows how to program those things. I mean, two, yeah; four, not really; eight, forget it. -- Steve Jobs
 
 Pick a software architect -- any architect that has drawn large-scale software systems --- and ask her about design and architectural patterns, say *Pipes and Filters*, *Client-Server* or the *Observer* pattern; she'll undoubtedly tell you is that they are now accepted as an invaluable tool to create, communicate and document the orchestration among the myriad of components in a large system. The legacy we inherited from Gamma *et al.*, heavily inspired in the works of Christopher Alexander [^7], goes well beyond the mere catalogue of recurrent designs. It gives us a framework to capture and systematize empirical knowledge, to uncover new relations and to think at higher levels of abstraction.
 
@@ -77,7 +77,7 @@ So Functional Programming scales, because it allows the programmer to scale. It 
 
 ### Reason N. 4 They really scale! ###
 
-"*The first 90% of the code accounts for the first 90% of the development time. The remaining 10% of the code accounts for the other 90% of the development time.*" -- Tim Cargill
+> The first 90% of the code accounts for the first 90% of the development time. The remaining 10% of the code accounts for the other 90% of the development time. -- Tim Cargill
 
 Software is more than just writing code. It's debugging code! And there's a root to all evil when it comes to debugging: *mutability*. I once spent hours of trying understand why a certain program ceased to function if I executed it step-by-step, but worked OK if I just jumped over the function. The problem? The debugger window was displaying the local variables and some good, well-intended soul, decided to override a getter to cache the result. And that specific getter function was crashing the application.
 
@@ -91,7 +91,7 @@ Functional Programming scales, because it gives better guarantees about the beha
 
 ### Reason N. 3 They scale even if you do nothing about it! ###
 
-*"A programming language is low level when its programs require attention to the irrelevant."* -- Alan J. Perlis.
+> A programming language is low level when its programs require attention to the irrelevant. -- Alan J. Perlis.
 
 Now imagine if pieces of programs could be regarded as *pure*, i.e., having absolutely no side effects. What would this mean?
 
@@ -109,7 +109,7 @@ Suffice to say that FP -- particularly due to the principle of "referential tran
 
 ### Reason N. 2 They provide a new kind of glue ###
 
-"*Such a catalogue of “advantages” is all very well, but one must not be surprised if outsiders don't take it too seriously. It says a lot about what functional programming isn't (it has no assignment, no side effects, no flow of control) but not much about what it is. The functional programmer sounds rather like a mediæval monk, denying himself the pleasures of life in the hope that it will make him virtuous.*" -- John Hughes
+> Such a catalogue of "advantages" is all very well, but one must not be surprised if outsiders don't take it too seriously. It says a lot about what functional programming isn't (it has no assignment, no side effects, no flow of control) but not much about what it is. The functional programmer sounds rather like a mediæval monk, denying himself the pleasures of life in the hope that it will make him virtuous. -- John Hughes
 
 So far it seems that if we strip other languages from features such as mutability and control flow, then we would have the same benefits of functional programming, without the hassle of learning a new language. Hence, the question remains: *why should we care to learn FP in the first place?*
 
@@ -145,7 +145,7 @@ Again, consider the number of components an ad-tech platform now comprehends, yi
 
 ### Reason N. 1 Because it's cool ###
 
-*"C is quirky, flawed, and an enormous success."* -- Dennis M. Ritchie.
+> C is quirky, flawed, and an enormous success. -- Dennis M. Ritchie.
 
 Much of the above was known more than twenty years ago, at a time where C was the *de-facto* king of programming languages. And yet, here we are, claiming again and again the advantages of functional programming. What really changed? Is imperative programming just getting old? Is Functional Programming becoming a hype?
 

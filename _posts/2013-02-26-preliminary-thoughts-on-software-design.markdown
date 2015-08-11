@@ -13,11 +13,15 @@ But, what exactly *is* design? What makes the difference between *good* and *bad
 
 The Webster’s dictionary defines it as the act of (i) "*working out the form of something*", (ii) "*sketching a plan for something*", (iii) "*creating something in the mind*", or (iv) "*doing something for a specific role or purpose or effect*". And it also seems that Software Engineering has also been faced with the task of sketching, planning, and creating suitable products for specific purposes.
 
-But Software Engineering, aspiring to become a quantitative science, goes beyond mere sketches. Software solutions drafted during the *design* of a software artifact *do* consider *forces* such as (i) the experience of the team, (ii) the available budget, (iii) technical constraints, etc. In fact, software projects were historically recognized as having four major forces through which any particular balance (or imbalance) of them directly influences the viability of a specific solution:
+<div class="sidenote" markdown="1">
 
 ![software-forces](http://skyservers.org/~bytter/software-forces.png)
 
-**Figure 1.** Here, (1) Time refers to the amount of time available to complete a project; (2) Cost refers to the budgeted amount available; (3) Scope refers the project’s domain limit and detail. Each force mutually influences (either positively or negatively) every other. Consequently, (4) Quality is regarded as a result function of how the other forces are balanced.
+**Figure 1.** Here, _time_ refers to the amount of time available to complete a project, _cost_ refers to the budgeted amount available, and _scope_ refers the project’s domain limit and detail. Each force mutually influences (either positively or negatively) every other. Consequently, _quality_ is regarded as a result function of how the other forces are balanced.
+
+</div>
+
+But Software Engineering, aspiring to become a quantitative science, goes beyond mere sketches. Software solutions drafted during the *design* of a software artifact *do* consider *forces* such as (i) the experience of the team, (ii) the available budget, (iii) technical constraints, etc. In fact, software projects were historically recognized as having four major forces through which any particular balance (or imbalance) of them directly influences the viability of a specific solution:
 
 But even taking into consideration these four major forces, the ever increasing complexity (both inherent and accidental) of building and managing software artifacts are pushing the limits of creation beyond the ability of a single entity. And similarly to every other areas of engineering, it is not uncommon for a single problem to have multiple ways to be coped with.
 
