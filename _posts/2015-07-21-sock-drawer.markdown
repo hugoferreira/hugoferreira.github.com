@@ -7,7 +7,7 @@ external-url:
 categories: fun mathematics
 ---
 
-A drawer has 18 black socks and 14 white socks. On average, how many socks should one draw to get two equal socks. And to get two different socks?
+> A drawer has 18 black socks and 14 white socks. On average, how many socks should one draw to get two equal socks? And to get two different socks?
 
 ## Solution A
 

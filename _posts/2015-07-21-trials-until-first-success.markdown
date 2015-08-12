@@ -7,8 +7,7 @@ external-url:
 categories: fun mathematics
 ---
 
-
-On the average, how many times must a die be thrown until one gets a 6?
+> On the average, how many times must a die be thrown until one gets a 6?
 
 ## Approach A: Analytical
 

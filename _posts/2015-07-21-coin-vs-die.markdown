@@ -7,9 +7,7 @@ external-url:
 categories: fun mathematics
 ---
 
-John makes a bet with Donald that he's able to flip heads on a coin before Donald throws 2 in a die. What's the probability of Donald winning, considering John begins the game and they play alternately?
-
-## Solution
+> John makes a bet with Donald that he's able to flip heads on a coin before Donald throws 2 in a die. What's the probability of Donald winning, considering John begins the game and they play alternately?
 
 Let the probability of tossing an head be $$p=~^1/_2$$ and tail $$q=~^1/_2$$, and the probability of tossing any die face other than a 2 be $$r=1-~^1/_6=~^5/_6$$. If we consider the outcome of John winning, then:
 

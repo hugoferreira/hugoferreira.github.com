@@ -7,7 +7,9 @@ external-url:
 categories: software
 ---
 
-The opening of third book on *Pattern Languages of Program Design* starts with the following sentence: "*What’s new here is that there’s nothing new here*".
+The opening of third book on *Pattern Languages of Program Design* starts with the following sentence:
+
+ > What’s new here is that there’s nothing new here.
 
 This single assertion seems to characterize the epistemological nature of patterns, in what concerns its methodology and goals; patterns result from the observation, analysis and formalization of empirical knowledge in search for stronger invariants, allowing rational design choices and uncovering newer abstractions. A pattern should not report on surface properties but rather capture *hidden structure* at a *suitably general level*. A comprehensive discussion on the epistemology of patterns and pattern languages can be found in a recent work by Kohls and Panke:
 

@@ -7,11 +7,9 @@ external-url:
 categories: fun mathematics
 ---
 
-You want to find someone whose birthday matches yours. What is the least number of strangers whose birthdays you need to ask about to have a 50-50 chance?
+> You want to find someone whose birthday matches yours. What is the least number of strangers whose birthdays you need to ask about to have a 50-50 chance?
 
-## Solution
-
-The problem can be modeled as a negative binomial with parameters $r = 1$ and $p = 1/365$, hence the pmf is given by $\left(\frac{N-r}{N}\right)^\frac{1}{p} p$.
+The problem can be modeled as a negative binomial with parameters $r = 1$ and $p = 1/365$, hence the PMF is given by $\left(\frac{N-r}{N}\right)^\frac{1}{p} p$.
 
 Since we want to find the number that gives us a 50-50 chance, we need to calculate the inverse CDF of the negative binomial and find the value for $0.5$. The CDF of the negative binomial is given by:
 

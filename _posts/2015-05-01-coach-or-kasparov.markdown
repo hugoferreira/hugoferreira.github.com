@@ -7,9 +7,7 @@ external-url:
 categories: fun mathematics
 ---
 
-To encourage John's promising chess career, his coach offers him a prize if he wins (at least) two games in a row in a three-game series to be played with his coach and Garry Kasparov alternately: coach-kasparov-coach or kasparov-coach-kasparov, according to John's choice. Kasparov is (evidently) a better player than John's coach. Which series should John choose?
-
-## Solution
+> To encourage John's promising chess career, his coach offers him a prize if he wins (at least) two games in a row in a three-game series to be played with his coach and Garry Kasparov alternately: coach-kasparov-coach or kasparov-coach-kasparov, according to John's choice. Kasparov is (evidently) a better player than John's coach. Which series should John choose?
 
 Let $$p_C$$ be the probability of winning the coach and $$p_K$$ the probability of winning Kasparov, where $$p_C < p_K$$. The winning outcomes for the first scenario (C-K-C) are:
 
@@ -19,9 +17,7 @@ Let $$p_C$$ be the probability of winning the coach and $$p_K$$ the probability 
 | $C_1K_1C_0$ | $p_C~p_K~(1-p_C)$ |
 | $C_1K_1C_1$ | $p_C~p_K~p_C$     |
 
-And thus $p_C~p_K~(1-p_C) + p_C~p_K~(1-p_C) + p_C~p_K~p_C = p_K~p_C~(2 - p_C)$.
-
-For the second scenario (K-C-K):
+And thus $p_C~p_K~(1-p_C) + p_C~p_K~(1-p_C) + p_C~p_K~p_C = p_K~p_C~(2 - p_C)$. For the second scenario (K-C-K):
 
 | outcome     | probability       |
 |-------------|-------------------|
