@@ -21,7 +21,7 @@ The Webster’s dictionary defines it as the act of (i) "*working out the form o
 
 </div>
 
-But Software Engineering, aspiring to become a quantitative science, goes beyond mere sketches. Software solutions drafted during the *design* of a software artifact *do* consider *forces* such as (i) the experience of the team, (ii) the available budget, (iii) technical constraints, etc. In fact, software projects were historically recognized as having four major forces through which any particular balance (or imbalance) of them directly influences the viability of a specific solution:
+But Software Engineering, aspiring to become a quantitative science, goes beyond mere sketches. Software solutions drafted during the *design* of a software artifact *do* consider *forces* such as (i) the experience of the team, (ii) the available budget, (iii) technical constraints, etc. In fact, software projects were historically recognized as having four major forces through which any particular balance (or imbalance) of them directly influences the viability of a specific solution, as seen in the left.
 
 But even taking into consideration these four major forces, the ever increasing complexity (both inherent and accidental) of building and managing software artifacts are pushing the limits of creation beyond the ability of a single entity. And similarly to every other areas of engineering, it is not uncommon for a single problem to have multiple ways to be coped with.
 
