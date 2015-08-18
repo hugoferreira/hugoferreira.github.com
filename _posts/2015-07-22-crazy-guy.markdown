@@ -7,9 +7,7 @@ external-url:
 categories: fun mathematics
 ---
 
-John and 99 other people make a queue to enter a plane, with Camille standing last. They each hold a ticket to one of the 100 seats on that flight. John, the first person in line, is a little cuckoo, and chooses a random seat disregarding his own ticket and ignoring the complains of other passengers. All of the other passengers are quite normal, and will go to their proper seat unless it is already occupied. If it is occupied, they will then find a free seat to sit in, at random. What's the probability that Camille (the last person to board) will sit in her proper seat? Assume may each ticket is numbered from 1 to 100.
-
-## Solution
+> John and 99 other people make a queue to enter a plane, with Camille standing last. They each hold a ticket to one of the 100 seats on that flight. John, the first person in line, is a little cuckoo, and chooses a random seat disregarding his own ticket and ignoring the complains of other passengers. All of the other passengers are quite normal, and will go to their proper seat unless it is already occupied. If it is occupied, they will then find a free seat to sit in, at random. What's the probability that Camille (the last person to board) will sit in her proper seat? Assume may each ticket is numbered from 1 to 100.
 
 Let $p(i)$ be the probability of the $i^{th}$ person to enter the airplane sitting on Camille's place. Note that only one, if any, will ever sit there. Then:
 
