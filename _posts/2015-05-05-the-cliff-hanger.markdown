@@ -7,7 +7,9 @@ external-url:
 categories: fun mathematics
 ---
 
-> Joseph is coming from "queima das fitas" and is a little tipsy. He stands near a cliff doing... something. If he takes one more step forward, he falls over the edge. He takes *a series of infinite random steps* either towards the cliff ($$p=1/3$$) or away ($$q=1-p=^2/_3$$). What is his chance of escaping the cliff?
+> Joseph is coming from "queima das fitas" and is a little tipsy. He stands near a cliff doing... something. If he takes one more step forward, he falls over the edge. He takes *a series of infinite random steps* either towards the cliff ($$p=1/3$$) or away ($$q=1-p=^2/_3$$). What is his chance of escaping the cliff? [^a]
+
+  [^a]: This is adapted from problem 35 of _Fifty Challenging Problems in Probability_ by Frederick Mosteller.
 
 Let $$p$$ be the probability of moving towards the cliff ($$←$$), and $$q$$ of moving away ($$→$$). Then:
 
@@ -27,3 +29,5 @@ $$\frac{(2 n)!}{(n + 1)! n!}$$
 Hence, the probability of the cliff hanger escaping is given by:
 
 $$p+p\sum_{n=1}^{\infty}{\frac{(2 n)!}{(n + 1)! n!}p^n q^n}$$
+
+---

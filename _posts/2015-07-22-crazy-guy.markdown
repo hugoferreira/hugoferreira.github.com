@@ -36,7 +36,9 @@ val size = 100
   val a = (1 to size).zip(Random.shuffle(1 to size)).toList
   val b = a.foldLeft(Map[Int, Int]()) { case (acc, (p, seat)) => acc + (p match {
     case 1 => 1 -> (Random.nextInt(size) + 1)
-    case _ => p -> (if (acc.exists(_._2 == seat)) Random.shuffle((1 to size).toSet -- acc.values).head else seat)
+    case _ => p -> (if (acc.exists(_._2 == seat))
+                      Random.shuffle((1 to size).toSet -- acc.values).head
+                    else seat)
   }) }
 
   a.last._2 == b(size)
