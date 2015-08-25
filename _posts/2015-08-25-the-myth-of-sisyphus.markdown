@@ -7,7 +7,7 @@ external-url:
 categories: philosophy
 ---
 
-The Myth of Sisyphus is an _existentialist_ philosophical essay from Albert Camus that starts with the following provocative assertion:
+[The Myth of Sisyphus](https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus) is an _existentialist_ philosophical essay from Albert Camus that starts with the following provocative assertion:
 
 > **There is but one truly serious philosophical problem, and that is suicide.** Judging whether life is or is not worth living amounts to answering the fundamental question of philosophy.
 
