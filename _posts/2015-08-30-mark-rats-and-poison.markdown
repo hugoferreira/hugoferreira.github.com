@@ -13,7 +13,7 @@ categories: fun mathematics puzzle
 
 Whatever we do, there's no way we can attempt to reduce the number of rats with gained information after doing a trial: there's simply no time! Hence, the naive solution for the 4 vials would be one rat per compound; after 24h, the one that is dead would point to the correct vial.
 
-A naive optimization of this algorithm would reduce the need to three rats: Mark would leave one compound out of the experience, and if no rat died, the compound that was left out would be the correct one. The minimum amount, however, would be 2 rats, through the following scheme:
+A naive optimization of this strategy would reduce the need to three rats: Mark would leave one compound out of the experience, and if no rat died, the compound that was left out would be the correct one. The minimum amount, however, would be 2 rats, through the following scheme:
 
 | Compound | Rat A | Rat B |
 |:--------:|-------|-------|
@@ -24,7 +24,7 @@ A naive optimization of this algorithm would reduce the need to three rats: Mark
 
 ... where compound 1 wouldn't be administered at all; compound 2 would be administered to Rat A; compound 3 to Rat B; and compound 4 to both of them. If both rats end up dying, Mark would know that the poison is in vial 4. Be aware that this works only because there's a single poisonous compound and no interference between them.
 
-## Solution for n vials
+## Solution for _n_ vials
 
 How would one proceed with 8 vials?
 
