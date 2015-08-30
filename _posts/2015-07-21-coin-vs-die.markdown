@@ -4,7 +4,7 @@ title: Coin vs Die
 date: 2015-07-21 16:27
 comments: true
 external-url:
-categories: fun mathematics
+categories: fun mathematics puzzle
 ---
 
 > John makes a bet with Donald that he's able to flip heads on a coin before Donald throws 2 in a die. What's the probability of Donald winning, considering John begins the game and they play alternately?

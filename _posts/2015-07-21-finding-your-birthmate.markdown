@@ -4,7 +4,7 @@ title: Finding Your Birthmate
 date: 2015-07-21 16:27
 comments: true
 external-url:
-categories: fun mathematics
+categories: fun mathematics puzzle
 ---
 
 > You want to find someone whose birthday matches yours. What is the least number of strangers whose birthdays you need to ask about to have a 50-50 chance? [^a]

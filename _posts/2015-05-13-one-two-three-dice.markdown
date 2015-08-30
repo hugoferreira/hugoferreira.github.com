@@ -4,7 +4,7 @@ title: One, Two, Three Dice
 date: 2015-05-13 01:28
 comments: true
 external-url:
-categories: fun mathematics
+categories: fun mathematics puzzle
 ---
 
 > Which one would you bet on? Throw 6 dice and get at least one 6, 12 dice and get at least two 6's, or 18 dice and get at least three 6's?

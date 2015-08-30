@@ -4,7 +4,7 @@ title: Trials Until First Success
 date: 2015-07-21 16:27
 comments: true
 external-url:
-categories: fun mathematics
+categories: fun mathematics puzzle
 ---
 
 > On the average, how many times must a die be thrown until one gets a 6?

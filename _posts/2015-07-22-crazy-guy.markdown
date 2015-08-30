@@ -4,7 +4,7 @@ title: Crazy Guy
 date: 2015-07-22 01:14
 comments: true
 external-url:
-categories: fun mathematics
+categories: fun mathematics puzzle
 ---
 
 > John and 99 other people make a queue to enter a plane, with Camille standing last. They each hold a ticket to one of the 100 seats on that flight. John, the first person in line, is a little cuckoo, and chooses a random seat disregarding his own ticket and ignoring the complains of other passengers. All of the other passengers are quite normal, and will go to their proper seat unless it is already occupied. If it is occupied, they will then find a free seat to sit in, at random. What's the probability that Camille (the last person to board) will sit in her proper seat? Assume may each ticket is numbered from 1 to 100.
