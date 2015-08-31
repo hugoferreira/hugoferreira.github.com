@@ -16,7 +16,7 @@ Whatever we do, there's no way we can attempt to reduce the number of rats with 
 A naive optimization of this strategy would reduce the need to three rats: Mark would leave one compound out of the experience, and if no rat died, the compound that was left out would be the correct one. The minimum amount, however, would be 2 rats, through the following scheme:
 
 | Compound | Rat A | Rat B |
-|:--------:|-------|-------|
+|:--------:|------:|------:|
 | 1        | No    | No    |
 | 2        | Yes   | No    |
 | 3        | No    | Yes   |
@@ -29,7 +29,7 @@ A naive optimization of this strategy would reduce the need to three rats: Mark 
 How would one proceed with 8 vials?
 
 | Compound | Rat A | Rat B | Rat C |
-|:--------:|-------|-------|-------|
+|:--------:|------:|------:|------:|
 | 1        | No    | No    | No    |
 | 2        | Yes   | No    | No    |
 | 3        | No    | Yes   | No    |
@@ -39,4 +39,4 @@ How would one proceed with 8 vials?
 | 7        | No    | Yes   | Yes   |
 | 8        | Yes   | Yes   | Yes   |
 
-The attentive reader would have already noticed that, for $n$ vials, Mark needs $\lceil\sqrt{n}~\rceil$ rats, with the information of the vials encoded using rats as bits. 8 compounds can be encoded in 3 bits, and 10 bits is enough to encode 1024 compounds. Hence, the number of rats required to test 1000 vials is 10.
+The attentive reader would have already noticed that, for $n$ vials, Mark needs $\lceil\log_{2}{n}\rceil$ rats, with the information of the vials encoded using rats as bits. 8 compounds can be encoded in 3 bits, and 10 bits is enough to encode 1024 compounds. Hence, the number of rats required to test 1000 vials is 10.
