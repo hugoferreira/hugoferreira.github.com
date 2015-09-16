@@ -31,7 +31,7 @@
     .kr    {  font-weight: bold } // Keyword.Reserved
     .kt    {  font-weight: bold } // Keyword.Type
     .m     {  } // Literal.Number
-    .s     {  } // Literal.String
+    .s     { font-style: italic } // Literal.String
     .na    {  } // Name.Attribute
     .nb    {  } // Name.Builtin
     .nc    {  font-weight: bold } // Name.Class
