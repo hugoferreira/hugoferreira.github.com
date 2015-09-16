@@ -55,13 +55,13 @@ Here's the results for one of the runs:
     Sheldon won 3685
     Penney won  6315
 
-In fact, for every sequence Sheldon bets, Penney seems to be able to choose a better, or at least one as probable as Sheldon's — something that seems to be making Sheldon twitch.
+In fact, for every sequence Sheldon bets, Penney seems to be able to choose a better one; something that seems to be making Sheldon twitch his face.
 
 ## Non-transitive Dice
 
 Before explaining what is going on, let's try a different game:
 
-> Sheldon is tired of loosing with Penney, and proposes a different game. She shows him three dice and says that each one of them should pick one die; the one that rolls the higher value wins. Sheldon even suggests Penney to go first. Upon observation, Penney realizes these are not normal dice:
+> Sheldon is tired of loosing with Penney, and proposes a different game. He shows her three dice and says that each one of them should pick one die; the one that rolls the higher value wins. Sheldon even suggests Penney to go first. Upon observation, Penney realizes these are not normal dice:
 
     Die A: 1 1 4 4 4 4
     Die B: 3 3 3 3 3 3
