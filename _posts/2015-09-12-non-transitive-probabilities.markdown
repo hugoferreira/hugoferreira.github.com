@@ -78,7 +78,7 @@ Which die would Penney pick? Some people would choose the one that has an higher
 
 Funny... All have the same expected value, so it shouldn't matter, right?
 
-Let's suppose Penney picks die `B`. Sheldon would pick die `A` and beat her with a probability of ⅔. Penney decides to pick `A` then. That's fine, Sheldon picks `C` and wins with odds of 5:4. Penney is furious and picks `C`! He goes for `B` and wins two thirds of the throws. *Bazinga*!
+Let's suppose Penney picks die `B`. Sheldon would pick die `A` and beat her with a probability of ⅔. Penney decides to pick `A` then. That's fine, Sheldon picks `C` and wins with odds of 5:4. Penney is furious and picks `C`! He goes for `B` and wins two thirds of the throws. *Bazinga*™!
 
 <div class="sidenote" markdown="1">
 Recall that a binary relation $R$ over a set $X$ is transitive *iff* $\forall_{a,b,c~\in~X}: aRb \wedge bRc \rightarrow aRc$.
@@ -139,7 +139,7 @@ Back to tossing coins, why does `THH` occurs first than `HHH`? Let's examine ten
 |  9  | **T H H** | Penney |
 
 <div class="sidenote" markdown="1">
-By now it should be evident to the reader the reason Penny seems misspelled.
+By now it should be evident to the reader [the reason](https://en.wikipedia.org/wiki/Penney%27s_game) Penny seems misspelled.
 </div>
 
 Spot the pattern? The only way Sheldon wins is if `HHH` occurs right from the beginning. Otherwise, as soon as a `T` comes out, Penney will (eventually) win. `THH` may be regarded here as a kind of *prefix* of `HHH`.
