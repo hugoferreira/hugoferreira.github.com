@@ -9,7 +9,7 @@ categories: fun mathematics puzzle
 
 > Sheldon and Penney decide to play a game. They throw a coin three times. If it comes back `HHH` Sheldon wins; if the result is `THH` then Penney wins. Otherwise they both loose. What are their probabilities of winning the game? [^1]
 
-[^1]: I don't remember where I first learned about this problem, but a good overview of both this and the non-transitive dice can be found in the highly recommended Martin Gardner's "*The Colossal Book of Mathematics: Classic Puzzles, Paradoxes and Problems*".
+[^1]: I don't remember where I first learned about this problem, but a good overview of both this and the non-transitive dice can be found in the highly recommended Martin Gardner's "[*The Colossal Book of Mathematics: Classic Puzzles, Paradoxes and Problems*](http://www.amazon.com/Colossal-Book-Mathematics-Paradoxes-Problems/dp/0393020231/ref=sr_1_1?ie=UTF8&qid=1442452079&sr=8-1&keywords=The+Colossal+Book+of+Mathematics)".
 
 ## Tossing coins
 
@@ -25,7 +25,7 @@ Let's change the game a little bit:
 
 > Penney now proposes Sheldon they should flip a coin until one of the patterns appear. Who has the higher probability of winning?
 
-In other words, what's the probability for `HHH` and `THH` occurring **first** in a potentially infinite sequence of coin tosses? Most people would assume to be the same, but in fact `THH` has an higher chance of winning that `HHH`!.. Say wat? If you don't believe me, run the following Scala program:
+In other words, what's the probability for `HHH` and `THH` occurring **first** in a potentially infinite sequence of coin tosses? Most people would assume to be the same, but in fact `THH` has an higher chance of winning than `HHH`!.. *Say wat*? If you don't believe me, run the following Scala program:
 
 {% highlight scala %}
 import scala.util.Random
@@ -61,7 +61,7 @@ In fact, for every sequence Sheldon bets, Penney seems to be able to choose a be
 
 Before explaining what is going on, let's try a different game:
 
-> Sheldon is tired of loosing with Penney, and proposes a different game. He shows her three dice and says that each one of them should pick one die; the one that rolls the higher value wins. Sheldon even suggests Penney to go first. Upon observation, Penney realizes these are not normal dice:
+> Sheldon is now tired of loosing with Penney, and proposes a different game. He shows her three dice and says that each one of them should pick one die; the one that rolls the higher value wins. Sheldon even suggests Penney to go first. Upon observation, Penney realizes these are not normal dice:
 
     Die A: 1 1 4 4 4 4
     Die B: 3 3 3 3 3 3
@@ -158,6 +158,10 @@ The fact that the game now ends whenever one of them **first completes a certain
 |  7  | H **T H H**  | Penney |
 |  8  | H T T **T T H**  | Sheldon |
 |  9  | T **T T H**  | Sheldon |
+
+<div class="sidenote" markdown="1">
+Don't these runs seem shorter than the above ones? Hmm...
+</div>
 
 It was a close call, but near the theoretical probability of ⅔ that Sheldon calculated. Is there anything Penney can do to win Sheldon's bet? Well, yes... Here's the complete table of best choices:
 
