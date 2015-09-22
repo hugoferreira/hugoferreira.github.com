@@ -7,7 +7,7 @@ external-url:
 categories: fun mathematics puzzle
 ---
 
-> Suppose you have a string that only contains the letters `M`, `I` and `U`. You can generate new strings by successively applying one of four rules. Rule 1, you can add an `U` to any string that ends in an `I`. Rule 2, you can double everything from M to the end of the string. Rule 3, any occurrence of `III` can be replaced by an `U`. Rule 4, you can simply remove any occurrence of `UU`. The puzzle is thus: starting from the string `MI`, what are the sequence of rules you must apply to reach `MU`? [^1]
+> Imagine strings that only contains the letters `M`, `I` and `U`. Every valid string begins with an `M`. You can generate new strings by successively applying one of four rules: (1) you can add an `U` to any string that ends in an `I`; (2) you can double everything from an `M` to the end of the string; (3) any occurrence of `III` can be replaced by a single `U`; and (4) you can simply remove any occurrences of `UU`. The puzzle is thus: starting from the string `MI`, what is the sequence of rules one must apply to produce the string `MU`? [^1]
 
 Let's first summarize the rules in a nice table, so that we can be clear about their semantics:
 
@@ -55,7 +55,7 @@ Thinking backwards, one would need to reach a state where three `I`'s exist (or 
 
 `MI` has only one `I`, so the invariant holds in the beginning. If you recall [proof by induction](/fun/mathematics/2013/02/19/all-gambozinos-are-white.html), this is the base case. Now, regardless of the string, does applying rule 1 preserve the invariant? Yes it does, particularly because it doesn't change the number of `I`'s. Same goes for rule 4.
 
-Rule 2 doubles the number of `I`'s present in a string. However, if $n$ is not a multiple of 3, 2$n$ is still not a multiple of 3 either. Rule 3 reduces the number of `I`'s by 3. But similarly, if if $n$ is not a multiple of 3, $n$-3 isn't either.
+Rule 2 doubles the number of `I`'s present in a string. However, if $n$ is not a multiple of 3, 2$n$ is still not a multiple of 3 either. Rule 3, on the other hand, reduces the number of `I`'s by 3; but similarly, if $n$ is not a multiple of 3, $n$-3 isn't either.
 
 Hence, we are forced to accept that, **regardless the sequence of rules we try, by beginning with `MI` we would _never_ be able to reach a state where producing a `MU` is a possibility.**
 
