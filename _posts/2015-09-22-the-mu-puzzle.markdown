@@ -11,12 +11,12 @@ categories: fun mathematics puzzle
 
 Let's first summarize the rules in a nice table, so that we can be clear about their semantics:
 
-|   | Rule           |          Example     |
-|:-:|---------------:|---------------------:|  
-| 1 | `xI` → `xU`    | `MII` → `MIIU`       |
-| 2 | `Mx` → `Mxx`   | `MUI` → `MUIUI`      |
-| 3 | `xIIIy` → `xy` | `MUIIIU` → `MUUU`    |
-| 4 | `xUUy` → `xy`  | `MIUUUI` → `MIUI`    |
+|   | Rule            |          Example     |
+|:-:|----------------:|---------------------:|  
+| 1 | `xI` → `xU`     | `MII` → `MIIU`       |
+| 2 | `Mx` → `Mxx`    | `MUI` → `MUIUI`      |
+| 3 | `xIIIy` → `xUy` | `MUIIIU` → `MUUU`    |
+| 4 | `xUUy` → `xy`   | `MIUUUI` → `MIUI`    |
 
 Assume `x` and `y` denote any arbitrary (sub-)string. Let's play the game a little bit. Suppose we start with the string `MUI`:
 
@@ -47,7 +47,7 @@ One common strategy, particularly when *loops* or *recursion* is part of the pro
 
 > ... (an) invariant is a property, held by a class of mathematical objects, which remains unchanged when transformations of a certain type are applied to the objects.
 
-What would be a good invariant in this case? Well, starting from `MI` one needs to get rid of the `I` and create a `U`. Creating `U`'s is straightforward due to rule 1, but getting rid of `I`'s is trickier — rule 3 requires three `I`'s to get rid of them, and the only way to create more `I`'s is through the slightly chaotic rule 2. Getting rid of extra `U`'s is also easy due to rule 4.
+What would be a good invariant in this case? Well, starting from `MI` one needs to get rid of the `I` and create a `U`. Creating `U`'s is straightforward due to rule 1 (or rule 3), but getting rid of `I`'s is trickier — rule 3 requires three `I`'s to get rid of them, and the only way to create more `I`'s is through the slightly chaotic rule 2, provided we start with any `I` in the first place. Getting rid of extra `U`'s is also easy due to rule 4.
 
 Thinking backwards, one would need to reach a state where three `I`'s exist (or any multiple of 3). Starting from `MI`, that has only one `I`, can we create 3 of them (or 6, 9...)? Here's a hint to the property we were looking for: the number of `I`'s. Let's state the invariant as such:
 
