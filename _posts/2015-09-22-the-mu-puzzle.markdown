@@ -13,7 +13,7 @@ Let's first summarize the rules in a nice table, so that we can be clear about t
 
 |   | Rule            |          Example     |
 |:-:|----------------:|---------------------:|  
-| 1 | `xI` → `xU`     | `MII` → `MIIU`       |
+| 1 | `xI` → `xIU`    | `MII` → `MIIU`       |
 | 2 | `Mx` → `Mxx`    | `MUI` → `MUIUI`      |
 | 3 | `xIIIy` → `xUy` | `MUIIIU` → `MUUU`    |
 | 4 | `xUUy` → `xy`   | `MIUUUI` → `MIUI`    |
@@ -35,7 +35,7 @@ It seems we've reached a point where there's no rule we can apply (well, except 
 Why a [BFS](https://en.wikipedia.org/wiki/Breadth-first_search) and not a [DFS](https://en.wikipedia.org/wiki/Depth-first_search)? Suppose you've chosen to use DFS. Now, when would a long sequence of rules be long enough that you should begin to search for alternatives?
 </div>
 
-We can attempt to solve this problem with a Scala program that does a [breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search), by recursively applying every rule that is applicable (*i.e.* valid) to a reached string and checking if it is equal to `MU`. We would, however, quickly reach the conclusion that the program doesn't stop after a considerable amount of time/steps
+We can attempt to solve this problem with a program that does a [breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search), by recursively applying every rule that is applicable (*i.e.* valid) to a reached string and checking if it is equal to `MU`. We would, however, quickly reach the conclusion that the program doesn't stop after a considerable amount of time/steps
 
 In these situations, one might begin to wonder: "*regardless of the sequence of rules one apply, would it be possible to reach `MU` starting from a `MI`?*"
 
