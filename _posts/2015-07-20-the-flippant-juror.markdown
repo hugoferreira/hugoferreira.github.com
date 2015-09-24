@@ -9,7 +9,7 @@ categories: fun mathematics puzzle
 
 > A three-man jury has two members each of whom independently has probability $$p$$ of making the correct decision and a third member who flips a coin for each decision (majority rules) A one-man jury has probability $$p$$ of making the correct decision. Which jury has the better probability of making the correct decision? [^a]
 
-  [^a]: This is problem 3 of _Fifty Challenging Problems in Probability_ by Frederick Mosteller.
+  [^a]: This is problem 3 of Frederick Mosteller's "*[Fifty Challenging Problems in Probability](http://www.amazon.com/Challenging-Problems-Probability-Solutions-Mathematics/dp/0486653552)*".
 
 ## Solution
 

@@ -9,7 +9,7 @@ categories: fun mathematics puzzle
 
 > Joseph is coming from "queima das fitas" and is a little tipsy. He stands near a cliff doing... something. If he takes one more step forward, he falls over the edge. He takes **a series of infinite random steps** either towards the cliff ($$p=~^1/_3$$) or away ($$q=1-p=~^2/_3$$). What is his chance of escaping? [^a]
 
-  [^a]: This is adapted from problem 35 of _Fifty Challenging Problems in Probability_ by Frederick Mosteller.
+  [^a]: This is adapted from problem 35 of Frederick Mosteller's "*[Fifty Challenging Problems in Probability](http://www.amazon.com/Challenging-Problems-Probability-Solutions-Mathematics/dp/0486653552)*".
 
 Let $$p$$ be the probability of moving towards the cliff ($$←$$), and $$q$$ of moving away ($$→$$). Then:
 

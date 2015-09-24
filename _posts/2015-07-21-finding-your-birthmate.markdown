@@ -9,7 +9,7 @@ categories: fun mathematics puzzle
 
 > You want to find someone whose birthday matches yours. What is the least number of strangers whose birthdays you need to ask about to have a 50-50 chance? [^a]
 
-  [^a]: This is problem 32 of _Fifty Challenging Problems in Probability_ by Frederick Mosteller.
+  [^a]: This is problem 32 of Frederick Mosteller's "*[Fifty Challenging Problems in Probability](http://www.amazon.com/Challenging-Problems-Probability-Solutions-Mathematics/dp/0486653552)*".
 
 The problem can be modeled as a negative binomial with parameters $r = 1$ and $p = 1/365$, hence the PMF is given by $\left(\frac{N-r}{N}\right)^\frac{1}{p} p$.
 

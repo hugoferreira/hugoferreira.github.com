@@ -37,4 +37,6 @@ Now suppose that we observe more men that don't die. We may add this fact to our
 
 This characteristic, i.e., that in a consistent argumentation one may add premises without affecting the validity of the conclusion, is called the *monotonicity principle*, and one can see that the inductive reasoning violates it: adding a black *gambozino* rejects the previous conclusion, so (i) $$P(a) \wedge Q(a)$$, (ii) $$P(b) \wedge \neg Q(b)$$, (iii) ... $$\nvdash \forall_x P(x) \rightarrow Q(x)$$.
 
+Continue to [Part II](/fun/mathematics/2013/02/19/all-gambozinos-are-white-part-2.html).
+
 ----

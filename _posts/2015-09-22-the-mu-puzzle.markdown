@@ -32,7 +32,7 @@ Assume `x` and `y` denote any arbitrary (sub-)string. Let's play the game a litt
 It seems we've reached a point where there's no rule we can apply (well, except rule 2, but that would not change the string `M`). Now, the puzzle asks us: what's the sequence of steps that transforms a `MI` into a `MU`?
 
 <div class="sidenote" markdown="1">
-Why a BFS and not a DFS? Suppose you've chosen to use DFS. Now, when would a long sequence of rules be long enough that you should begin to search for alternatives?
+Why a [BFS](https://en.wikipedia.org/wiki/Breadth-first_search) and not a [DFS](https://en.wikipedia.org/wiki/Depth-first_search)? Suppose you've chosen to use DFS. Now, when would a long sequence of rules be long enough that you should begin to search for alternatives?
 </div>
 
 We can attempt to solve this problem with a Scala program that does a [breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search), by recursively applying every rule that is applicable (*i.e.* valid) to a reached string and checking if it is equal to `MU`. We would, however, quickly reach the conclusion that the program doesn't stop after a considerable amount of time/steps

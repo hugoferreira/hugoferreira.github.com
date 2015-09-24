@@ -29,4 +29,6 @@ This form of induction does not necessarily involve numbers; one can actually ge
 
 Mathematical induction is a powerful tool in deductive reasoning that allows to prove properties of an infinite number of elements without having to actually observe every one of them. It works whenever the elements we are dealing with are part of a well-founded relation, and we are able to assume properties over that relation. Mathematical induction is thus well beyond inductive reasoning, able to assert the *veracity* of an argument over its mere *plausibility*.
 
+Read back [Part II](/fun/mathematics/2013/02/19/all-gambozinos-are-white-part-2.html) or [I](/fun/mathematics/2013/02/19/all-gambozinos-are-white.html).
+
 ----
