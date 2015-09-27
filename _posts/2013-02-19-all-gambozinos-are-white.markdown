@@ -15,7 +15,7 @@ Most of us learn that there are two types of reasoning, namely deductive and ind
 
   [^1]: This is formally equivalent to $$\forall_{x \in P} Q(x)$$, but we are being relaxed.
 
-Inductive reasoning, on the other hand, makes generalizations based on individual instances. Imagine that you go outside in a quest to observe the *gambozino*, an animal so rare that it only appears minutes before the sunset in a rainy day. You were lucky to catch three young, white *gambozinos*, drinking water by the lake. Since it is the first time you see one, you assume that, probably, *most gambozinos are white*. In the following days you repeat the feat, and you now seem to be confident that *all gambozinos are white*. Hence, (i) $$P(a) \wedge Q(a)$$, (ii) $$P(b) \wedge Q(b)$$, (iii) $$P(c) \wedge Q(c)$$, (iv) ... $$\forall_x P(x) \rightarrow Q(x)$$?
+Inductive reasoning, on the other hand, makes generalizations based on individual instances. Imagine that you go outside in a quest to observe the *gambozino*, an animal so rare that it only appears minutes before the sunset in a rainy day. You were lucky to catch three young, white *gambozinos*, drinking water by the lake. Since it is the first time you see one, you assume that, probably, *most gambozinos are white*. In the following days you repeat the feat, and you now seem to be confident that *all gambozinos are white*. Hence, (i) $$P(a) \wedge Q(a)$$, (ii) $$P(b) \wedge Q(b)$$, (iii) $$P(c) \wedge Q(c)$$, (iv) \ldots $$\forall_x P(x) \rightarrow Q(x)$$?
 
 Of course it doesn't seem valid to assume that, only because you have seen a dozen of gambozinos, all must have the same characteristics. But what if you had observed hundreds, or even millions? Is it sound to begin an argument based on a probability (most), and conclude an universal assertion (all), due to the sheer number of observations?
 
@@ -35,8 +35,8 @@ There are other different ways to show that inductive reasoning isn't a valid fo
 
 Now suppose that we observe more men that don't die. We may add this fact to our list of premises, but we now seem to be in a position of *inconsistency*. Some men die, others don't, and thus being a man isn't sufficient to guarantee its mortality: $$P(x)\not\rightarrow Q(x)$$. We can't even begin to reject the conclusion since our premises are contradictory. Otherwise, no matter how many new premises you add, the conclusion is always a direct *consequence* of the hypothesis.
 
-This characteristic, i.e., that in a consistent argumentation one may add premises without affecting the validity of the conclusion, is called the *monotonicity principle*, and one can see that the inductive reasoning violates it: adding a black *gambozino* rejects the previous conclusion, so (i) $$P(a) \wedge Q(a)$$, (ii) $$P(b) \wedge \neg Q(b)$$, (iii) ... $$\nvdash \forall_x P(x) \rightarrow Q(x)$$.
+This characteristic, i.e., that in a consistent argumentation one may add premises without affecting the validity of the conclusion, is called the *monotonicity principle*, and one can see that the inductive reasoning violates it: adding a black *gambozino* rejects the previous conclusion, so (i) $$P(a) \wedge Q(a)$$, (ii) $$P(b) \wedge \neg Q(b)$$, (iii) \ldots $$\nvdash \forall_x P(x) \rightarrow Q(x)$$.
 
-Continue to [Part II](/fun/mathematics/2013/02/19/all-gambozinos-are-white-part-2.html).
+Continue to [Part II]({% post_url 2013-02-19-all-gambozinos-are-white-part-2 %}).
 
 ----

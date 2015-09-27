@@ -53,7 +53,7 @@ Thinking backwards, one would need to reach a state where three `I`'s exist (or 
 
 > Regardless of what we do, **the number of `I`'s in a string is not a multiple of 3.**
 
-`MI` has only one `I`, so the invariant holds in the beginning. If you recall [proof by induction](/fun/mathematics/2013/02/19/all-gambozinos-are-white.html), this is the base case. Now, regardless of the string, does applying rule 1 preserve the invariant? Yes it does, particularly because it doesn't change the number of `I`'s. Same goes for rule 4.
+`MI` has only one `I`, so the invariant holds in the beginning. If you recall [proof by induction]({% post_url 2013-02-19-all-gambozinos-are-white %}), this is the base case. Now, regardless of the string, does applying rule 1 preserve the invariant? Yes it does, particularly because it doesn't change the number of `I`'s. Same goes for rule 4.
 
 Rule 2 doubles the number of `I`'s present in a string. However, if $n$ is not a multiple of 3, 2$n$ is still not a multiple of 3 either. Rule 3, on the other hand, reduces the number of `I`'s by 3; but similarly, if $n$ is not a multiple of 3, $n$-3 isn't either.
 

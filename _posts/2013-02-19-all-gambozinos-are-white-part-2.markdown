@@ -29,7 +29,7 @@ The above proof is based on a very particular type of structure inherent to natu
 
 $$
 \begin{equation}
-0 + 1 + 2 + \ldots + n = \frac{n(n+1)}{2}
+0 + 1 + 2 + \cdots + n = \frac{n(n+1)}{2}
 \end{equation}
 $$
 
@@ -39,7 +39,7 @@ $$0 = \frac{0(0+1)}{2}$$
 
 Then we need to show that, if the statement holds for some $$n$$, then the statement also holds in the subsequent of n, i.e. when $$n + 1$$ is replaced by $$n$$:
 
-$$0 + 1 + \ldots + k + (k + 1) = \frac{(k+1)((k+1)+1)}{2}$$
+$$0 + 1 + \cdots + k + (k + 1) = \frac{(k+1)((k+1)+1)}{2}$$
 
 Using equation 1, we can rewrite the left-hand side, so all that remains is to (algebraically) prove the equality:
 
@@ -53,7 +53,7 @@ The previous application of induction is based on the fact that every natural nu
 
 And here lies the slight of hand! Mathematical induction is similar to the sequential effect of falling dominoes. Put every one of them in a line, and prove that, if an arbitrary domino falls, the one next to him must fall [^4]. Then push the first one and, voilá: *every one of them falls*.
 
-Continue to [Part III](/fun/mathematics/2013/02/19/all-gambozinos-are-white-part-3.html) or read [Part I](/fun/mathematics/2013/02/19/all-gambozinos-are-white.html).
+Continue to [Part III]({% post_url 2013-02-19-all-gambozinos-are-white-part-3 %}) or read [Part I]({% post_url 2013-02-19-all-gambozinos-are-white %}).
 
 
 ----
