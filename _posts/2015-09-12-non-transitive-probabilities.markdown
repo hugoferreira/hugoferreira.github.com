@@ -176,7 +176,7 @@ It was a close call, but near the theoretical probability of ⅔ that Sheldon ca
 | TTH	| HTT	| 3:1 |
 | TTT	| HTT |	7:1 |
 
-A rule of thumb is to end the betting sequence with the first two opponent's choices, and begin it with the opposite of the last choice. An intuitive explanation for this result given in [Wikipedia](https://en.wikipedia.org/wiki/Penney%27s_game) is that:
+A rule of thumb is to end the betting sequence with the first two opponent's choices, and begin it with the opposite of your last choice. An intuitive explanation for this result given in [Wikipedia](https://en.wikipedia.org/wiki/Penney%27s_game) is that:
 
 > ...in any case that the sequence is not immediately the first player's choice, the chances for the first player getting their sequence-beginning, the opening two choices, are usually the chance that the second player will be getting their full sequence. So the second player will most likely "finish before" the first player.
 
