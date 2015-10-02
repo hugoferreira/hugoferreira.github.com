@@ -25,6 +25,7 @@ body {
     -o-font-feature-settings: "liga", "dlig";
     font-feature-settings: "liga", "dlig";
     font-variant-ligatures: contextual;
+    text-rendering: optimizeLegibility;
 }
 
 /**
