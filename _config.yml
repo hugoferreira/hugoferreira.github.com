@@ -14,7 +14,8 @@ linkedin_username: hugoserenoferreira
 simple_search: http://google.com/search
 markdown: kramdown
 
-#gems:
+gems:
+- jekyll-sitemap
 # - octopress-date-format
 # - octopress-social
 # - octopress-quote-tag
