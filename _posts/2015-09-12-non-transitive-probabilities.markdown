@@ -119,7 +119,7 @@ Wikipedia has a nice section of [non-transitive dice](https://en.wikipedia.org/w
     Die C: 6, 6, 2, 2, 2, 2
     Die D: 5, 5, 5, 1, 1, 1
 
-It's easy to check that P(A>B) = P(B>C) = P(C>D) = P(D>A).
+It's easy to check that $P(A>B) = P(B>C) = P(C>D) = P(D>A)$.
 
 ## Penney's game
 
