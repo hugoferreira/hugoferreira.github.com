@@ -245,8 +245,20 @@ pre {
     }
 }
 
-.bigicon {
+.ornament {
+    > svg {
+        display: inline-block;
+        width: 220px;
+        height: 60px;
+        vertical-align: middle;
 
+        path {
+            fill: $alt-color;
+        }
+    }
+}
+
+.bigicon {
     > svg {
         display: inline-block;
         width: 32px;
