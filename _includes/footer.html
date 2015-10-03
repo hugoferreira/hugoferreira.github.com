@@ -2,12 +2,17 @@
   <div class="wrapper-v3">
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-      <h2><center><nav style="font-weight: 600; font-size: 18px;">who am i?</nav></center></h2>
-        I am a Professor of Software Engineering at the Faculty of Engineering, University of Porto. I am also the CTO and Co-Founder of ShiftForward, as well as a Researcher at INESC TEC.
+      <h2><nav>who am i</nav></h2>
+        I am a Professor of Software Engineering at the Faculty of Engineering, University of Porto, CTO and Co-Founder of ShiftForward, and Senior Researcher at INESC TEC.
+      </div>
+
+      <div class="footer-col footer-col-3">
+      <h2><nav>what is this</nav></h2>
+        {{ site.description }}.
       </div>
 
       <div class="footer-col footer-col-2">
-        <h2><center><nav style="font-weight: 600; font-size: 18px;">contacts</nav></center></h2>
+        <h2><nav>contacts</nav></h2>
         <ul class="contact-list social-media-list">
           {% if site.email %}
           <li>
@@ -35,11 +40,6 @@
             </a>
           </li>
         </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-      <h2><center><nav style="font-weight: 600; font-size: 18px;">what is this?</nav></center></h2>
-        {{ site.description }}.
       </div>
     </div>
 

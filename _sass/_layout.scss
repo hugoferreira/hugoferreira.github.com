@@ -64,14 +64,14 @@
       padding-left: 25px; } }
 
 .wrapper-v3 {
-  max-width: calc(1160px);
+  max-width: calc(1060px);
   margin-right: auto;
   margin-left: auto;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1060px) {
   .wrapper-v3 {
-    max-width: calc(1160px);
+    max-width: calc(1060px);
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -232,6 +232,14 @@
     color: #6C6C6C;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
+
+    nav {
+      font-weight: 700;
+      font-size: 18px;
+      font-variant: small-caps;
+      letter-spacing: 0.1em;
+      text-align: left;
+    }
 }
 
 .footer-col {
