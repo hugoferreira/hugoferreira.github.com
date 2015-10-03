@@ -45,16 +45,13 @@ layout: default
     </center>
   </header>
 
-  <div style="padding-left: 200px">
+  <div>
     <ul class="post-list">
       {% for post in site.posts %}
-        <div id="menu" style="height: 30px; width: 670px; float:left; border-bottom: 1px dashed #eee; padding-top: 5px;">
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </div>
-
-        <div id="content" style="text-align: right; height: 30px; width:100px; float:left; border-bottom: 1px dashed #eee; padding-top: 5px;">
-          <span class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span>
-        </div>
+        <li>
+          <a id="menu" class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <span id="content" class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span>
+        </li>
       {% endfor %}
     </ul>
   </div>
