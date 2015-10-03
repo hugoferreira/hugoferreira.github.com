@@ -9,15 +9,19 @@ categories: software machine-learning
 
 Genetic algorithms are search heuristics that mimics the process of natural evolution, by adhering to nature-inspired techniques such as *inheritance*, *mutation*, *selection*, and *crossover*. In this post, we'll see how to build a simple mechanism in [Scala](http://www.scala-lang.org/) that would allow us to evolve specimens.
 
+## Desiderata
+
 Let's first start by defining our contract. Here's some basic assumptions:
 
-* A genetic exploration evolves `Specimens`.
-* Specimens are made up from sequences of `Genes`.
-* There's a finit number of possible genes, hence we'll need a `GenePool`.
-* At any point, we should be able to calculate how *fit* a specimen is; *i.e.* a function from `Specimen` to `Double`.
-* There's a probability of a single gene to mutate during the *crossover*.
-* There's a maximum population (number of `Specimens`) to simulate.
+* A genetic exploration evolves `Specimens`,
+* Specimens are made up from sequences of `Genes`,
+* There's a finite number of possible genes, hence we'll need a `GenePool`,
+* At any point, we should be able to calculate how *fit* a specimen is; *i.e.* a function from `Specimen` to `Double`,
+* There's a probability of a single gene to mutate during the *crossover*,
+* There's a maximum population (number of `Specimens`) to simulate,
 * It is possible to decide when to stop evolving our specimens (`StopCondition`).
+
+## Implementation
 
 The above can be represented by the following class signature:
 
@@ -31,7 +35,7 @@ class GeneticExploration[Gene, Specimen <% Iterable[Gene]]
      stopCondition: List[Specimen] => Boolean)
 {% endhighlight %}
 
-What can we use as specimen? What about a `String` of characters? `Strings` are perfect candidates for specimens according to the above signature, since each indidivual character can act as a `Gene` (*i.e.* a `String` can be viewed as an `Iterable[Char]`). Here's a specimen:
+What can we use as specimen? What about a `String` of characters? `Strings` are perfect candidates for specimens according to the above signature, since each individual character can act as a `Gene` (*i.e.* a `String` can be viewed as an `Iterable[Char]`). Here's a specimen:
 
 {% highlight scala %}
 val target = "as armas e os baroes assinalados"
@@ -100,7 +104,7 @@ def evolution(pool: Pool, epoch: Int = 0): (Pool, Int) = {
 }
 {% endhighlight %}
 
-Mating involves finding the specimens more fit to survive and leave descendency:
+Mating involves finding the specimens more fit to survive and leave descendancy:
 
 {% highlight scala %}
 type MatePool = List[(Specimen, Double)]

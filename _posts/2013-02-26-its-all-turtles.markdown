@@ -27,6 +27,4 @@ Now let us suppose we wanted to add a new property to a Video, like the name of 
 
 The technique of using programs to manipulate other programs, or the running program itself, is known as *meta-programming*, and the high-level design of such system is called a *meta-architecture*.
 
----
-
-  [^1]: Would it be the sixth, I seriously doubt anyone would apply the same prefix five times.
+[^1]: Would it be the sixth, I seriously doubt anyone would apply the same prefix five times.

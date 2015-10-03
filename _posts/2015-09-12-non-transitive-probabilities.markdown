@@ -13,11 +13,8 @@ categories: fun mathematics puzzle
 
 ## Tossing coins
 
-<div class="sidenote" markdown="1">
-
 The *[gambler's fallacy](https://en.wikipedia.org/wiki/Gambler%27s_fallacy)*: the belief that if something happens more frequently than normal during some period, it will happen less frequently in the future.
-
-</div>
+{: .sidenote }
 
 If you thought *"the same"*, then you're right. The probability for both of the above sequences is $\left(\frac{1}{2}\right)^3 = \frac{1}{8} = 0.125$. The coin is memoryless; it doesn't care what was its previous results and so the probability of `HHH` is exactly the same as any other arbitrary sequence of heads and tails such as `THH` or `HTH`. It is only due to human being's ability to easily recognize such patterns that a series of heads, such as `HHHHHHHHHH`, would hardly be recognized as arbitrary as `HTHHTTHTHT`, despite the fact that they both occur once every $2^{10} = 1024$ sequences of tosses. This very simple misinterpretation of statistics has lead to the widespread of the *gambler's fallacy*.
 
@@ -80,9 +77,8 @@ Funny... All have the same expected value, so it shouldn't matter, right?
 
 Let's suppose Penney picks die `B`. Sheldon would pick die `A` and beat her with a probability of ⅔. Penney decides to pick `A` then. That's fine, Sheldon picks `C` and wins with odds of 5:4. Penney is furious and picks `C`! He goes for `B` and wins two thirds of the throws. *Bazinga*™!
 
-<div class="sidenote" markdown="1">
 Recall that a binary relation $R$ over a set $X$ is transitive *iff* $\forall_{a,b,c~\in~X}: aRb \wedge bRc \rightarrow aRc$.
-</div>
+{: .sidenote }
 
 That's strange, isn't it? There's not *best die*; just because `A` is a better die than `B`, and `B` than `C`, it doesn't mean that `A` will be better than `C`. In fact, it will loose most of the times. Behold an example of *non-transitive* probabilities! As always, we can check our sanity with a small Scala program:
 
@@ -138,9 +134,8 @@ Back to tossing coins, why does `THH` occurs first than `HHH`? Let's examine ten
 |  8  | **T H H** | Penney |
 |  9  | **T H H** | Penney |
 
-<div class="sidenote" markdown="1">
 By now it should be evident to the reader [the reason](https://en.wikipedia.org/wiki/Penney%27s_game) Penny seems misspelled.
-</div>
+{: .sidenote }
 
 Spot the pattern? The only way Sheldon wins is if `HHH` occurs right from the beginning. Otherwise, as soon as a `T` comes out, Penney will (eventually) win. `THH` may be regarded here as a kind of *prefix* of `HHH`.
 
@@ -159,9 +154,8 @@ The fact that the game now ends whenever one of them **first completes a certain
 |  8  | H T T **T T H**  | Sheldon |
 |  9  | T **T T H**  | Sheldon |
 
-<div class="sidenote" markdown="1">
 Don't these runs seem shorter than the above ones? Hmm...
-</div>
+{: .sidenote }
 
 It was a close call, but near the theoretical probability of ⅔ that Sheldon calculated. Is there anything Penney can do to win Sheldon's bet? Well, yes... Here's the complete table of best choices:
 
@@ -181,5 +175,3 @@ A rule of thumb is to end the betting sequence with the first two opponent's cho
 > ...in any case that the sequence is not immediately the first player's choice, the chances for the first player getting their sequence-beginning, the opening two choices, are usually the chance that the second player will be getting their full sequence. So the second player will most likely "finish before" the first player.
 
 To be continued...
-
----

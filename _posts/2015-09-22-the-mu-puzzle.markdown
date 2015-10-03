@@ -31,9 +31,8 @@ Assume `x` and `y` denote any arbitrary (sub-)string. Let's play the game a litt
 
 It seems we've reached a point where there's no rule we can apply (well, except rule 2, but that would not change the string `M`). Now, the puzzle asks us: what's the sequence of steps that transforms a `MI` into a `MU`?
 
-<div class="sidenote" markdown="1">
 Why a [BFS](https://en.wikipedia.org/wiki/Breadth-first_search) and not a [DFS](https://en.wikipedia.org/wiki/Depth-first_search)? Suppose you've chosen to use DFS. Now, when would a long sequence of rules be long enough that you should begin to search for alternatives?
-</div>
+{: .sidenote }
 
 We can attempt to solve this problem with a program that does a [breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search), by recursively applying every rule that is applicable (*i.e.* valid) to a reached string and checking if it is equal to `MU`. We would, however, quickly reach the conclusion that the program doesn't stop after a considerable amount of time/steps.
 
@@ -55,16 +54,13 @@ Thinking backwards, one would need to reach a state where three `I`'s exist (or 
 
 `MI` has only one `I`, so the invariant holds in the beginning. If you recall [proof by induction]({% post_url 2013-02-19-all-gambozinos-are-white %}), this is the base case. Now, regardless of the string, does applying rule 1 preserve the invariant? Yes it does, particularly because it doesn't change the number of `I`'s. Same goes for rule 4.
 
-<div class="sidenote" markdown="1">
 In doubt, recall the notion of [divisor](https://en.wikipedia.org/wiki/Divisor) and note that 2 and 3 are prime numbers.
-</div>
+{: .sidenote }
 
 Rule 2 doubles the number of `I`'s present in a string. However, if $n$ is not a multiple of 3, 2$n$ is still not a multiple of 3 either. Rule 3, on the other hand, reduces the number of `I`'s by 3; but similarly, if $n$ is not a multiple of 3, $n$-3 isn't either.
 
 Hence, we are forced to accept that, **regardless the sequence of rules we try, by beginning with `MI` we would _never_ be able to reach a state where producing a `MU` is a possibility.**
 
 Q.E.D.
-
----
 
 [^1]: I first learned about this puzzle in the amazing Douglas Hofstadter's book "[*Gödel, Escher, Bach: An Eternal Golden Braid*](https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach)", and I've been using it in the last years as a way to introduce formal proofs via invariant preservation. As always, one can find more information about this puzzle in [Wikipedia](https://en.wikipedia.org/wiki/MU_puzzle).

@@ -37,5 +37,3 @@ The two scenarios are strictly equivalent.
 ## Intuition
 
 Half the times the flippant member agrees with the first member. In these cases the conditional probability of a correct decision is $$p$$. The other half it agrees with the second member, where the conditional probability is also $$p$$, thus $$\frac{1}{2}p + \frac{1}{2}p = p$$.
-
----

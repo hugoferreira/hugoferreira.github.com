@@ -55,9 +55,9 @@ If something doesn't work, don't rush calling your teacher or giving up. Read yo
 
 Original research is only required for a PhD. And even at that point, ideas don't usually appear out of nowhere. Research is typically an iterative, incremental process, introducing small changes to an already existing body of knowledge.
 
-Having said that, cite your sources. And if you don't have sources, then learn to find them... à-priori! Learn to use Google and Google Scholar.
+Having said that, cite your sources. And if you don't have sources, then learn to find them... *a priori*! Learn to use Google and Google Scholar.
 
-Also, unless stated, it's not wrong to reuse - *au contraire*, it may reveal the pragmatism you'll need in the industrial world. But, by all means, cite them!!! Credit where credit is due. And if you don't like the culture of copy-paste - which you shouldn’t - then use your newly gained time to improve upon it.
+Also, unless stated, it's not wrong to reuse - *au contraire*, it may reveal the pragmatism you'll need in the industrial world. But, by all means, cite them!!! Credit where credit is due. And if you don't like the culture of copy-paste - which you shouldn't - then use your newly gained time to improve upon it.
 
 Still, Google is not a valid source *per se*. Point to the actual pages you've used, and when appropriate, use those references inside the text of your report. Otherwise, it’s just a bunch of links.
 

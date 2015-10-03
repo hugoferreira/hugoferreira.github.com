@@ -85,8 +85,14 @@ h1, h2, h3, h4, h5, h6 {
 /**
  * Footnotes
  */
-.footnotes > ol {
+.footnotes {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 1em;
+  margin-top: 2em;
+
+  > ol {
    margin-left: 0px;
+  }
 }
 
 sup > .footnote {

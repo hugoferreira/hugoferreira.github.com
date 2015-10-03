@@ -34,5 +34,3 @@ I don't want to be misunderstood. Our country has amazing technical skills, prob
 * To increase the **quantity** of computer science students (which, facing the current demand, is directly translated into increasing the _numerus clausus_);
 * To increase the **efficiency** of young graduates, by adjusting their expectations to the market expectations; and
 * To increase the **quality** and keep an updated curricula, strengthening its status as scientific leaders per excellence.
-
----

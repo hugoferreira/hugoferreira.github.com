@@ -24,5 +24,3 @@ $$
 $$
 
 I still don't know how to compute the inverse of this CDF, but a numerical approximation gives us 252. In [Maxima](http://maxima.sourceforge.net/), one can use: `quantile_negative_binomial(0.5, 1, 1/365);`
-
----

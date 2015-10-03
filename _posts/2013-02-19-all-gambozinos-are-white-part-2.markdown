@@ -13,9 +13,8 @@ categories: fun mathematics
 
 In inductive reasoning, the premises do not guarantee the conclusion, although they may give it some probability or plausibility. In order to prove an universal claim one have to observe every instance of that claim, or else assume it as a (potentially refutable) hypothesis.
 
-<div class="sidenote" markdown="1">
 The Goldbach conjecture, _every even number is a sum of two primes_, is a fine example of how mathematical induction is different from simple induction. It states that *every even integer greater than 2 can be written as the sum of two primes,* e.g. 10 = 7 + 3. But despite no even number ever found violates this rule, the conjecture remains mathematically unproven.
-</div>
+{: .sidenote }
 
 But, mathematicians keep proving things about numbers without actually observing every one of them. For example, while it is only believed that every even number is a sum of two primes, it is actually known that there is an infinite number of primes. So, if it is true that mathematical induction involves a sort of generalization, how can we ensure its validity within a logical framework?
 
@@ -54,8 +53,5 @@ The previous application of induction is based on the fact that every natural nu
 And here lies the slight of hand! Mathematical induction is similar to the sequential effect of falling dominoes. Put every one of them in a line, and prove that, if an arbitrary domino falls, the one next to him must fall [^4]. Then push the first one and, voilá: *every one of them falls*.
 
 Continue to [Part III]({% post_url 2013-02-19-all-gambozinos-are-white-part-3 %}) or read [Part I]({% post_url 2013-02-19-all-gambozinos-are-white %}).
-
-
-----
 
 [^4]: This may seem tricky, but you could assume some form of consistent newtonian physics, and a fixed distance between pieces.

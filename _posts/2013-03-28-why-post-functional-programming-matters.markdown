@@ -27,7 +27,7 @@ But we don't need to go into "heavy" formal systems, such as Coq or Isabelle, to
 
   [^4]: And yet before another exodus *en masse*, do please consider that Java and C# are also part of my courses' syllabus.
 
-Notwithstanding, most of the tools that we use today are not LISP based. But most are C based, and despite the fundamental differences Alan Kay introduced with Object-Oriented languages, they are (still) an imperative variant. And with imperative languages, any relation between the math behind the problem, and the implementation artefacts (source-code), is the sole responsibility of the developer. We know the mathematical model behind the QuickSort algorithm, and of the binary search in a list. But none of these relations "emerge" when we contemplate (or glance) at its source-code in C. It is, in its most fundamental sense, a list of commands that a system "rigorously" obeys [^5], though it represents an extremely close model of what the CPU is doing, and as such it has enjoyed outstanding run-time performance and massive adoption [^6].
+Notwithstanding, most of the tools that we use today are not LISP based. But most are C based, and despite the fundamental differences Alan Kay introduced with Object-Oriented languages, they are (still) an imperative variant. And with imperative languages, any relation between the math behind the problem, and the implementation artifacts (source-code), is the sole responsibility of the developer. We know the mathematical model behind the QuickSort algorithm, and of the binary search in a list. But none of these relations "emerge" when we contemplate (or glance) at its source-code in C. It is, in its most fundamental sense, a list of commands that a system "rigorously" obeys [^5], though it represents an extremely close model of what the CPU is doing, and as such it has enjoyed outstanding run-time performance and massive adoption [^6].
 
   [^5]: Obeying rigorously doesn't make the act rigorous.
 
@@ -176,5 +176,3 @@ So, post-functionalism is about realizing that the *ecosystem* matters. Instead 
   [^30]: To be completely honest, functional-programming also comes riddled with mathematical jargon and category-theory concepts that may make your head explode. Your mileage may vary...
 
 (Post-)Functionalism is now a reality. To some extent, it doesn't really matter if you've been evangelized by this article. I've claimed that (post-)functional programming will give you better, more robust, more scalable, more modular programs. It would make you better cope with the specific needs of the fast growing industry that is the *ad-tech*, because the issues *ad-tech* has (high-availability, high-scalability, robustness, fault-tolerance, adaptiveness) *are* the issues that FP learned to solve decades ago. But, perhaps, the most pragmatic reason why post-functional programming *matters* is because you will no longer be able to ignore it.
-
-----

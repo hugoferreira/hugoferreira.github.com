@@ -69,5 +69,3 @@ $$
 
 Note that this merely proves that _"there’s a strategy that can improve that probability to more than 0.3"_.
 A proof of optimality is not presented though it would be the actual answer to _"The prisoners are allowed to collude before hand and devise a strategy to **maximize** the chances of releasing each and every prisoner. What is their strategy?"_. A [proof of the optimality](http://www.cl.cam.ac.uk/~gw104/Locker_Puzzle.pdf) of this strategy was provided in 2006 by Eugene Curtin and Max Warshauer.
-
----

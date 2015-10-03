@@ -21,13 +21,6 @@ And he does make a point in the absurdity of our own _habits_:
 
 He goes on with a very rational critique on religion and the _belief of an afterlife_. He also makes a very elquent critique on Science. Being a _scientific positivist_ myself, I cannot completely agree with his position, but as a _human_, I cannot help but be delighted by his poetry:
 
-> And here are trees and I know their gnarled surface, water and I feel its taste. These scents of grass and stars
-at night, certain evenings when the heart relaxes — how shall I negate this world whose power and strength I
-feel? Yet all the knowledge on earth will give me nothing to assure me that this world is mine. You describe it to
-me and you teach me to classify it. You enumerate its laws and in my thirst for knowledge I admit that they are
-true. You take apart its mechanism and my hope increases. At the final stage you teach me that this wondrous and multicolored universe can be reduced to the atom and that the atom itself can be reduced to the
-electron. All this is good and I wait for you to continue. But you tell me of an invisible planetary system in
-which electrons gravitate around a nucleus. You explain this world to me with an image. I realize then that you
-have been reduced to poetry: I shall never know.
+> And here are trees and I know their gnarled surface, water and I feel its taste. These scents of grass and stars at night, certain evenings when the heart relaxes — how shall I negate this world whose power and strength I feel? Yet all the knowledge on earth will give me nothing to assure me that this world is mine. You describe it to me and you teach me to classify it. You enumerate its laws and in my thirst for knowledge I admit that they are true. You take apart its mechanism and my hope increases. At the final stage you teach me that this wondrous and multicolored universe can be reduced to the atom and that the atom itself can be reduced to the electron. All this is good and I wait for you to continue. But you tell me of an invisible planetary system in which electrons gravitate around a nucleus. You explain this world to me with an image. I realize then that you have been reduced to poetry: I shall never know.
 
 I still haven't finished the book so I'll come back to this post in the future.
