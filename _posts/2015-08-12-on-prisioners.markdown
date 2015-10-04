@@ -9,7 +9,7 @@ categories: fun mathematics puzzle
 
 > A room has 100 boxes labelled 1 through 100. The prison has 100 prisoners also labelled 1 through 100. The number of the 100 prisoners have been placed in these boxes by the warden. The prisoners shall visit the room one by one. Each prisoner is allowed to inspect the contents of at most 50 boxes, one after the other and leave the room with no communication with other prisoners. If the prisoner discovers his own number in the boxes he inspects, he is released. The prisoners are allowed to collude before hand and devise a strategy to **maximize the chances of releasing each and every prisoner**. What is their strategy?
 
-If you think on the naive strategy of randomly choosing 50 boxes, then the probability that _every prisoner gets it right_ is $0.5^{100}$ or $8 × 10^{−31}$. There's a strategy, however, that can improve that probability to more than 30%! The solution to this amazing puzzle is explained below by my friend _I.M.Timóteo_ from the University of Cambridge:
+If you think on the naïve strategy of randomly choosing 50 boxes, then the probability that _every prisoner gets it right_ is $0.5^{100}$ or $8 × 10^{−31}$. There's a strategy, however, that can improve that probability to more than 30%! The solution to this amazing puzzle is explained below by my friend _I.M.Timóteo_ from the University of Cambridge:
 
 ## First remarks
 

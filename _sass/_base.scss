@@ -27,6 +27,10 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+p.small {
+    font-variant: small-caps;
+}
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -239,7 +243,6 @@ pre {
  * Icons
  */
 .icon {
-
     > svg {
         display: inline-block;
         width: 16px;
@@ -261,6 +264,8 @@ pre {
 
         path {
             fill: $alt-color;
+            fill-rule: evenodd;
+            shape-rendering: geometricPrecision;
         }
     }
 }

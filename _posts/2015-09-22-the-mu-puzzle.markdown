@@ -42,7 +42,7 @@ In these situations, one might begin to wonder: "*regardless of the sequence of 
 
 Should the reader begin to be convinced that *maybe* this puzzle doesn't have a solution, how would one proceed to mathematically prove it?
 
-One common strategy, particularly when *loops* or *recursion* is part of the problem, is to (1) establish a *proposition* that asserts something about the underlying formal system and (2) show that if the *proposition* holds for a certain string, it would also hold for all strings that are the result of applying the rules. Such kind of *proposition* is called an [*invariant*](https://en.wikipedia.org/wiki/Invariant_(computer_science)), for obvious reasons.
+One common strategy, particularly when *loops* or *recursion* is part of the problem, is to (1) establish a *proposition* that asserts something about the underlying formal system and (2) show that if the *proposition* holds for a certain string, it would also hold for all strings that are the result of applying the rules. Such kind of *proposition* is called an [*invariant*](https://en.wikipedia.org/wiki/Invariant_(computer_science)), for obvious reasons:
 
 > ... (an) invariant is a property, held by a class of mathematical objects, which remains unchanged when transformations of a certain type are applied to the objects.
 
@@ -59,8 +59,6 @@ In doubt, recall the notion of [divisor](https://en.wikipedia.org/wiki/Divisor) 
 
 Rule 2 doubles the number of `I`'s present in a string. However, if $n$ is not a multiple of 3, 2$n$ is still not a multiple of 3 either. Rule 3, on the other hand, reduces the number of `I`'s by 3; but similarly, if $n$ is not a multiple of 3, $n$-3 isn't either.
 
-Hence, we are forced to accept that, **regardless the sequence of rules we try, by beginning with `MI` we would _never_ be able to reach a state where producing a `MU` is a possibility.**
-
-Q.E.D.
+Hence, we are forced to accept that, **regardless the sequence of rules we try, by beginning with `MI` we would _never_ be able to reach a state where producing a `MU` is a possibility.** ∎
 
 [^1]: I first learned about this puzzle in the amazing Douglas Hofstadter's book "[*Gödel, Escher, Bach: An Eternal Golden Braid*](https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach)", and I've been using it in the last years as a way to introduce formal proofs via invariant preservation. As always, one can find more information about this puzzle in [Wikipedia](https://en.wikipedia.org/wiki/MU_puzzle).

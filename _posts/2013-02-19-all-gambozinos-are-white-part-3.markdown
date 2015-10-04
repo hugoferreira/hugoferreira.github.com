@@ -21,7 +21,7 @@ $$\forall_{P, (b, k, n) \in \mathbb{N}} [\exists_b P(b) \wedge (\forall_{k \geq 
 
 This form of induction does not necessarily involve numbers; one can actually generalize it to any type of *well-founded* structure, i.e., any structure whose elements relate to each other in a finite number of ways, essentially creating a "chain". Back to *gambozinos*, imagine that you are able to assert that (i) if a *gambozino* is white, its descendants will always be white, and (ii) the first two *gambozinos* to exist were white [^1]. Then, by the nature of the structure that rules the *gambozino* ascendency, all *gambozinos* are proven to be white [^2].
 
-[^1]: There are actually premises that we've disregarded for the sake of simplicity, such as (iii) except for the first two of them, a *gambozino* can only exist through sexual reproduction, and (iv) the parenthood of a *gambozino* is an anti-simetric, anti-reflexive and anti-transitive relation.
+[^1]: There are actually premises that we've disregarded for the sake of simplicity, such as (iii) except for the first two of them, a *gambozino* can only exist through sexual reproduction, and (iv) the parenthood of a *gambozino* is an [antisymmetric](https://en.wikipedia.org/wiki/Antisymmetric_relation), [anti-reflexive](https://en.wikipedia.org/wiki/Reflexive_relation) and [anti-transitive](https://en.wikipedia.org/wiki/Intransitivity#Antitransitivity) relation.
 
 [^2]: Unless genetic manipulation is allowed, but then you would be attacking the premise, not the conclusion.
 

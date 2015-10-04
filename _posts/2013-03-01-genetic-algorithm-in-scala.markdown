@@ -132,7 +132,7 @@ def popReproduction(matePool: MatePool): Pool =
     crossover(monteCarlo(matePool), monteCarlo(matePool))).toList
 {% endhighlight %}
 
-A naive implementation of the Monte Carlo method could be coded as:
+A naïve implementation of the Monte Carlo method could be coded as:
 
 {% highlight scala %}
 def monteCarlo[A](weightedList: List[(A, Double)]): A =
