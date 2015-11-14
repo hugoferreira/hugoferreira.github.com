@@ -57,7 +57,6 @@ $$
 P(\text{permutation has a cycle of length} > 50) = \sum_{k=51}^{100}{\frac{1}{k}} ≈ 0.68817
 $$
 
-
 Finally we have:
 
 $$
@@ -69,3 +68,44 @@ $$
 
 Note that this merely proves that _"there’s a strategy that can improve that probability to more than 0.3"_.
 A proof of optimality is not presented though it would be the actual answer to _"The prisoners are allowed to collude before hand and devise a strategy to **maximize** the chances of releasing each and every prisoner. What is their strategy?"_. A [proof of the optimality](http://www.cl.cam.ac.uk/~gw104/Locker_Puzzle.pdf) of this strategy was provided in 2006 by Eugene Curtin and Max Warshauer.
+
+## Source code
+
+If you want to test the strategy, here's a Scala program that simulates it:
+
+{% highlight scala %}
+val trials = 10
+val n = 4
+val k = n / 2
+
+/* Naive
+val experiences = (0 to trials - 1) map { _ =>
+  val boxes = Random.shuffle(0 to n - 1).toList
+  ((0 to n - 1) map { prisoner =>
+    Random.shuffle(0 to n - 1).take(k).exists(b => boxes(b) == prisoner)
+  }).forall(identity)
+} */
+
+/* Cycle Exploitation */
+val experiences = (0 to trials - 1) map { trial =>
+  val boxes = Random.shuffle(0 to n - 1).toList
+  println(s"----- New trial $trial -----")
+  ((0 to n - 1) map { prisoner =>
+    var t = 0
+    var found = false
+    var nextBox = prisoner
+    while ((t < k) && !found) {
+      print(s"Prisoner $prisoner @ attempt $t is looking in box $nextBox... ")
+      nextBox = boxes(nextBox)
+      println(s"found $nextBox")
+      found = nextBox == prisoner
+      t += 1
+    }
+    found
+  }).forall(identity)
+}
+
+val p = experiences.count(identity).toDouble / trials
+println(p)
+
+{% endhighlight %}
