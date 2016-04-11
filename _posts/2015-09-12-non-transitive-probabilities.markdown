@@ -24,7 +24,7 @@ Let's change the game a little bit:
 
 In other words, what's the probability for `HHH` and `THH` occurring **first** in a potentially infinite sequence of coin tosses? Most people would assume to be the same, but in fact `THH` has an higher chance of winning than `HHH`!.. *Say wat*? If you don't believe me, run the following Scala program:
 
-{% highlight scala %}
+```scala
 import scala.util.Random
 
 val choices = List('H, 'T)
@@ -45,12 +45,14 @@ def findWinner(p1r: List[Symbol], p2r: List[Symbol]): Symbol = {
 val simulate = (1 to 10000).map { _ => findWinner(p1, p2) }
 println("Sheldon won " + simulate.count { _ == 'P1 })
 println("Penney won  " + simulate.count { _ == 'P2 })
-{% endhighlight %}
+```
 
 Here's the results for one of the runs:
 
-    Sheldon won 3685
-    Penney won  6315
+```
+Sheldon won 3685
+Penney won  6315
+```
 
 In fact, for every sequence Sheldon bets, Penney seems to be able to choose a better one; something that seems to be making Sheldon twitch his face.
 
@@ -60,9 +62,11 @@ Before explaining what is going on, let's try a different game:
 
 > Sheldon is now tired of loosing with Penney, and proposes a different game. He shows her three dice and says that each one of them should pick one die; the one that rolls the higher value wins. Sheldon even suggests Penney to go first. Upon observation, Penney realizes these are not normal dice:
 
-    Die A: 1 1 4 4 4 4
-    Die B: 3 3 3 3 3 3
-    Die C: 2 2 2 2 5 5
+```
+Die A: 1 1 4 4 4 4
+Die B: 3 3 3 3 3 3
+Die C: 2 2 2 2 5 5
+```
 
 Which die would Penney pick? Some people would choose the one that has an higher expected value, of course... But doing the math:
 
@@ -82,7 +86,7 @@ Recall that a binary relation $R$ over a set $X$ is transitive *iff* $\forall_{a
 
 That's strange, isn't it? There's not *best die*; just because `A` is a better die than `B`, and `B` than `C`, it doesn't mean that `A` will be better than `C`. In fact, it will loose most of the times. Behold an example of *non-transitive* probabilities! As always, we can check our sanity with a small Scala program:
 
-{% highlight scala %}
+```scala
 import scala.util.Random
 
 val dieA = List(1, 1, 4, 4, 4, 4)
@@ -98,22 +102,26 @@ val CvsA = (1 to 10000).map { _ => if (roll(dieC) > roll(dieA)) 'C else 'A }
 println(s"A (${AvsB.count(_ == 'A)}) vs B (${AvsB.count(_ == 'B)})")
 println(s"B (${BvsC.count(_ == 'B)}) vs C (${BvsC.count(_ == 'C)})")
 println(s"C (${CvsA.count(_ == 'C)}) vs A (${CvsA.count(_ == 'A)})")
-{% endhighlight %}
+```
 
 Here are the results from one of the runs:
 
-    A (6641) vs B (3359)
-    B (6650) vs C (3350)
-    C (5586) vs A (4414)
+```
+A (6641) vs B (3359)
+B (6650) vs C (3350)
+C (5586) vs A (4414)
+```
 
 In fact, it's very easy to check this out. There are always $6^2 = 36$ possible outcomes in each pair of throws. In `A` vs `B`, `A` wins when it rolls a 4 (24 combinations) and looses when it rolls a 1 (12 combinations). In `C` vs `B`, `C` only wins when it rolls a 5 (12 combinations). In `C` vs `A`, a 2 will win against a 1 (8 combinations), and a 5 will win against everything else (12 combinations).  
 
 Wikipedia has a nice section of [non-transitive dice](https://en.wikipedia.org/wiki/Nontransitive_dice), including a 4 dice set invented by Bradley Efron, where there's always a die that beats another one with a probability of ⅔:
 
-    Die A: 4, 4, 4, 4, 0, 0
-    Die B: 3, 3, 3, 3, 3, 3
-    Die C: 6, 6, 2, 2, 2, 2
-    Die D: 5, 5, 5, 1, 1, 1
+```
+Die A: 4, 4, 4, 4, 0, 0
+Die B: 3, 3, 3, 3, 3, 3
+Die C: 6, 6, 2, 2, 2, 2
+Die D: 5, 5, 5, 1, 1, 1
+```
 
 It's easy to check that $P(A>B) = P(B>C) = P(C>D) = P(D>A)$.
 

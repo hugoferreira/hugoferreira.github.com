@@ -23,36 +23,42 @@ Let's attempt to clarify the strong hypothesis of the dust theory:
 
 The last point can be a little confusing (and wildly controversial), so allow me to illustrate with an example; suppose that a sub-structure of one's consciousness has the following sequence of states:
 
-    0. Birth
-    1. {... 1, 2, 3, 4, 5 ...}
-    2. {... 2, 3, 4, 5, 6 ...}
-    3. {... 3, 4, 5, 6, 7 ...}
-    4. {... 4, 5, 6, 7, 8 ...}
-    5. Death
+```
+0. Birth
+1. {... 1, 2, 3, 4, 5 ...}
+2. {... 2, 3, 4, 5, 6 ...}
+3. {... 3, 4, 5, 6, 7 ...}
+4. {... 4, 5, 6, 7, 8 ...}
+5. Death
+```
 
 Each state contains all the information relevant to a subjective observer to perceive self-consciousness, including *one's relevant memories and external stimuli*. At this point I must establish an important premise, which is that *any universe that produces (either by computation or by chance) the above sub-structure would be producing my own consciousness*.
 
 Note there's no particular time isomorphism (let alone scale invariance) in this depiction, but if it helps, one can imagine the observer was 20 at state 1, 40 at state 2... However, imagine that a computer (or an arbitrary universe) produces the following:
 
-    0. Birth
-    0. LONG PAUSE
-    1. {... 1, 2, 3, 4, 5 ...}
-    0. LONG PAUSE
-    2. {... 2, 3, 4, 5, 6 ...}
-    0. LONG PAUSE
-    3. {... 3, 4, 5, 6, 7 ...}
-    0. LONG PAUSE
-    4. {... 4, 5, 6, 7, 8 ...}
-    5. Death
+```
+0. Birth
+0. LONG PAUSE
+1. {... 1, 2, 3, 4, 5 ...}
+0. LONG PAUSE
+2. {... 2, 3, 4, 5, 6 ...}
+0. LONG PAUSE
+3. {... 3, 4, 5, 6, 7 ...}
+0. LONG PAUSE
+4. {... 4, 5, 6, 7, 8 ...}
+5. Death
+```
 
 If every state produces exactly the same sub-structure, then no matter how fast or slow these sub-structures are being produced, one's consciousness would still be *experiencing* the same as before. Now imagine the following:
 
-    0. Birth
-    4. {... 4, 5, 6, 7, 8 ...}
-    3. {... 3, 4, 5, 6, 7 ...}
-    2. {... 2, 3, 4, 5, 6 ...}
-    1. {... 1, 2, 3, 4, 5 ...}
-    5. Death
+```
+0. Birth
+4. {... 4, 5, 6, 7, 8 ...}
+3. {... 3, 4, 5, 6, 7 ...}
+2. {... 2, 3, 4, 5, 6 ...}
+1. {... 1, 2, 3, 4, 5 ...}
+5. Death
+```
 
 Despite the reversed order, if my consciousness relies entirely in any particular "state", at point 2 one would still be 40, with all the memories present in a non-reversed way. In fact, one can even mix these states or produce them out-of-order, but the *subjective observer* would still be experiencing the same, from its own point of view.
 

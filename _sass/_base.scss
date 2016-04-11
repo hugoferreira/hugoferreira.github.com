@@ -172,14 +172,14 @@ pre,
 code {
     font-size: 14px;
     font-weight: 300;
-    background-color: #f9f2f4;
-    border-radius: 4px;
-    color: #c7254e;
     font-family: 'Source Code Pro', monospace;
+    border: 0;
+    border-radius: 4px;
 }
 
 code {
     padding: 1px 5px;
+    background-color: #f9f2f4;
 }
 
 pre {
@@ -190,11 +190,10 @@ pre {
     border-radius: 8px;
 
     > code {
-        color: #3D3D3D;
         background-color: #eee;
-        border: 0;
+        display: block;
         padding-right: 0;
-        padding-left: 0;
+        padding-left: 5px;
     }
 }
 

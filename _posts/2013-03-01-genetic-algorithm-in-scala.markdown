@@ -25,7 +25,7 @@ Let's first start by defining our contract. Here's some basic assumptions:
 
 The above can be represented by the following class signature:
 
-{% highlight scala %}
+```scala
 class GeneticExploration[Gene, Specimen <% Iterable[Gene]]
     (val mutationRate: Double,
      val population: Int,
@@ -33,129 +33,129 @@ class GeneticExploration[Gene, Specimen <% Iterable[Gene]]
      specimenBuilder: Iterable[Gene] => Specimen,
      fitnessF: Specimen => Double,
      stopCondition: List[Specimen] => Boolean)
-{% endhighlight %}
+```
 
 What can we use as specimen? What about a `String` of characters? `Strings` are perfect candidates for specimens according to the above signature, since each individual character can act as a `Gene` (*i.e.* a `String` can be viewed as an `Iterable[Char]`). Here's a specimen:
 
-{% highlight scala %}
+```scala
 val target = "as armas e os baroes assinalados"
-{% endhighlight %}
+```
 
 And here's the corresponding gene pool:
 
-{% highlight scala %}
+```scala
 val genePool = Array('a','b','c','d','e','f','g','h',
                      'i','j','k','l','m','n','o','p',
                      'q','r','s','t','u','v','w','x',
                      'y','z',' ')
-{% endhighlight %}
+```
 
 Using `String` specimens makes calculating the fitness fairly straightforward:
 
-{% highlight scala %}
+```scala
 def fitness(src: String): Double = src.zip(target).count { case (s, t) => s == t }
-{% endhighlight %}
+```
 
 In other words, the fitness of a string is equal to the number of correct characters according to our target goal. Sometimes we'll need new random genes from our gene pool. Let's build an infinite stream of them:
 
-{% highlight scala %}
+```scala
 def randomGenes: Stream[Gene] = genePool(Random.nextInt(genePool.length)) #:: randomGenes
-{% endhighlight %}
+```
 
 ... which makes generating a random new specimen also straightforward:
 
-{% highlight scala %}
+```scala
 def newSpecimen(len: Int): Specimen = specimenBuilder(randomGenes.take(len))
-{% endhighlight %}
+```
 
 It seems we have a lot of things in place. Let's start by initializing a `GeneticExploration` class:
 
-{% highlight scala %}
+```scala
 val petri = new GeneticExploration[Char, String](
     0.01, 500, genePool,           // rate of mutation, max population and gene pool
     cs => new String(cs.toArray),  // how to build a specimen from genes
     fitness,                       // the fitness function
     _.exists(_ == target)          // the stop condition
 )
-{% endhighlight %}
+```
 
 Where to now? We need to evolve specimens, but for that, we'll need an initial pool of primordial specimens. Let's capture the usage before implementing those functions:
 
-{% highlight scala %}
+```scala
 val evolvedSpecimens = petri.evolution(petri.randomPool(archetype))
-{% endhighlight %}
+```
 
 An `archetype` is simply a seed specimen from which the primordial soup is made of, as seen in the implementation of `randomPool`:
 
-{% highlight scala %}
+```scala
 type Pool = List[Specimen]
 
 def randomPool(archetype: Specimen): Pool =
   (1 to population).map(_ => newSpecimen(archetype.size)).toList
-{% endhighlight %}
+```
 
-It is time to code the *"main"* function, which basically evolves a pool (by mating its specimens) until the stop condiction is met:
+It is time to code the *"main"* function, which basically evolves a pool (by mating its specimens) until the stop condition is met:
 
-{% highlight scala %}
+```scala
 def evolution(pool: Pool, epoch: Int = 0): (Pool, Int) = {
     val newGeneration = popReproduction(matePool(pool))
     if (stopCondition(newGeneration)) (newGeneration, epoch)
     else evolution(newGeneration, epoch + 1)
 }
-{% endhighlight %}
+```
 
-Mating involves finding the specimens more fit to survive and leave descendancy:
+Mating involves finding the specimens more fit to survive and leave offspring:
 
-{% highlight scala %}
+```scala
 type MatePool = List[(Specimen, Double)]
 
 def matePool(pool: Pool): MatePool = {
     val fitnesses = pool.map(fitnessF).toArray
     pool.zip(renormalize(fitnesses))
 }
-{% endhighlight %}
+```
 
 With the typical renormalization (i.e., the sum of all fitnesses in the pool must be equal to 1):
 
-{% highlight scala %}
+```scala
 def renormalize(vector: Array[Double]): Array[Double] = {
     val sum = vector.sum
     vector.map(_ / sum)
 }
-{% endhighlight %}
+```
 
 How do the population as an whole reproduce? Well, mates are selected from the mate pool using their fitness as the probability of being chosen:
 
-{% highlight scala %}
+```scala
 def popReproduction(matePool: MatePool): Pool =
   (1 to population).par.map(_ =>
     crossover(monteCarlo(matePool), monteCarlo(matePool))).toList
-{% endhighlight %}
+```
 
 A naïve implementation of the Monte Carlo method could be coded as:
 
-{% highlight scala %}
+```scala
 def monteCarlo[A](weightedList: List[(A, Double)]): A =
   weightedList(Random.nextInt(weightedList.length)) match {
      case (s, f) if f > Random.nextFloat => s
      case _ => monteCarlo(weightedList)
   }
-{% endhighlight %}
+```
 
 The crossing over of two specimens is here accomplished by randomly recombining their genes:
 
-{% highlight scala %}
+```scala
 def crossover(a: Specimen, b: Specimen): Specimen =
   mutate(specimenBuilder(a.zip(b).map(gene =>
     if (Random.nextFloat >= 0.5) gene._1 else gene._2)))
-{% endhighlight %}
+```
 
 ... though sometimes mutations occur, i.e., random genes that were not inherited:
 
-{% highlight scala %}
+```scala
 def mutate(s: Specimen): Specimen =
   specimenBuilder(s.map(gene =>
     if (mutationRate > Random.nextFloat) randomGenes.head else gene))
-{% endhighlight %}
+```
 
 And that's it! Go ahead and try... You can use the `target` as the `archetype`. See how many generations does it take for the algorithm to find out the very first phrase from "[*Os Lusíadas*](http://en.wikipedia.org/wiki/Os_Lus%C3%ADadas)".

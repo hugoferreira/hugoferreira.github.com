@@ -20,14 +20,16 @@ Let's first summarize the rules in a nice table, so that we can be clear about t
 
 Assume `x` and `y` denote any arbitrary (sub-)string. Let's play the game a little bit. Suppose we start with the string `MUI`:
 
-    MUI                     { axiom }
-    MUIU                    { by applying rule 1 }
-    MUIUUIU                 { rule 2 }
-    MUIUUIUUIU              { 2 }
-    MUIIUUIU                { 4 }
-    MUIIIU                  { 4 }
-    MUU                     { 3 }
-    M                       { 4 }
+```
+MUI                     { axiom }
+MUIU                    { by applying rule 1 }
+MUIUUIU                 { rule 2 }
+MUIUUIUUIU              { 2 }
+MUIIUUIU                { 4 }
+MUIIIU                  { 4 }
+MUU                     { 3 }
+M                       { 4 }
+```
 
 It seems we've reached a point where there's no rule we can apply (well, except rule 2, but that would not change the string `M`). Now, the puzzle asks us: what's the sequence of steps that transforms a `MI` into a `MU`?
 

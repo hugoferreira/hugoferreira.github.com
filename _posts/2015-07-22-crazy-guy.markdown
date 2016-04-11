@@ -28,7 +28,7 @@ This is, either the first occupied $i^{th}$ place, or the second, or the third, 
 
 For fun, here's a Scala program that simulates this puzzle:
 
-{% highlight scala %}
+```scala
 val sims = 100000
 val size = 100
 
@@ -43,4 +43,4 @@ val size = 100
 
   a.last._2 == b(size)
 } / sims.toFloat
-{% endhighlight %}
+```

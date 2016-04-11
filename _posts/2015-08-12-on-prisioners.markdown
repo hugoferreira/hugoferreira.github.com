@@ -73,7 +73,7 @@ A proof of optimality is not presented though it would be the actual answer to _
 
 If you want to test the strategy, here's a Scala program that simulates it:
 
-{% highlight scala %}
+```scala
 val trials = 10
 val n = 4
 val k = n / 2
@@ -107,5 +107,4 @@ val experiences = (0 to trials - 1) map { trial =>
 
 val p = experiences.count(identity).toDouble / trials
 println(p)
-
-{% endhighlight %}
+```
