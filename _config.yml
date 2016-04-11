@@ -11,6 +11,7 @@ url: "http://hugoferreira.github.io" # the base hostname & protocol for your sit
 twitter_username: ferreira_hugo
 github_username: hugoferreira
 linkedin_username: hugoserenoferreira
+facebook_username: hugo.sereno.ferreira
 simple_search: http://google.com/search
 markdown: kramdown
 highlighter: rouge
