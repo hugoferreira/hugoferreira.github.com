@@ -56,6 +56,7 @@ The above proof is based on a very particular type of structure inherent to natu
 $$
 \begin{equation}
 0 + 1 + 2 + \cdots + n = \frac{n(n+1)}{2}
+\label{eq:main}
 \end{equation}
 $$
 
@@ -67,11 +68,11 @@ Then we need to show that, if the statement holds for some $$n$$, then the state
 
 $$0 + 1 + \cdots + k + (k + 1) = \frac{(k+1)((k+1)+1)}{2}$$
 
-Using equation 1, we can rewrite the left-hand side, so all that remains is to (algebraically) prove the equality:
+Using equation $\eqref{eq:main}$, we can rewrite the left-hand side, so all that remains is to (algebraically) prove the equality:
 
 $$\frac{k(k+1)}{2} + (k + 1) = \frac{(k+1)((k+1)+1)}{2}$$
 
-which is trivial. Therefore (1) holds. ∎
+which is trivial. Therefore $\eqref{eq:main}$ holds. ∎
 
 ### The Falling of Dominoes
 
