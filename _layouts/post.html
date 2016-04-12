@@ -6,7 +6,12 @@ layout: layout
 
   <header class="post-header">
     <span itemprop="name"><h1 class="post-title"><center>{{ page.title }}</center></h1></span>
-    <p class="post-meta"><center>{{ page.date | date: "%-d %b %Y" }}{% if page.meta %} • {{ page.meta }}{% endif %}</center></p>
+    <p class="post-meta"><center>{{ page.date | date: "%-d %b %Y" }}  • {% capture words %}
+  {{ page.content | number_of_words | minus: 180 }}
+{% endcapture %}
+{% unless words contains "-" %}
+  {{ words | plus: 180 | divided_by: 180 | append: " minutes to read" }}
+{% endunless %} {% if page.meta %} • {{ page.meta }}{% endif %}</center></p>
     <center>
       <span class="bigicon">
         <svg viewBox="0 0 290 320">
@@ -17,6 +22,7 @@ layout: layout
   </header>
 
   <article class="post-content" lang="en">
+    {% if page.abstract %} <b>Abstract.</b> {{ page.abstract }} {% endif %}<br><br>
     {{ content }}
   </article>
 	</div>
