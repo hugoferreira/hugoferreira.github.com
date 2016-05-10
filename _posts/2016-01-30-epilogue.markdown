@@ -7,7 +7,7 @@ external-url:
 categories: philosophy existentialism
 ---
 
-*What if...*
+***What if...***
 
 > What and if, two words as nonthreatening as words come. But put them together side-by-side and they have the power to haunt you for the rest of your life: What if?... [^10]
 
@@ -39,7 +39,7 @@ And if it really becomes necessary, then you scratch everything, you throw all a
 
 And effectively, nothing is lost... your daily experimental laboratory is so free of effects, that trying, by the *sheer act* of merely trying, is such a common strategy that almost borders stupidity. So common that you've learned not to measure the consequences, to not deeply ponder about what may happen if you are proven wrong. You create the perfect testing environment, and isolate from the outside world any effect due to your guesses and intuitions. If you cannot rigorously calculate the solution to a problem, then you never hesitate to use that *amalgamation of experience* accumulated throughout the years, that *storm of electricity and chemistry* in your mind, that leads to the emergence, in the blink of an eye, of *casuistically selected heuristics* due to those times were *they actually worked*; and if, epistemologically, you dedicate your life to the search of *The Truth*, positivistic and *exact*, whatever works ninety percent of the time in the real world is more than *acceptable*.
 
-And in that process you forget the role of chance, the uncontrollable variables, the scenarios where, by throwing the dice so *many times*, even the oddest and most improbable outcomes will eventually happen. You forget one of the effects that you know so well, that you reject so many times in your analysis, that always makes you doubt when things are too good to be true: *serendipity*... sometimes, the universe does seem to conspire in order to make improbable things happen. But you know that it it isn't a real *conspiration*; you know that *nothing happens by chance*; and although you're also keenly aware that your understanding of that phrase if not the same as *poets* and *dreamers* have — that there is a *deliberate reason*, an *hidden driving force*, a *conscious agency* that *posits* the meaning of things — you are well acquainted with the fundamentals of mathematics and physics, of cause and effect, of the *meta-determinism* that exists in a quantic universe ruled by probabilistic laws, to know that *not even chance happens by chance*.
+And in that process you forget the role of chance, the uncontrollable variables, the scenarios where, by throwing the dice so *many times*, even the oddest and most improbable outcomes will eventually happen. You forget one of the effects that you know so well, that you reject so many times in your analysis, that always makes you doubt when things are too good to be true: *serendipity*... sometimes, the universe does seem to conspire in order to make improbable things happen. But you know that it it isn't a real *conspiration*; you know that *nothing happens by chance*; and although you're also keenly aware that your understanding of that phrase is not the same as *poets* and *dreamers* have — that there is a *deliberate reason*, an *hidden driving force*, a *conscious agency* that *posits* the meaning of things — you are well acquainted with the fundamentals of mathematics and physics, of cause and effect, of the *meta-determinism* that exists in a quantic universe ruled by probabilistic laws, to know that *not even chance happens by chance*.
 
 > And here are trees and I know their gnarled surface, water and I feel its taste. These scents of grass and stars at night, certain evenings when the heart relaxes — how shall I negate this world whose power and strength I feel? Yet all the knowledge on earth will give me nothing to assure me that this world is mine. You describe it to me and you teach me to classify it. You enumerate its laws and in my thirst for knowledge I admit that they are true. You take apart its mechanism and my hope increases. At the final stage you teach me that this wondrous and multicolored universe can be reduced to the atom and that the atom itself can be reduced to the electron. All this is good and I wait for you to continue. But you tell me of an invisible planetary system in which electrons gravitate around a nucleus. You explain this world to me with an image. I realize then that you have been reduced to poetry: I shall never know. [^6]
 
@@ -51,7 +51,7 @@ What you are still struggling to conceive is that there is no possible control. 
 
 [^5]: *We have begun to contemplate our origins: starstuff pondering the stars; organized assemblages of ten billion billion billion atoms considering the evolution of atoms; tracing the long journey by which, here at least, consciousness arose.* — Carl Sagan in *Cosmos*.
 
-*What if...*
+***What if...***
 
 But life isn't made of that stuff; because would you think carefully, would you observe yourself writing down this text, would you contemplate the long sequence of actions, the chain of events that lead to the existence of tens of thousands of words dedicated to someone you hardly understood — someone that was probably nothing more that the *idealization* of your own mind — you would see that *control* is a mere illusion, and any attempt to *comprehend the incomprehensible*, the neverending quest for the meaning of life and the sensations that make us happy, are themselves the ultimate acts that impede us from being so:
 
@@ -60,6 +60,10 @@ But life isn't made of that stuff; because would you think carefully, would you 
 [^2]: *You will never be happy if you continue to search for what happiness consists of. You will never live if you are looking for the meaning of life.* — Albert Camus in *The Stranger*.
 
 What is then left to us, mere humans, also incapable of controlling that arrow of time dictated by entropy?...
+
+> — Why, Mr. Anderson? Why, why, why? Why do you do it? Why get up? Why keep fighting? Do you believe you're fighting for something? For more than your survival? Can you tell me what it is? Do you even know? Is it freedom? Or truth? Perhaps peace? Could it be for love? Illusions, Mr. Anderson. Vagaries of perception. Temporary constructs of a feeble human intellect trying desperately to justify an existence that is without meaning or purpose. And all of them as artificial as the Matrix itself, although only a human mind could invent something as insipid as love. You must be able to see it, Mr. Anderson. You must know it by now. You can't win. It's pointless to keep fighting. Why, Mr. Anderson? Why? Why do you persist? <br>— Because I choose to. [^11]
+
+[^11]: Dialogue between Agent Smith and Neo in The Matrix Revolutions.
 
 *Choice...*
 
@@ -77,12 +81,16 @@ And so you did it: in each moment, in each feeling of pain and joy, of anguish a
 
 And you obviously rebel against that... Another action that only an *absurdist* could take. You rebel against the inevitable, against the unavoidable, against the incomprehensible... You rebel against yourself. You find irritating that every — *every* — single morning you awake, the first thought you have once you gain conscience is always — *always* — the same: she. You irritate with yourself every time the phone rings, every time you receive a message, every time you open *Facebook*... You rebel against yourself by the absurdity of the situation, for rationally knowing there is only one path to take — only one *choice* to make — and that any other alternative you might ponder is doomed to fail because *you are not in the control of the situation*. You aren't, you never were, and you will never be. You are not *supposed* to. It is not even something that is *desirable*.
 
-You rebel because your life is all about solving equations and ***she's not and equation that you can solve. She's not an expression that you can understand; pages that you can scrutinize; symbols that you can unveil or a lexicum that you can learn. She's a whole world, with her mountains and valleys; her rivers and oceans; her continents and islands; her secrets and mysteries. A world with its various languages, and alphabets, and books, and histories, and characters, and*** **endless dreams** ***kept within*** **herself**.
+You rebel because your life is all about solving equations and she's not an equation that you can solve. She's not an expression that you can understand; pages that you can scrutinize; symbols that you can unveil or a lexicum that you can learn. She's a whole world, with her mountains and valleys; her rivers and oceans; her continents and islands; her secrets and mysteries. A world with its various languages, and alphabets, and books, and histories, and characters, and *endless dreams* kept within *herself*.
 
 And *you* are another one of those worlds...
 
 Two planets; *two bodies* that approached each other, whose gravity mutually influenced your own trajectory, that made you dance in elliptic curves around a common axis, facing one another, in rapid tangential movements of angular acceleration due to the sheer amount of mass that comprises your beings. But whose origins, whose path, whose genesis of your own structure, your own *momentum*, partially dictated even before you were both born, was too strong for those brief moments where *nothing else existed* besides you.
 
+> Each atom of that stone, each mineral flake of that night-filled mountain, in itself forms a world. The struggle itself towards the heights is enough to fill a man's heart. One must imagine Sisyphus happy. [^12]
+
+[^12]: *Chacun des grains de cette pierre, chaque éclat minéral de cette montagne pleine de nuit, à lui seul, forme un monde. La lutte elle-même vers les sommets suffit à remplir un cœur d'homme. Il faut imaginer Sisyphe heureux.* — Albert Camus in *The Myth of Sisyphus*.
+
 And that now depart from each other, due to the action of the exact same force that once attracted you... perhaps still looking onto one another, taking with you whatever both *choose* to take. While one of you, unable to forget all the wonders that were seen and felt in such a different, such fascinating, such strange but simultaneously such familiar world, forever revolted by the *unshakeable laws of nature*, ponder:
 
-*What if...*
+***What if...***
