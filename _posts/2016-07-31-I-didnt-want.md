@@ -12,7 +12,7 @@ I didn't *choose* to love you...
 
 I know such thing because I am able to recall with meticulous perfection the moment I realized that the oath I repeated myself so many times — that I would not fall in love with you — would be completely impossible to hold.
 
-You're sitting in my lap, in my chair, with my hands absently touching your naked, soft legs. An amused laugh precedes that idiosyncratic cry of yours — "My god, yes!" — while you simultaneously choose the next sequence of notes to be echoed throughout this room's walls, filling the air with music and lyrics of an art I will never own so I could write them for you... though I wished so... but I am, irrevocably and simply, *me*. And as such, I resign myself to contemplate your intoxicating existence, drawing a faint smile from who's head is running a hundred miles per hour, speeding through roads of endless thought.
+You're sitting in my lap, in my chair, with my hands absently touching your naked, soft legs. An amused laugh precedes that idiosyncratic cry of yours — "My god, yes!" — while you simultaneously choose the next sequence of notes to be echoed throughout this room's walls, filling the air with music and lyrics of an art I will never possess so I could write them for you... though I wished so... but I am, irrevocably and simply, *me*. And as such, I resign myself to contemplate your intoxicating existence, drawing a faint smile from who's head is running a hundred miles per hour, speeding through roads of endless thought.
 
 It is not without irony that two events occur to me at this time...
 
