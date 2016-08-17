@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I Didn't Want...
+title: I Didn't Want
 date: 2016-07-31 11:08
 comments: true
 external-url:
