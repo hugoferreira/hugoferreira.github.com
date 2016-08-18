@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "All gambozinos are white"
+title: "All Gambozinos are White"
 date: 2013-02-19 01:24
 comments: true
 external-url:
-categories: fun mathematics
+categories: Mathematics
 abstract: It is argued that there may be a case where all gambozinos are white.
 ---
 

@@ -4,7 +4,7 @@ title: Coach or Kasparov
 date: 2015-05-01 16:33
 comments: true
 external-url:
-categories: fun mathematics puzzle
+categories: Mathematics
 ---
 
 > To encourage John's promising chess career, his coach offers him a prize if he wins (at least) two games in a row in a three-game series to be played with his coach and Garry Kasparov alternately: coach-kasparov-coach or kasparov-coach-kasparov, according to John's choice. Kasparov is (evidently) a better player than John's coach. Which series should John choose? [^a]

@@ -4,7 +4,7 @@ title: Review of Metamorphosis of Prime Intellect
 date: 2014-12-08 02:47
 comments: true
 external-url:
-categories: books philosophy
+categories: Philosophy
 ---
 
 There are basically two schools of thought concerning post-singularity and the immortality of the human race. One of them, often portrayed by Greg Egan, is optimistic; it is capable of seeing beyond the wishes and fears, hopes, dreams and nightmares of humans, up to the point were it can reimagine whole societies that find a meaning for existence in the absence of death [^1]. The universe portrayed in his stories is far larger than our imagination and our contingency as mortal beings.

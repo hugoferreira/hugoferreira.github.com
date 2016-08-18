@@ -4,7 +4,7 @@ title: "Why Post-Functional Programming Matters"
 date: 2013-03-28 20:37
 comments: true
 external-url:
-categories: software functional-programming object-oriented-programming
+categories: Software
 ---
 
 > The limits of my language mean the limits of my world. -- Ludwig Wittgenstein

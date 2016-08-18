@@ -4,7 +4,7 @@ title: The Cliff-Hanger
 date: 2015-05-05 19:03
 comments: true
 external-url:
-categories: fun mathematics puzzle
+categories: Mathematics
 ---
 
 > Joseph is coming from "queima das fitas" and is a little tipsy. He stands near a cliff doing... something. If he takes one more step forward, he falls over the edge. He takes **a series of infinite random steps** either towards the cliff ($$p=~^1/_3$$) or away ($$q=1-p=~^2/_3$$). What is his chance of escaping? [^a]

@@ -4,7 +4,7 @@ title: Non-Transitive Probabilities
 date: 2015-09-12 22:22
 comments: true
 external-url:
-categories: fun mathematics puzzle
+categories: Mathematics
 ---
 
 > Sheldon and Penney decide to play a game. They throw a coin three times. If it comes back `HHH` Sheldon wins; if the result is `THH` then Penney wins. Otherwise they both loose. What are their probabilities of winning the game? [^1]

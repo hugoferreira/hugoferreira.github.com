@@ -4,7 +4,7 @@ title: "Turtles all the way down (or up?)"
 date: 2013-02-26 03:39
 comments: true
 external-url:
-categories: software
+categories: Software
 ---
 
 The line separating between data and model is blurred when speaking about *meta-data*, in the sense that everything is, ultimately, *data*; only its *purpose* is different. For example, the information that some particular video in our system is named *The Matrix*, and another one named *Lord of the Rings*, is called data for the purpose of using it as an information system for video renting. We could hypothetically draw a line encompassing all the objects that account for data (normally called instances) and name it the meta-level-zero ($$M_0$$) of our system.

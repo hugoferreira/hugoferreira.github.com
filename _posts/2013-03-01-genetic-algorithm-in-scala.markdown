@@ -4,7 +4,7 @@ title: "An Exploration of Genetic Algorithms in Scala"
 date: 2013-03-01 23:34
 comments: true
 external-url:
-categories: software machine-learning
+categories: Software
 ---
 
 Genetic algorithms are search heuristics that mimics the process of natural evolution, by adhering to nature-inspired techniques such as *inheritance*, *mutation*, *selection*, and *crossover*. In this post, we'll see how to build a simple mechanism in [Scala](http://www.scala-lang.org/) that would allow us to evolve specimens.

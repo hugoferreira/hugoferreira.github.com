@@ -4,7 +4,7 @@ layout: default
 <div class="post">
   <header class="post-header">
     <span itemprop="name"><h1 class="post-title"><center>On Software Engineering, Mathematics<br>and Philosophy</center></h1></span>
-    <center>
+    <center style="margin-top: 30px">
       <span class="ornament">
         <svg viewBox="310 350 400 350">
           <path d="M24.403,568.588c44.369-42.193,98.197-60.552,155.345-66.541
@@ -40,8 +40,9 @@ layout: default
       			C694.319,504.626,737.095,574.986,783.362,586.941z"/>
       		<path d="M715.083,582.295c-45.695-13.551-123.528-32.477-144.198-44.605
       			C619.305,504.135,668.579,570.832,715.083,582.295z"/>
-
+            
           <!-- Alternate ornament
+
           <path d="M895.451,579.754c15.029-20.867,18.418-41.834,15.369-60.51
             c-10.624-64.501-82.325-80.454-131.216-74.012c-97.011,12.901-134.956,93.788-244.437,50.334
             c58.307,34.283,93.105,42.182,126.886,33.512c51.353-13.23,77.662-59.312,136.128-64.318
@@ -67,20 +68,22 @@ layout: default
             c-113.316,45.064-287.817,43.621-496.689-62.555c-53.22-26.731-107.623-53.979-162.023-73.34
             C232.17,382.69,166.549,389.471,102.903,414.339z"/>
           -->
+
         </svg>
       </span>
     </center>
   </header>
 
-  <div>
-    <ul class="post-list">
-      {% for post in site.posts %}
-        <li>
-          <a id="menu" class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          <span id="content" class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span>
-        </li>
+  <div class="page-content">
+    <div class="wrapper-v4">
+      {% assign categories = site.categories | sort %}
+      {% for category in categories %}
+      <p>On {{ category || first }}: {% for posts in category %} {% for post in posts %}
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> {% if forloop.last == false %} <span style="color: #777">&nbsp;•&nbsp;</span> {% endif %}
+        {% endfor %} {% endfor %}  </p>
       {% endfor %}
-    </ul>
+
+    </div>
   </div>
 </div>
 </div>

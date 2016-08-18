@@ -4,7 +4,7 @@ title: The Myth of Sisyphus
 date: 2015-08-25 00:43
 comments: true
 external-url:
-categories: philosophy
+categories: Philosophy
 ---
 
 [The Myth of Sisyphus](https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus) is an _existentialist_ philosophical essay from Albert Camus that starts with the following provocative assertion:

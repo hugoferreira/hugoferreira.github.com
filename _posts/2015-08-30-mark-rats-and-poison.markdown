@@ -4,7 +4,7 @@ title: Finding the Poisonous Compound
 date: 2015-08-30 15:58
 comments: true
 external-url:
-categories: fun mathematics puzzle
+categories: Mathematics
 ---
 
 > Mark was doing an experiment in the laboratory with chemical compounds when he accidentally mixed up 4 of the vials. Unfortunately, one (and just one) of the compounds is extremely lethal, capable of killing a mammal in 24 hours. The problem is that he needs to sort the lethal one out in exactly 24 hours. What is the minimum amount of lab rats he needs to use in order to find which compound is the lethal one? What if he had mixed up 1000 vials?

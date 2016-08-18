@@ -4,7 +4,7 @@ title: "Artificial Intelligence?"
 date: 2013-02-19 02:52
 comments: true
 external-url:
-categories: philosophy machine-learning
+categories: Philosophy
 ---
 
 ![hopeless-argumentation](http://skyservers.org/~bytter/artificial-intelligence.png)

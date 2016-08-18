@@ -4,7 +4,7 @@ title: Challenges From The Industry to Teaching Computer Science
 date: 2014-09-08 18:47
 comments: true
 external-url:
-categories: computer science
+categories: Software
 ---
 
 Nowadays there is little doubt that computer science is not the job of the future. It’s the job of the present. Computer science was able to infiltrate itself in every area of our culture, economics and society. Never before was the concept of trans-disciplinarity so important in a science such as ours. Maybe 10% of the whole computer science is for itself. The other 90% [^1], is applied to other areas, to the point where they now depend directly on our existence. For good or evil, this is were we stand.

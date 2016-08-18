@@ -1,10 +1,10 @@
 ---
 layout: post
-title: On Dust And Immortality
+title: On Dust and Immortality
 date: 2015-10-04 03:49
 comments: true
 external-url:
-categories: philosophy epistemology
+categories: Philosophy
 ---
 
 The [Dust Theory](http://en.wikipedia.org/wiki/Permutation_City), by Greg Egan, states that:

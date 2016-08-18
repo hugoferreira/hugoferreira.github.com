@@ -4,7 +4,7 @@ title: I Didn't Want
 date: 2016-07-31 11:08
 comments: true
 external-url:
-categories: poetry
+categories: Poetry
 ---
 
 I didn't *want* to love you...<br/>

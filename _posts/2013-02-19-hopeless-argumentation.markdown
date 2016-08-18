@@ -4,7 +4,7 @@ title: "A Pattern Language for Hopeless Argumentation"
 date: 2013-02-19 02:32
 comments: true
 external-url:
-categories: fun philosophy
+categories: Philosophy
 ---
 
 ![hopeless-argumentation](http://skyservers.org/~bytter/hopeless-argumentation.png)

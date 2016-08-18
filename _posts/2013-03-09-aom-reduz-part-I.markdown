@@ -4,7 +4,7 @@ title: "AOM Redux Part I - Software Crisis"
 date: 2013-04-09 20:55
 comments: true
 external-url:
-categories: software aom
+categories: Software
 ---
 
 Software — and the corresponding area of software engineering — seems to be in crisis since the early days of computing science. The rapid growth in both computer power and problem complexity has been resulting in a corresponding increase in the difficulty of writing *correct*, *understandable* and *verifiable* computer programs [^2]. Such state was recognized since the NATO sponsored conference on software engineering circa 1968, where unreasonable expectations and change were underlined as major contributing factors. A few year later, Edsger Dijkstra commented this same issue during his 1972 ACM Turing Award lecture:
