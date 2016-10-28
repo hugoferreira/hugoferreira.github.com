@@ -13,15 +13,32 @@ body {
   font-size: $base-font-size;
   color: $text-color;
 
-  a       { color: $alt-color; }
-  a:hover { color: $alt-color; }
+  a, a:hover {
+    color: $alt-color;
+  }
 
   p {
     line-height: $base-line-height;
   }
+
+  h1 {
+    font-weight: 600;
+  }
+
+  h2 {
+    margin-top: 1em;
+    font-size: 1.6em;
+    margin-bottom: 0.6em;
+  }
 }
 
 article {
+  ul li {
+    padding-left: 0em;
+    margin-bottom: 0;
+    list-style: none;
+  }
+
   ul {
     position: relative;
     padding: 0;
@@ -35,21 +52,17 @@ article {
     left: -1.15em;
   }
 
-  ul li {
-    padding-left: 0em;
-    margin-bottom: 0;
-    list-style: none;
+  pre, code {
+    background-color: $background-color;
   }
 
   pre {
-    background-color: $background-color;
     padding: 1em;
     border-radius: 5px;
   }
 
   code {
     font-family: $mono-font-family;
-    background-color: $background-color;
   }
 }
 
@@ -80,38 +93,27 @@ blockquote {
   border-top: 3px solid $alt-color;
 }
 
-h1 {
-  font-weight: 600;
-}
-
-h2 {
-  margin-top: 1em;
-  font-size: 1.6em;
-  margin-bottom: 0.6em;
-}
-
-.small-ornament {
-  display: inline-block;
-  vertical-align: middle;
-  width: 32px;
-  height: 32px;
-  fill: $alt-color-darker;
-}
-
-.big-ornament {
+.small-ornament, .big-ornament {
   > svg {
     display: inline-block;
     vertical-align: middle;
-    width: 14em;
-    height: 4em;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    width: 40px;
+    height: 40px;
 
     path {
         fill: $alt-color-darker;
         fill-rule: evenodd;
         shape-rendering: geometricPrecision;
     }
+  }
+}
+
+.big-ornament {
+  > svg {
+    width: 14em;
+    height: 4em;
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
 }
 
@@ -145,8 +147,9 @@ footer {
     letter-spacing: 0.15em;
   }
 
-  a       { color: $alt-color-darker; }
-  a:hover { color: $alt-color-darker; }
+  a, a:hover {
+    color: $alt-color-darker;
+  }
 }
 
 .footnotes {

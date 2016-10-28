@@ -2,7 +2,7 @@
  * Syntax highlighting styles
  */
 .highlight {
-    .c     {  color: #999; font-style: italic } // Comment
+    .c     {  color: lighten($text-color, 35%); font-style: italic } // Comment
     .err   {  } // Error
     .k     {  color: $alt-color; font-weight: bold } // Keyword
     .o     {  font-weight: bold }  // Operator
