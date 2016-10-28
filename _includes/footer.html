@@ -1,62 +1,55 @@
-<footer class="site-footer">
-  <div class="wrapper-v3">
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-      <h2><nav>who am i</nav></h2>
-        <p>I am a Professor of Software Engineering at the <a href="http://www.fe.up.pt">Faculty of Engineering</a>, University of Porto, CTO and Co-Founder of <a href="http://www.shiftforward.eu">ShiftForward</a>, and Senior Researcher at <a href="https://www.inesctec.pt">INESC TEC</a>. Here you can find my <a href="{{ site.url }}/assets/thesis.pdf">PhD Thesis</a> and my <a href="{{ site.url }}/assets/cv.pdf">Résumé</a>.</p>
+<footer>
+  <div class="container">
+    <div class="row biography">
+      <div class="col-sm-4">
+        <h2>who am i</h2>
+        <p>I am a Professor of Software Engineering at the <a href="http://www.fe.up.pt">Faculty of Engineering</a>, University of Porto and Senior Researcher at <a href="https://www.inesctec.pt">INESC TEC</a>. Here you can find my <a href="http://hugoferreira.github.io/assets/thesis.pdf">PhD Thesis</a> and my <a href="http://hugoferreira.github.io/assets/cv.pdf">Résumé</a>.</p>
       </div>
-
-      <div class="footer-col footer-col-3">
-      <h2><nav>what is this</nav></h2>
-        <p>{{ site.description }}.</p>
+      <div class="col-sm-4">
+        <h2>what is this</h2>
+        <p>This is a blog about software, some mathematics, and the occasional philosophy. Not necessarily in that order.</p>
       </div>
-
-      <div class="footer-col footer-col-2">
-        <h2><nav>where am i</nav></h2>
-        <ul class="contact-list social-media-list">
+      <div class="col-sm-4">
+        <h2>where am i</h2>
           {% if site.email %}
-          <li>
+          <div>
             <a href="mailto:{{ site.email }}">
               <span class="username">{{ site.email }}</span>
             </a>
-          </li>
+          </div>
           {% endif %}
           {% if site.github_username %}
+          <div>
             <a href="https://github.com/{{ site.github_username }}">
               <span class="username">github//{{ site.github_username }}</span>
             </a>
-          </li>
+          </div>
           {% endif %}
           {% if site.twitter_username %}
-          <li>
+          <div>
             <a href="https://twitter.com/{{ site.twitter_username }}">
               <span class="username">twitter//{{ site.twitter_username }}</span>
             </a>
-          </li>
+          </div>
           {% endif %}
-          <li>
+          <div>
             <a href="https://id.linkedin.com/in/{{ site.linkedin_username }}">
               <span class="username">linkedin//{{ site.linkedin_username }}</span>
             </a>
-          </li>
-          <li>
+          </div>
+          <div>
             <a href="https://www.facebook.com/{{ site.facebook_username }}">
               <span class="username">facebook//{{ site.facebook_username }}</span>
             </a>
-        </ul>
+          </div>
       </div>
     </div>
-  </div>
-</footer>
-
-<footer class="site-footer">
-  <div class="wrapper-v4">
-    <div style="font-size:14px; color: #6C6C6C;">
-      <center>
+      <div class="row copyright">
+        <center>
         © MMXIII — MMXVI by Hugo Sereno Ferreira.<br>
         Content available under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons (BY-NC-SA)</a> unless otherwise noted.<br>
         This site is hosted at <a href="https://pages.github.com/">Github Pages</a> and created with <a href="http://jekyllrb.com/">Jekyll</a>.
       </center>
-    </div>
+      </div>
   </div>
 </footer>

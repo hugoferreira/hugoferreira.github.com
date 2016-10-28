@@ -2,9 +2,6 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background: #fff;
-    @extend %vertical-rhythm;
-
     .c     {  color: #999; font-style: italic } // Comment
     .err   {  } // Error
     .k     {  color: $alt-color; font-weight: bold } // Keyword

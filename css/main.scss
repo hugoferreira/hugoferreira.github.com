@@ -3,50 +3,28 @@
 ---
 @charset "utf-8";
 
-
 // Our variables
 $base-font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
-$base-font-size:   17px;
+$base-font-size:   12pt;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$mono-font-family: 'Source Code Pro', Menlo, Monaco, Inconsolata;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-$alt-color:        #c72525;
-$alt-color-light:  #fff5f5;
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$text-color:       hsl(0, 0%, 25%);
 
-// Width of the content area
-$content-width:    800px;
+$alt-color:        hsl(0, 70%, 46%);
+$alt-color-darker: darken($alt-color, 6%);
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$article-bg-color: hsl(35, 36%, 95%);
+$background-color: darken($article-bg-color, 6%);
+$bg-color-darker:  darken($article-bg-color, 15%);
+$alt-text-color:   darken($article-bg-color, 60%);
 
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-
+$subdued-border:   rgba($bg-color-darker, 0.5);
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+  "base",
+  "syntax-highlighting"
 ;
