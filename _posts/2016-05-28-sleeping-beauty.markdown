@@ -7,7 +7,7 @@ external-url:
 categories: Mathematics
 ---
 
-> Sleeping Beauty undergoes an experiment where she's put to sleep on Sunday. Immediately after that, a fair coin is tossed. If it comes out Heads, Sleeping Beauty is waken on Monday. If it comes out Tails, she's waken both on Monday and Tuesday. After being waken, the experimentalist asks Sleeping Beauty "What is your degree of certainty that the coin landed heads?". He subsequently puts Sleeping Beauty to sleep, taking care to administer her an amnesia inducing drug that ensures she doesn't remember the experiment. Hence, everytime Sleeping Beauty is awaked, she won't know which day it is or whether she has already been awakened before or not. What should her answer be?
+> Sleeping Beauty undergoes an experiment where she's put to sleep on Sunday. Immediately after that, a fair coin is tossed. If it comes out Heads, Sleeping Beauty is waken on Monday. If it comes out Tails, she's waken both on Monday and Tuesday. After being waken, the experimentalist asks Sleeping Beauty: *"What is your degree of certainty that the coin landed heads?"*. He subsequently puts Sleeping Beauty to sleep, taking care to administer her an amnesia inducing drug that ensures she doesn't remember the experiment. Hence, everytime Sleeping Beauty is awaked, she won't know which day it is or whether she has already been awakened before or not. What should her answer be?
 
 It's amazing how a simple puzzle installs chaos among mathematicians and philosophers alike. Some would argue that the correct probability is ½: after all, the coin is **fair**, isn't it? Others would say that the correct probability should be ⅓. Think about this problem for a second because the correct answer is... **both**!
 
@@ -52,7 +52,7 @@ Probability of Heads being tossed: 0.5034
 
 The attentive reader should have already grasped that the answer depends on *what exactly we are counting as a success*. If we measure success as the *number of times Sleeping Beauty is able to give a correct answer*, then her *degree* of confidence should be ⅓, as the above simulation shows. If you are still unable to see how, under that measurement of success, the number of times Sleeping Beauty is awakened impacts the answer, then imagine the following puzzle variant:
 
-> (...) she's put to sleep on the 31th of December. If it comes out Heads, Sleeping Beauty is waken on the 1st of January. If it comes out Tails, she's waken every single day for the whole year, i.e., 365 days.
+> (...) she's put to sleep on the 31th of December. If it comes out Heads, Sleeping Beauty is waken on the 1st of January. If it comes out Tails, she's waken every single day for the whole year, *i.e.*, 365 days.
 
 Or even something a little more extreme:
 
