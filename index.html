@@ -47,11 +47,11 @@ layout: default
     </header>
   </div>
   <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8 offset-md-2">
+    <div class="col-md-1"></div>
+    <div class="col-md-8 offset-md-1">
       {% assign categories = site.categories | sort %}
       {% for category in categories %}
-      <h3>On {{ category || first }}</h3>
+      <h3>On {{ category | first }}</h3>
       <p>{% for posts in category %} {% for post in posts %}
             <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>{% if forloop.last == false %},&nbsp;&nbsp;{% endif %}
         {% endfor %} {% endfor %}  </p>
