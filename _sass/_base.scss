@@ -13,8 +13,41 @@ body {
   font-size: $base-font-size;
   color: $text-color;
 
-  a, a:hover {
+  a {
     color: $alt-color;
+    white-space: nowrap;
+    padding-bottom: 0px; position: relative;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $alt-color;
+    text-decoration: none;
+  }
+
+  a:after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: $alt-color;
+      content: '';
+      opacity: 0;
+      -webkit-transition: opacity 0.5s, -webkit-transform 0.4s;
+      -moz-transition: opacity 0.5s, -moz-transform 0.4s;
+      transition: opacity 0.5s, transform 0.4s;
+      -webkit-transform: scaleX(0);
+      -moz-transform: scaleX(0);
+      transform: scaleX(0);
+  }
+
+  a:hover::after,
+  a:focus::after {
+      opacity: 1;
+      -webkit-transform: scaleX(1);
+      -moz-transform: scaleX(1);
+      transform: scaleX(1);
   }
 
   p {
