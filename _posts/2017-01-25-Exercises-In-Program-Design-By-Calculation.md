@@ -80,7 +80,7 @@ $(x≥-100 ∧ x≤100) → (x<0 ∧ 0≤y≤300 ∨ 0≤x≤150) →\\: ? →$<
 
 ---
 
-Provide the *total* proof for the following specification. Underline the chose invariant, variant and loop pre-condition.
+Provide the *total* proof for the following specification:
 
 > $[n≥0 ∧ d>0]$ <br>
 > ```q:=0;
