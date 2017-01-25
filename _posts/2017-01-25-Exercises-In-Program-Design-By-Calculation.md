@@ -7,7 +7,7 @@ external-url:
 categories: Mathematics
 ---
 
-Below you can find some examples on correctness checking and derivation through calculation of simple programs. This exercises are part of the _Formal Methods in Software Engineering_ course given at the _Masters in Informatics Engineering_ at the _Faculty of Engineering, University of Porto_.
+Below you can find some examples on correctness checking and derivation through calculation of simple programs. These exercises are part of the _Formal Methods in Software Engineering_ course given at the _Masters in Informatics Engineering_ at the _Faculty of Engineering, University of Porto_.
 
 ---
 
@@ -23,7 +23,7 @@ $wp($`b:=c+1`, $c<b ∧ b<c+2) → c<c+1 ∧ c+1<c+2 ≡$<span class='bghighligh
 
 1.2. $\\{wp\\}$ `if (a>b) then c:=a` $\\{ c=\text{max}(a,b) \\}$
 
-By assuming this definition:
+If we assume this definition:
 
 $$\text{max}(a,b) ≜ \begin{cases} a &\mbox{if } a > b \\
 b & \mbox{if } a ≤ b \end{cases}$$
@@ -35,7 +35,7 @@ $≡$ { By the `if` rule } <br/>
 $a>b ∧ wp($`c:=a`, $c=\text{max}(a,b)) ∨ a≤b ∧ wp($`skip`, $c=\text{max}(a,b))$ <br/>
 $≡$ { Assignment `:=` rule } <br/>
 $a>b ∧ a=\text{max}(a,b) ∨ a≤b ∧ c=\text{max}(a,b)$ <br/>
-$≡$ { According to the definition of $\text{max}(a,b)$ } <br/>
+$≡$ { By the definition of $\text{max}(a,b)$ } <br/>
 $a>b ∧ a=a ∨ a≤b ∧ c=b$ <br/>
 $≡$ { Identity } <br/>
 $a>b ∨ a≤b ∧ c=b$ <br>
@@ -46,7 +46,7 @@ $≡$ { Left tautology  } <br>
 
 ---
 
-Find if the following triplets are true or false, through calculation of the _Weakest Precondition_:
+Find if the following triplets hold (i.e., _true_ or _false_), by calculating the _Weakest Precondition_:
 
 2.1. $\\{y=3\\}$ `y:=x-y; x:=y+1; y:=x-1` $\\{y<x\\}$
 
@@ -58,10 +58,9 @@ $wp($`y:=x-1`, $y<x) → x-1<x$ <br/>
 $wp($`x:=y+1`, $x-1<x) → y<y+1 ≡ y<y+1$ <br/>
 $wp($`y:=x-y`, $y<y+1) → x-y < (x-y)+1 ≡ \text{True}$
 
-Now we need to prove if the implication holds:
+Now we need to prove that the implication holds:
 
 $(y=3)→\text{True}→\\:?→$<span class='bghighlight'> $\text{True}$ </span>.
-
 
 2.2. $\\{x≥-100 ∧ x≤100\\}$ `if (x<0) then x:=x+100 else y:=2*x fi` $\\{y≥0 ∧ y≤300\\}$
 
@@ -75,7 +74,7 @@ $x<0 ∧ 0≤y≤300 ∨ x≥0 ∧ 2x≥0 ∧ 2x≤300$ <br/>
 $≡$ { Algebra and set theory } <br/>
 $x<0 ∧ 0≤y≤300 ∨ 0≤x≤150$ <br/>
 
-Now we need to prove if the implication holds:
+Now we need to prove that the implication holds:
 
 $(x≥-100 ∧ x≤100) → (x<0 ∧ 0≤y≤300 ∨ 0≤x≤150) →\\: ? →$<span class='bghighlight'>$\text{False}$ </span>.
 
