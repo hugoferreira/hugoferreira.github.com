@@ -34,7 +34,11 @@ $a>b ∧ a=\text{max}(a,b) ∨ a≤b ∧ c=\text{max}(a,b)$ <br/>
 $≡$ { Definição de $\text{max}(a,b)$ } <br/>
 $a>b ∧ a=a ∨ a≤b ∧ c=b$ <br/>
 $≡$ { Identidade } <br/>
-<span class='bghighlight'> $a>b ∨ a≤b ∧ c=b$ </span>.
+$a>b ∨ a≤b ∧ c=b$ <br>
+$≡$ { Propriedade Distributiva } <br>
+$(a>b ∨ a≤b) ∧ (a>b ∨ c=b)$ <br>
+$≡$ { Tautologia à esquerda } <br>
+<span class='bghighlight'> $a>b ∨ c=b$ </span>.
 
 ---
 
