@@ -7,77 +7,81 @@ external-url:
 categories: Mathematics
 ---
 
-Encontre a _Weakest Precondition_ dos seguintes triplos:
+Below you can find some examples on correctness checking and derivation through calculation of simple programs. This exercises are part of the _Formal Methods in Software Engineering_ course given at the _Masters in Informatics Engineering_ at the _Faculty of Engineering, University of Porto_.
+
+---
+
+Find the _Weakest Precondition_ of the following:
 
 1.1. $\\{wp\\}$ `b:=c+1; a:=c+2` $\\{c<b ∧ b<a\\}$
 
 $wp($`b:=c+1`, $wp($`a:=c+2`, $c<b ∧ b<a))$ <br/>
-$≡$ { Aplicação sucessiva da regra de assignment `:=` } <br/>
+$≡$ { Successive application of the assignment `:=` rule } <br/>
 $wp($`a:=c+2`, $c<b ∧ b<a) → c<b ∧ b<c+2$ <br/>
 $wp($`b:=c+1`, $c<b ∧ b<c+2) → c<c+1 ∧ c+1<c+2 ≡$<span class='bghighlight'> $\text{True}$ </span>.
 
 
 1.2. $\\{wp\\}$ `if (a>b) then c:=a` $\\{ c=\text{max}(a,b) \\}$
 
-Admitindo a definição:
+By assuming this definition:
 
 $$\text{max}(a,b) ≜ \begin{cases} a &\mbox{if } a > b \\
 b & \mbox{if } a ≤ b \end{cases}$$
 
-Temos que:
+It follows that:
 
 $wp($`if (a>b) then c:=a`, $c=\text{max}(a,b))$ <br/>
-$≡$ { Regra do `if` } <br/>
+$≡$ { By the `if` rule } <br/>
 $a>b ∧ wp($`c:=a`, $c=\text{max}(a,b)) ∨ a≤b ∧ wp($`skip`, $c=\text{max}(a,b))$ <br/>
-$≡$ { Regra do assignment `:=` } <br/>
+$≡$ { Assignment `:=` rule } <br/>
 $a>b ∧ a=\text{max}(a,b) ∨ a≤b ∧ c=\text{max}(a,b)$ <br/>
-$≡$ { Definição de $\text{max}(a,b)$ } <br/>
+$≡$ { According to the definition of $\text{max}(a,b)$ } <br/>
 $a>b ∧ a=a ∨ a≤b ∧ c=b$ <br/>
-$≡$ { Identidade } <br/>
+$≡$ { Identity } <br/>
 $a>b ∨ a≤b ∧ c=b$ <br>
-$≡$ { Propriedade Distributiva } <br>
+$≡$ { Distributive Property of ∨ } <br>
 $(a>b ∨ a≤b) ∧ (a>b ∨ c=b)$ <br>
-$≡$ { Tautologia à esquerda } <br>
+$≡$ { Left tautology  } <br>
 <span class='bghighlight'> $a>b ∨ c=b$ </span>.
 
 ---
 
-Indique se os triplos que se seguem são verdadeiros ou falsos através das regras da _Weakest Precondition_:
+Find if the following triplets are true or false, through calculation of the _Weakest Precondition_:
 
 2.1. $\\{y=3\\}$ `y:=x-y; x:=y+1; y:=x-1` $\\{y<x\\}$
 
-Calculamos a pré-condição mais fraca:
+First we calculate the weakest precondition:
 
 $wp($`y:=x-y`, $wp($`x:=y+1`, $wp($`y:=x-1`, $y < x)))$ <br/>
-$≡$ { Aplicação sucessiva da regra de assignment `:=` } <br/>
+$≡$ { Successive application of the assignment  `:=` rule } <br/>
 $wp($`y:=x-1`, $y<x) → x-1<x$ <br/>
 $wp($`x:=y+1`, $x-1<x) → y<y+1 ≡ y<y+1$ <br/>
 $wp($`y:=x-y`, $y<y+1) → x-y < (x-y)+1 ≡ \text{True}$
 
-E demonstramos a implicação:
+Now we need to prove if the implication holds:
 
 $(y=3)→\text{True}→\\:?→$<span class='bghighlight'> $\text{True}$ </span>.
 
 
 2.2. $\\{x≥-100 ∧ x≤100\\}$ `if (x<0) then x:=x+100 else y:=2*x fi` $\\{y≥0 ∧ y≤300\\}$
 
-Calculamos a pré-condição mais fraca:
+First we calculate the weakest precondition:
 
 $wp($`if (x<0) then x:=x+100 else y:=2*x fi`, $0 ≤ y≤300)$ <br/>
-$≡$ { Regra do `if` } <br/>
+$≡$ { By the `if` rule } <br/>
 $x<0 ∧ wp($`x:=x+100`, $0≤y≤300) ∨ x≥0 ∧ wp($`y:=2*x`, $0≤y≤300)$ <br/>
-$≡$ { Regra do assignment `:=` } <br/>
+$≡$ { Assignment `:=` rule } <br/>
 $x<0 ∧ 0≤y≤300 ∨ x≥0 ∧ 2x≥0 ∧ 2x≤300$ <br/>
-$≡$ { Álgebra e teoria de conjuntos } <br/>
+$≡$ { Algebra and set theory } <br/>
 $x<0 ∧ 0≤y≤300 ∨ 0≤x≤150$ <br/>
 
-E demonstramos a implicação:
+Now we need to prove if the implication holds:
 
-$(x≥-100 ∧ x≤100) → (x<0 ∧ 0≤y≤300 ∨ 0≤x≤150) →\\: ? →$<span class='bghighlight'> $\text{False}$ </span>.
+$(x≥-100 ∧ x≤100) → (x<0 ∧ 0≤y≤300 ∨ 0≤x≤150) →\\: ? →$<span class='bghighlight'>$\text{False}$ </span>.
 
 ---
 
-Apresente a prova *total* para o seguinte programa através da lógica de _Hoare_ e _Weakest Preconditions_. Indique o invariante, variante e a pré-condição do ciclo.
+Provide the *total* proof for the following specification. Underline the chose invariant, variant and loop pre-condition.
 
 > $[n≥0 ∧ d>0]$ <br>
 > ```q:=0;
@@ -89,65 +93,65 @@ Apresente a prova *total* para o seguinte programa através da lógica de _Hoare
 > ```
 > $[n = q⋅d + r∧0≤r ∧ r<d]$
 
-a. Arbitrar uma invariante:
+a. We first choose and invariant:
 
 <span class='bghighlight'>$\\:I ≜ n = q⋅d+r ∧ r≥0 ∧ d>0\\:$</span>
 
-b. E uma variante:
+b. And a variant:
 
 <span class='bghighlight'>$\\:M ≜ r\\:$</span>
 
-c. Garantir que a invariante é verdadeira antes do ciclo:
+c. We provide proof that the invariant holds before the loop:
 
 $[P]$ `q:=0; r:=n` $[I]$<br/>
-$≡$ { Definição de $I$ e cálculo da $wp$} <br/>
+$≡$ { By the definition of $I$ and $wp$} <br/>
 $P → wp($`q:=0`, $wp($`r:=n`, $n = q ⋅ d + r ∧ r ≥ 0 ∧ d>0$ <br/>
-{ Aplicação sucessiva da regra de assignment `:=` } <br/>
+{ Successive application of the assignment `:=` rule } <br/>
 $P → (n = 0 ⋅ d + n ∧ n ≥ 0 ∧ d>0)$ <br/>
-$≡$ { Definição de $P$, álgebra e teoria de conjuntos } <br/>
+$≡$ { Definition of $P$, algebra and set theory } <br/>
 $n ≥ 0 ∧ d > 0 → (n = n ∧ n ≥ 0 ∧ d>0) ≡$ <span class='bghighlight'> $\\:\text{True}\\:$</span>
 
-d. Garantir que a invariante é preservada e a variante é estritamente decrescente:
+d. We provide proof that the invariant holds during the loop and that the variant is strictly decreasing:
 
-$[I ∧ C∧ M = M']$ `q:=q+1; r:=r-d` $[I∧ M < M']$ <br/>
-$≡$ { Definição de $I$ e $M$ } <br/>
+$[I ∧ C ∧ M = M']$ `q:=q+1; r:=r-d` $[I ∧ M < M']$ <br/>
+$≡$ { Definition of $I$ and $M$ } <br/>
 $[\ldots]$ `q:=q+1; r:=r-d` $[n = q ⋅ d + r ∧ r ≥ 0 ∧ d>0 ∧ r < M']$ <br/>
-$≡$ { Verificação pelo cálculo da $wp$ } <br/>
+$≡$ { Proof by $wp$ } <br/>
 $\ldots\\: → wp($`q:=q+1`, $wp($`r:=r-d`, $n = q ⋅ d + r ∧ r ≥ 0 ∧ d>0 ∧ r < M'))$ <br/>
-$≡$ { Aplicação sucessiva da regra de assignment `:=` } <br/>
+$≡$ { Successive application of the assignment `:=` rule } <br/>
 $\ldots\\: → n = (q + 1) ⋅ d + (r - d) ∧ (r-d) ≥ 0 ∧ d>0 ∧ (r - d) < M'$ <br/>
-$≡$ { Definição de $I$, $C$, $M$ e álgebra } <br/>
+$≡$ { Definition of $I$, $C$, $M$ and algebra } <br/>
 $(n = q⋅d + r ∧ r≥0 ∧ r≥d ∧ d>0 ∧ r=M') →$<br/>
 $→(n = q⋅d + r ∧ (r-d)≥0 ∧ d>0 ∧ (r-d)< M')$ <br/>
-$≡$ {Álgebra e teoria de conjuntos } <br/>
+$≡$ { Algebra and set theory } <br/>
 <span class='bghighlight'> $\\:\text{True}\\:$</span>
 
-e. Garantir que a pós-condição é uma implicação do fim do ciclo:
+e. We provide proof that the post-condition is implied by loop termination:
 
 $I ∧ ¬ C → Q$ <br/>
-$≡$ { Definição de $I$, $C$ e $Q$ } <br/>
+$≡$ { Definition of $I$, $C$ and $Q$ } <br/>
 $(n = q ⋅ d + r ∧ r ≥ 0∧ d>0 ∧ r < d) → (n = q ⋅ d + r ∧ 0 ≤ r ∧ r < d)≡$ <span class='bghighlight'> $\\:\text{True}\\:$</span>
 
-f. Garantir que a variante não é nula no inicio do ciclo:
+f. We provide proof that the variant is strictly positive before the loop:
 
 $I ∧ C → M > 0$ <br/>
-$≡$ { Definição de $I$, $C$ e $M$ } <br/>
+$≡$ { Definition of $I$, $C$ and $M$ } <br/>
 $(n = q ⋅ d + r ∧ r ≥ 0 ∧ r >= d ∧ d>0) → (r > 0)≡$ <span class='bghighlight'> $\\:\text{True}\\:$</span>
 
 ---
 
-Encontre um programa `S` que refine as especificações seguintes, indicando as regras aplicadas.
+Find the program `S` that refines the following specifications:
 
 4.1. $\\{x=0\\}$ `S` $\\{y=x\\}$
 
 Spec($x=0$, `S`, $y=x$) <br/>
-$\sqsubseteq$ { Refinamento do assignment `:=` } <br/>
+$\sqsubseteq$ { Refinement of the assignment `:=` } <br/>
 Spec($x=0$, `y:=x`, $y=x$).
 
 4.2. $\\{y=2 ∧ x=3\\}$ `S` $\\{x=3\\}$
 
 Spec($y=2 ∧ x=3$, `S`, $x=3$) <br/>
-$\sqsubseteq$ { Refinamento do `skip`, dado que $y=2 ∧ x=3 → x=3$ } <br/>
+$\sqsubseteq$ { Refinement of `skip`, given that $y=2 ∧ x=3 → x=3$ } <br/>
 Spec($y=2 ∧ x=3$, `skip`, $x=3$).
 
 ---
