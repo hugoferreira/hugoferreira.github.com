@@ -1,6 +1,9 @@
 /**
  * Syntax highlighting styles
  */
+
+.bghighlight { color: rgb(82, 86, 67); background-color: rgba(132, 189, 0, 0.188235); }
+
 .highlight {
     .c     {  color: lighten($text-color, 35%); font-style: italic } // Comment
     .err   {  } // Error
