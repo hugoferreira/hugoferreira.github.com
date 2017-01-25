@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exercises in Program Design <br> by Calculation
+title: Exercises in Program Design by Calculation
 date: 2017-01-25 18:28
 comments: true
 external-url:
