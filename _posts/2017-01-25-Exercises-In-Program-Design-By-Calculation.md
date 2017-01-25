@@ -89,7 +89,7 @@ Provide the *total* proof for the following specification. Underline the chose i
 >   q:=q+1;
 >   r:=r−d
 > od
-> ```
+> ``` <br>
 > $[n = q⋅d + r∧0≤r ∧ r<d]$
 
 a. We first choose and invariant:
@@ -163,7 +163,7 @@ Prove o seguinte programa através de refinamento (indique as regras que aplicou
 >   y:=y-1;
 >   x:=x-1
 > od
-> ```
+> ``` <br>
 > $\\{ y = n - m \\}$
 
 O ponto de partida é então:
