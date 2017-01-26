@@ -33,7 +33,7 @@ It follows that:
 $wp($`if (a>b) then c:=a`, $c=\text{max}(a,b))$ <br/>
 $≡$ { By the `if` rule } <br/>
 $a>b ∧ wp($`c:=a`, $c=\text{max}(a,b)) ∨ a≤b ∧ wp($`skip`, $c=\text{max}(a,b))$ <br/>
-$≡$ { Assignment `:=` rule } <br/>
+$≡$ { Assignment `:=` and `skip` rule } <br/>
 $a>b ∧ a=\text{max}(a,b) ∨ a≤b ∧ c=\text{max}(a,b)$ <br/>
 $≡$ { By the definition of $\text{max}(a,b)$ } <br/>
 $a>b ∧ a=a ∨ a≤b ∧ c=b$ <br/>
@@ -41,7 +41,7 @@ $≡$ { Identity } <br/>
 $a>b ∨ a≤b ∧ c=b$ <br>
 $≡$ { Distributive Property of ∨ } <br>
 $(a>b ∨ a≤b) ∧ (a>b ∨ c=b)$ <br>
-$≡$ { Left tautology  } <br>
+$≡$ { Left identity of ∧, since $(a>b ∨ a≤b)$ is a tautology } <br>
 <span class='bghighlight'> $a>b ∨ c=b$ </span>.
 
 ---
