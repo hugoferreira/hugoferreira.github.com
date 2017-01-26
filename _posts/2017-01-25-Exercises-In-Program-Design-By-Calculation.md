@@ -105,7 +105,7 @@ c. We provide proof that the invariant holds before the loop:
 $[P]$ `q:=0; r:=n` $[I]$<br/>
 $≡$ { By the definition of $I$ and $wp$} <br/>
 $P → wp($`q:=0`, $wp($`r:=n`, $n = q ⋅ d + r ∧ r ≥ 0 ∧ d>0$ <br/>
-{ Successive application of the assignment `:=` rule } <br/>
+$≡$ { Successive application of the assignment `:=` rule } <br/>
 $P → (n = 0 ⋅ d + n ∧ n ≥ 0 ∧ d>0)$ <br/>
 $≡$ { Definition of $P$, algebra and set theory } <br/>
 $n ≥ 0 ∧ d > 0 → (n = n ∧ n ≥ 0 ∧ d>0) ≡$ <span class='bghighlight'> $\\:\text{True}\\:$</span>
@@ -120,8 +120,7 @@ $\ldots\\: → wp($`q:=q+1`, $wp($`r:=r-d`, $n = q ⋅ d + r ∧ r ≥ 0 ∧ d>0
 $≡$ { Successive application of the assignment `:=` rule } <br/>
 $\ldots\\: → n = (q + 1) ⋅ d + (r - d) ∧ (r-d) ≥ 0 ∧ d>0 ∧ (r - d) < M'$ <br/>
 $≡$ { Definition of $I$, $C$, $M$ and algebra } <br/>
-$(n = q⋅d + r ∧ r≥0 ∧ r≥d ∧ d>0 ∧ r=M') →$<br/>
-$→(n = q⋅d + r ∧ (r-d)≥0 ∧ d>0 ∧ (r-d)< M')$ <br/>
+$(n = q⋅d + r ∧ r≥0 ∧ r≥d ∧ d>0 ∧ r=M') → (n = q⋅d + r ∧ (r-d)≥0 ∧ d>0 ∧ (r-d)< M')$ <br/>
 $≡$ { Algebra and set theory } <br/>
 <span class='bghighlight'> $\\:\text{True}\\:$</span>
 
