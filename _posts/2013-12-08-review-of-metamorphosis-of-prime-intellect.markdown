@@ -3,7 +3,6 @@ layout: post
 title: Review of Metamorphosis of Prime Intellect
 date: 2014-12-08 02:47
 comments: true
-external-url:
 categories: Philosophy
 ---
 
@@ -17,6 +16,13 @@ The other school is portrayed in [this book](http://localroger.com/prime-intelle
 
 [^3]: A recent rant by Greg Egan on the typical patterns seen when portraying artificial intelligence (and _sci-fi_ in general) can be seen [here](http://gregegan.customer.netspace.net.au/ESSAYS/NISF/NISF.html).
 
-Nonetheless, it is a very good book from an otherwise unknown author. It is very well-written, literally engaging, and portrays an increasingly important subject for the XXI technology. It is, however, from my perspective, philosophically simplistic and intellectually limited [^4].
+Nonetheless, it is a very good book from an ~~otherwise unknown~~ well-known author. It is very well-written, literally engaging, and portrays an increasingly important subject for the XXI century  technology. It is, however, from my perspective, philosophically simplistic and intellectually limited [^4].
 
 [^4]: By that I don't mean the author, but the principles in light of what we know today. To be fair, the author has written a very good [post scriptum](http://localroger.com/prime-intellect/mopitech.html) on the choices he made when writing the story.
+
+---
+
+**Addenda (12/03/2017).** I've recently read more works from Roger Williams, and I must say that I am impressed by some of his short stories, particularly those part of "[The Mortal Passage Trilogy](https://www.amazon.co.uk/Mortal-Passage-Trilogy-future-stories/dp/1516966392/)", that one can find [here](http://localroger.com). There's also this excellent [philosophical review](https://www.michaeluhall.com/2017/01/31/metaphysical-boredom-in-the-empire-of-desire-prime-intellect-and-posthistoire/
+) of MoPI, recently drafted by Michael Uhall:
+
+> In any case, although speculations about the modal effects of technological development often get foregrounded in SSF, the narratives always seem to be preoccupied with the existential questions and worries at the heart of posthistoire: Are we really finite creatures? Can humanity exist without the conflicts and constraints that bedevil finite creatures? Do conflicts and constraints actually provide the existential conditions of meaning? Is there a point where certain changes in our abilities or context mean that we have become no longer human? What is the human, after all – and is there even such a thing in the first place? In no way do I mean to suggest that the technological dimension is irrelevant here. To the contrary, siding with Bernard Stiegler and others, it seems likely that the relationship between history and technics is far more interdependent than we often assume, although not in any simplistic, Whiggish sense.
