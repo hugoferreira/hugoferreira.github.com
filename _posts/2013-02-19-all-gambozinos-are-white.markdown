@@ -27,14 +27,6 @@ It was the skeptic [Sextus Empiricus](https://en.wikipedia.org/wiki/Sextus_Empir
 
 > When they propose to establish the universal from the particulars by means of induction, they will effect this by a review of either all or some of the particulars. But if they review some, the induction will be insecure, since some of the particulars omitted in the induction may contravene the universal; while if they are to review all, they will be toiling at the impossible, since the particulars are infinite and indefinite.
 
-```{mermaid}
-graph LR
-A --> B
-B --> C
-B --> D
-D
-```
-
 According to Sextus Empiricus, only if one had observed all gambozinos could one conclude the universal statement, since even just a single particular would be sufficient to disprove the generalization. Therefore, (i) $$P(a) \wedge Q(a)$$, (ii) $$P(b) \wedge \neg Q(b) \vdash \forall_x P(x) \not\rightarrow Q(x)$$.
 
 ### Monotonicity of Entailment
