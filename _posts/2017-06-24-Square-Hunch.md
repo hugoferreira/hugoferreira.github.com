@@ -11,7 +11,7 @@ categories: Mathematics
 
 [^1]: I first read about this puzzle on "[*The Art and Craft of Problem Solving*](https://www.amazon.com/Art-Craft-Problem-Solving/dp/0471789011/ref=sr_1_1?ie=UTF8&qid=1498345535&sr=8-1&keywords=art+craft+problem+solving)" by Paul Zeitz.
 
-The first thing one should do when trying to tackle something like this, is to *"check out the terrain"*. I would be very tempted to write a computer program to find the values for me right away, but where should the program start from considering that this is a recurrence? We do know how to implement *recursive functions*, but the way the recurrence is formulated, it's not straightfoward to define it.
+The first thing one should do when trying to tackle something like this is to *"check out the terrain"*. I would be very tempted to write a computer program to find the values for me right away, but where should the program start from, considering that this is a recurrence? We do know how to implement *recursive functions*, but the way the recurrence is formulated, it's not straightfoward to define it.
 
 ## Release the mathematician in you
 
