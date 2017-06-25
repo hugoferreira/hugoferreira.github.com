@@ -23,7 +23,9 @@ Let $m = 0$, $n = 0$, then $a_0 + a_0 = \frac{1}{2}(a_0+a_0)$ $⇔ 2a_0 = a_0 �
 
 **Step 2. Find the general equivalence for some fixed values**
 
-Assume we fix $n = 0$. Then, the recurrence becomes $a_m + a_m = \frac{1}{2}(a_{2m}+a_0)$ $⇔ 2a_m = \frac{1}{2}a_{2m} ⇔$ <span class='bghighlight'>&nbsp;$4a_m = a_{2m}$ </span>, which no longer depends on two variables ($n$ and $m$) [^2]. With this result in mind, we can now calculate some more values:
+Assuming we fix $n = 0$, the recurrence becomes $a_m + a_m = \frac{1}{2}(a_{2m}+a_0)$ $⇔ 2a_m = \frac{1}{2}a_{2m} ⇔$ <span class='bghighlight'>&nbsp;$4a_m = a_{2m}$ </span> [^2]. This equation is neat for two things: (i) it no longer depends on two variables ($n$ and $m$), and thus can provide a solution given the exact index we want to compute; and (ii) if we multiply the current value by 4, we get the solution for the current index $\times$ 2.
+
+With this result in mind, let's calculate a few more values:
 
 [^2]: If you are wondering why I didn't simplified it instead as $a_m = \frac{a_{2m}}{4}$, it's because we are usually "peeking" incrementally (i.e. from lower to upper indexes in the sequence), so it's typically more useful to have something that can provide a solution based on previous results.
 
@@ -41,11 +43,13 @@ Assume we fix $n = 0$. Then, the recurrence becomes $a_m + a_m = \frac{1}{2}(a_{
 
 **Step 3. Fill some holes to get a clear picture**
 
-We know that $3 = 1 + 2$, and we already gathered some values, so let's attempt to calculate $a_3$. Let $m = 2$, $n = 1$, then $a_{2+1} + a_{2-1} = \frac{1}{2}(a_4+a_2)$ $⇔ a_3 + 1 = \frac{1}{2}(16+4) ⇔$&nbsp;<span class='bghighlight'> $a_3 = 9$ </span>. Wait a minute...
+We know that $3 = 1 + 2$, and we've already gathered some solutions, so let's attempt to calculate $a_3$. Let $m = 2$, $n = 1$, then $a_{2+1} + a_{2-1} = \frac{1}{2}(a_4+a_2)$ $⇔ a_3 + 1 = \frac{1}{2}(16+4) ⇔$&nbsp;<span class='bghighlight'> $a_3 = 9$ </span>.
+
+... wait a minute.
 
 **Step 4. Establish an hypothesis**
 
-Can it be that $H(a_k = k^2)$? If so, then $a_5 = 25$. Shall we try it out? Let $m = 4$, $n = 1$, then $a_{4+1} + a_{4-1} = \frac{1}{2}(a_8+a_2)$ $⇔ a_5 + 9 = \frac{1}{2}(64+4) ⇔$<span class='bghighlight'>&nbsp;$a_5 = 25$ </span>. Hurray!
+Could it be that <span class='bghighlight'>$H(a_k = k^2)$</span>? If so, then $a_5 \stackrel{?}{=} 25$. Shall we try it out? Let $m = 4$, $n = 1$, then $a_{4+1} + a_{4-1} = \frac{1}{2}(a_8+a_2)$ $⇔ a_5 + 9 = \frac{1}{2}(64+4) ⇔$<span class='bghighlight'>&nbsp;$a_5 = 25$ </span>. Hurray!
 
 | Index | Value  | Hypothesis |
 |-------|--------|------------|
