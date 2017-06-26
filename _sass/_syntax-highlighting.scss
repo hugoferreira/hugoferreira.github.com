@@ -2,7 +2,7 @@
  * Syntax highlighting styles
  */
 
-.bghighlight { color: rgb(82, 86, 67); background-color: rgba(132, 189, 0, 0.188235); }
+.bghighlight { color: rgb(82, 86, 67); background-color: rgba(132, 189, 0, 0.188235); padding: 2px; }
 
 .highlight {
     .c     {  color: lighten($text-color, 50%); font-style: italic } // Comment

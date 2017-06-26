@@ -7,7 +7,7 @@ external-url:
 categories: Mathematics
 ---
 
-> Let $a_0, a_1, a_2, ...$ be a sequence of integers, where $a_{m+n} + a_{m-n} = \frac{1}{2}(a_{2m}+a_{2n})$. If $a_1 = 1$, what would be the value of $a_{1997}$? [^1]
+> Let $a_0, a_1, a_2, ...$ be a sequence of integers, where $a_{m+n} + a_{m-n} = ½(a_{2m}+a_{2n})$. If $a_1 = 1$, what would be the value of $a_{1997}$? [^1]
 
 [^1]: I first read about this puzzle on "[*The Art and Craft of Problem Solving*](https://www.amazon.com/Art-Craft-Problem-Solving/dp/0471789011/ref=sr_1_1?ie=UTF8&qid=1498345535&sr=8-1&keywords=art+craft+problem+solving)" by Paul Zeitz.
 
@@ -19,11 +19,27 @@ Let's try to tackle this problem analitically and without computer aid. Where to
 
 **Step 1. Check out the terrain**
 
-Let $m = 0$, $n = 0$, then $a_0 + a_0 = \frac{1}{2}(a_0+a_0)$ $⇔ 2a_0 = a_0 ⇔$&nbsp;<span class='bghighlight'> $a_0 = 0$ </span>. Great, we now have two data points: $a_0$ and $a_1$. Can we try generalize the equation?
+Let $m = 0$, $n = 0$, then:
+
+$$
+\begin{equation}
+a_0 + a_0 = \frac{1}{2}(a_0+a_0) ⇔ 2a_0 = a_0 ⇔ a_0 = 0
+\end{equation}
+$$
+
+Great, we now have two data points: $a_0$ and $a_1$. Can we try and generalize the equation?
 
 **Step 2. Find the general equivalence for some fixed values**
 
-Assuming we fix $n = 0$, the recurrence becomes $a_m + a_m = \frac{1}{2}(a_{2m}+a_0)$ $⇔ 2a_m = \frac{1}{2}a_{2m} ⇔$ <span class='bghighlight'>&nbsp;$4a_m = a_{2m}$ </span> [^2]. This equation is neat for two things: (i) it no longer depends on two variables ($n$ and $m$), and thus can provide a solution given the exact index we want to compute; and (ii) if we multiply the current value by 4, we get the solution for the current index $\times$ 2.
+Assuming we fix $n = 0$, the recurrence becomes:
+
+$$
+\begin{equation}
+a_m + a_m = \frac{1}{2}(a_{2m}+a_0) ⇔ 2a_m = \frac{1}{2}a_{2m} ⇔ \class{bghighlight}{4a_m = a_{2m}}
+\end{equation}
+$$
+
+This equation [^2] is neat for two things: (i) it no longer depends on two variables ($n$ and $m$), and thus can provide a solution given the exact index we want to compute; and (ii) if we multiply the current value by 4, we get the solution for the current index $\times$ 2.
 
 With this result in mind, let's calculate a few more values:
 
@@ -43,13 +59,27 @@ With this result in mind, let's calculate a few more values:
 
 **Step 3. Fill some holes to get a clear picture**
 
-We know that $3 = 1 + 2$, and we've already gathered some solutions, so let's attempt to calculate $a_3$. Let $m = 2$, $n = 1$, then $a_{2+1} + a_{2-1} = \frac{1}{2}(a_4+a_2)$ $⇔ a_3 + 1 = \frac{1}{2}(16+4) ⇔$&nbsp;<span class='bghighlight'> $a_3 = 9$ </span>.
+As we've already gathered some solutions, let's attempt to calculate $a_3$. Let $m = 2$, $n = 1$, then:
+
+$$
+\begin{equation}
+a_{2+1} + a_{2-1} = \frac{1}{2}(a_4+a_2) ⇔ a_3 + 1 = \frac{1}{2}(16+4) ⇔ \class{bghighlight}{a_3 = 9}
+\end{equation}
+$$
 
 ... wait a minute.
 
 **Step 4. Establish an hypothesis**
 
-Could it be that <span class='bghighlight'>$H(a_k = k^2)$</span>? If so, then $a_5 \stackrel{?}{=} 25$. Shall we try it out? Let $m = 4$, $n = 1$, then $a_{4+1} + a_{4-1} = \frac{1}{2}(a_8+a_2)$ $⇔ a_5 + 9 = \frac{1}{2}(64+4) ⇔$<span class='bghighlight'>&nbsp;$a_5 = 25$ </span>. Hurray!
+Could it be that $\class{bghighlight}{H(a_k = k^2)}$? If so, then $a_5 \stackrel{?}{=} 25$. Shall we try it out? Let $m = 4$, $n = 1$, then:
+
+$$
+\begin{equation}
+a_{4+1} + a_{4-1} = \frac{1}{2}(a_8+a_2) ⇔ a_5 + 9 = \frac{1}{2}(64+4) ⇔ a_5 = 25
+\end{equation}
+$$
+
+Hurray! We now know a lot more about the recurrence:
 
 | Index | Value  | Hypothesis |
 |-------|--------|------------|
@@ -71,7 +101,15 @@ Yeah, yeah... by now most of us would be convinced that we reached an easy solut
 
 Think about it... We are trying to prove *sequences*, and we already know some lower values of the sequence. We want to prove that our hypothesis is valid for every element of the sequence. This smells a lot like *induction*, particularly  [*strong induction*](https://en.wikipedia.org/wiki/Mathematical_induction#Complete_induction).
 
-In *strong induction* we assume that when attempting to prove an hypothesis $H$, then $∀_k : H(k_0) ∧ H(k_0 + 1) ∧ H(k_0 + 2) \cdots H(k) ⇒ H(k+1)$; in other words, if the inductive hypothesis holds for all values up to $k$, starting from a base value $k_0$, then it *must* hold for $k+1$.
+In *strong induction* we assume that when attempting to prove an hypothesis $H$, then:
+
+$$
+\begin{equation}
+∀_k : H(k_0) ∧ H(k_0 + 1) ∧ H(k_0 + 2) ∧ \cdots ∧ H(k) ⇒ H(k+1)
+\end{equation}
+$$
+
+... in other words, if the inductive hypothesis holds for all values up to $k$, starting from a base value $k_0$, then it *must* hold for $k+1$.
 
 **Step 5.2. Induction it is! Test the base case**
 
@@ -95,8 +133,8 @@ $a_{x+1} = x^2+2x+1$<br>
 $≡$ { since $(a+b)^2 = (a^2+2ab+b^2)$ } <br>
 $a_{x+1} = (x+1)^2$<br>
 $≡$ { let $k=x+1$ } <br>
-<span class='bghighlight'> $a_k = k^2$ </span>&nbsp;Q.E.D.<br>
+$\class{bghighlight}{a_k = k^2}$&nbsp;Q.E.D.<br>
 
 **Step 6. Pown that puzzle!**
 
-<span class='bghighlight'> $a_{1997} = 1997^2 = 3988009$ </span>. Easy, uh?
+$\class{bghighlight}{a_{1997} = 1997^2 = 3988009}$. Easy, uh?
