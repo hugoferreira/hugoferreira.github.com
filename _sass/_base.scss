@@ -1,11 +1,14 @@
 @font-face {
-  font-family: 'FiraCode-Regular';
+  font-family: 'Fira Code';
   src: url('/assets/FiraCode-Regular.woff2') format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'FiraCode-Medium';
+  font-family: 'Fira Code';
   src: url('/assets/FiraCode-Medium.woff2') format("woff2");
+  font-weight: 500;
 }
 
 body {
