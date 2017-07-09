@@ -119,6 +119,6 @@ console.log(`After ${n} simulations, the expected value is ${avg(results)}`)
 
 ## Fancy chart
 
-Of course, the Expected Value is exactly what the name says: expected. On average, it will be 10417.74, but in reality it is a random variable that follows a normal distribution, centered at that value. We can run the above simulation, say, 5000 times, and then plot an histogram to get the feeling of it, like so:
+Of course, the Expected Value is exactly what the name says: expected. On average, it will be 10417.74, but in reality it is a random variable that follows a normal distribution, centered at that value. We can run the above simulation, say, 5000 times, and then plot an histogram to get the feeling of it, like so (you can refresh the page to see a new run):
 
 <div id="histogram"></div>

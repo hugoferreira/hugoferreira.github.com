@@ -65,7 +65,7 @@ $(() => {
 
   bar.append("rect")
       .attr("x", 1)
-      .attr("width", x(bins[0].x1) - x(bins[0].x0))
+      .attr("width", x(bins[0].x1) - x(bins[0].x0) + 1)
       .attr("height", (d) => height - y(d.length));
 
   /* bar.append("text")
