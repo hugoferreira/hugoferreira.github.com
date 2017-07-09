@@ -80,6 +80,8 @@ $\phantom{\equiv}~9900 + 517.74 = \class{bghighlight}{10417.74}$
 
 ## Simulation
 
+I like to solve the same problem using more than one technique; so, as always, we shall simulate it:
+
 ```javascript
 const random = (min, max) => Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min)
 const avg = (r) => r.reduce((a, b) => a+b) / r.length
@@ -116,5 +118,7 @@ console.log(`After ${n} simulations, the expected value is ${avg(results)}`)
 ```
 
 ## Fancy chart
+
+Of course, the Expected Value is exactly what the name says: expected. On average, it will be 10417.74, but in reality it is a random variable that follows a normal distribution, centered at that value. We can run the above simulation, say, 5000 times, and then plot an histogram to get the feeling of it, like so:
 
 <div id="histogram"></div>
