@@ -17,8 +17,8 @@ Let $C$ be a random variable that denotes the counter being called, and $NC$ a n
 
 $$
 \begin{eqnarray*}
- C &\sim& NBin(1, \frac{1}{100}) \\
- NC(x) &\sim& NBin(1, \frac{x}{100})
+ C &\sim& \text{NB}(1; \frac{1}{100}) \\
+ NC(x) &\sim& \text{NB}(1; \frac{x}{100})
 \end{eqnarray*}
 $$
 
@@ -119,6 +119,6 @@ console.log(`After ${n} simulations, the expected value is ${avg(results)}`)
 
 ## Fancy chart
 
-Of course, the Expected Value is exactly what the name says: expected. On average, it will be 10417.74, but in reality it is a random variable that follows a normal distribution, centered at that value. We can run the above simulation, say, 5000 times, and then plot an histogram to get the feeling of it, like so (you can refresh the page to see a new run):
+Of course, the Expected Value is exactly what the name says: expected. On average, it will be 10417.74, but in reality it is a random variable that follows a normal distribution, centered at that value. We can run the above simulation, say, 5000 times, and then plot an histogram to get the feeling of it, like so (you can [simulate a new run](javascript:update();)):
 
 <div id="histogram"></div>

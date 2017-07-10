@@ -269,16 +269,6 @@ table {
   }
 }
 
-#histogram .bar rect {
-  fill: $alt-color;
-}
-
-#histogram .bar text {
-  fill: $background-color;
-  font-size: 10px;
-  font-family: 'PT Serif';
-}
-
 #histogram {
   font-family: 'PT Serif';
   background-color: $background-color;
@@ -290,6 +280,16 @@ table {
   svg {
     width: 100%;
     shape-rendering: crispEdges;
+  }
+
+  .bar text {
+    fill: $background-color;
+    font-size: 10px;
+    font-family: 'PT Serif';
+  }
+
+  .bar rect {
+    fill: $alt-color;
   }
 
   .axis {
