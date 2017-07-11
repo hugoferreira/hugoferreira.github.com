@@ -1,25 +1,26 @@
-var data = [];
-var simulations = 0;
+const data = [];
+let simulations = 0;
 
 function update(n = 500) {
   simulation(n);
-  updateChart();
+  updateChart(data);
 }
 
 function restart() {
   data.length = 0;
   simulation();
   clearChart();
-  redraw();
+  updateChart(data);
 }
 
 function simulation(n = 500) {
   const random = (min, max) => Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min)
   const avg = (r) => r.reduce((a, b) => a+b) / r.length
-
-  let counterGuy = random(1, 100)
+  const counterGuy = random(1, 100)
 
   Array.prototype.push.apply(data, [...Array(n).keys()].map(() => {
+    simulations++
+
     let counter = 0
     let sw = false
     let steps = 0
@@ -43,8 +44,6 @@ function simulation(n = 500) {
 
     return steps;
   }))
-
-  simulations = data.length;
 
   console.log(`After ${simulations} simulations, the expected value is ${avg(data)}`)
 }
@@ -70,14 +69,14 @@ function drawchart() {
 
   g.append("text")
     .attr("class", "axis n-simulations")
-    .attr("x", 10).attr("y", 10)
+    .attr("x", 0).attr("y", 10)
     .text("n = " + simulations);
 
   clearChart = () => {
-    var bars = svg.selectAll('.bar').remove();
+    svg.selectAll('.bar').remove();
   }
 
-  updateChart = () => {
+  updateChart = (data) => {
     const bins = d3.histogram()
         .domain(x.domain())
         .thresholds(x.ticks(50))
@@ -87,9 +86,8 @@ function drawchart() {
         .domain([0, d3.max(bins, (d) => d.length)])
         .range([height, 0]);
 
-    var bars = svg.selectAll('.bar').data(bins);
+    const bars = svg.selectAll('.bar').data(bins);
 
-    // Remove
     bars.exit().remove();
     bars.enter().append("g")
       .attr("class", "bar")
@@ -97,11 +95,15 @@ function drawchart() {
         .append("rect")
         .attr("x", 1)
         .attr("width", x(bins[0].x1) - x(bins[0].x0) + 1)
-        .attr("y", height);
+        .attr("y", height)
+        .transition()
+            .duration(1000)
+            .attr("height", (d) => height - y(d.length))
+            .attr("y", (d) => y(d.length));
 
     bars.select("rect")
       .transition()
-          .duration(1000)
+          .duration(500)
           .attr("height", (d) => height - y(d.length))
           .attr("y", (d) => y(d.length));
 
@@ -109,42 +111,12 @@ function drawchart() {
       .text("n = " + simulations);
   }
 
-  redraw = () => {
-    console.log("Redrawing...");
+  updateChart(data);
 
-    const bins = d3.histogram()
-        .domain(x.domain())
-        .thresholds(x.ticks(50))
-        (data);
-
-    const y = d3.scaleLinear()
-        .domain([0, d3.max(bins, (d) => d.length)])
-        .range([height, 0]);
-
-    g.selectAll(".bar")
-      .data(bins)
-      .enter().append("g")
-        .attr("class", "bar")
-        .attr("transform", (d) => `translate(${x(d.x0)}, 0)`)
-          .append("rect")
-          .attr("x", 1)
-          .attr("width", x(bins[0].x1) - x(bins[0].x0) + 1)
-          .attr("y", height)
-          .transition()
-              .duration(1000)
-              .attr("height", (d) => height - y(d.length))
-              .attr("y", (d) => y(d.length));
-
-    g.append("line")
-      .attr("class", "x-marker")
-      .attr("x1", x(10417.74)).attr("x2", x(10417))
-      .attr("y1", 0).attr("y2", height);
-
-    g.select(".n-simulations")
-      .text("n = " + simulations);
-  }
-
-  redraw();
+  g.append("line")
+    .attr("class", "x-marker")
+    .attr("x1", x(10417.74)).attr("x2", x(10417))
+    .attr("y1", 0).attr("y2", height);
 }
 
 $(() => { simulation(); drawchart(); });
