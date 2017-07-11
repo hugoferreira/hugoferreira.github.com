@@ -280,6 +280,13 @@ table {
   svg {
     width: 100%;
     shape-rendering: crispEdges;
+
+    .x-marker {
+      stroke: darken($alt-color, 50%);
+      stroke-width: 1;
+      stroke-dasharray: 5;
+      stroke-opacity: 0.4;
+    }
   }
 
   .bar text {
@@ -298,13 +305,5 @@ table {
 
   .axis {
     font-family: 'PT Serif';
-  }
-
-  .x-marker {
-    stroke: darken($alt-color, 50%);
-    stroke-width: 1;
-    stroke-dasharray: "5, 5";
-    stroke-opacity: 0.4;
-    z-index: 10;
   }
 }
