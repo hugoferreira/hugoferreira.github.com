@@ -292,6 +292,10 @@ table {
     fill: $alt-color;
   }
 
+  .bar rect:hover {
+    fill: darken($alt-color, 10%);
+  }
+
   .axis {
     font-family: 'PT Serif';
   }
@@ -301,5 +305,6 @@ table {
     stroke-width: 1;
     stroke-dasharray: "5, 5";
     stroke-opacity: 0.4;
+    z-index: 10;
   }
 }

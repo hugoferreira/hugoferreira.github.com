@@ -2,8 +2,7 @@ var data = [];
 
 function update() {
   simulation();
-  clearChart();
-  redraw();
+  updateChart();
 }
 
 function simulation() {
@@ -66,35 +65,34 @@ function drawchart() {
   }
 
   updateChart = () => {
-    console.log("Clearing...");
+    console.log("Updating...");
 
     const bins = d3.histogram()
         .domain(x.domain())
         .thresholds(x.ticks(50))
         (data);
 
+    const y = d3.scaleLinear()
+        .domain([0, d3.max(bins, (d) => d.length)])
+        .range([height, 0]);
+
     var bars = svg.selectAll('.bar').data(bins);
 
     // Remove
     bars.exit().remove();
-
-    const bar = bars.enter().append("g")
+    bars.enter().append("g")
       .attr("class", "bar")
-      .attr("transform", (d) => `translate(${x(d.x0)}, 0)`);
+      .attr("transform", (d) => `translate(${x(d.x0)}, 0)`)
+        .append("rect")
+        .attr("x", 1)
+        .attr("width", x(bins[0].x1) - x(bins[0].x0) + 1)
+        .attr("y", height);
 
-    g.selectAll(".bar")
-      .data(bins)
-      .enter().append("g")
-        .attr("class", "bar")
-        .attr("transform", (d) => `translate(${x(d.x0)}, 0)`)
-          .append("rect")
-          .attr("x", 1)
-          .attr("width", x(bins[0].x1) - x(bins[0].x0) + 1)
-          .attr("y", height)
-          .transition()
-              .duration(1000)
-              .attr("height", (d) => height - y(d.length))
-              .attr("y", (d) => y(d.length));
+    bars.select("rect")
+      .transition()
+          .duration(1000)
+          .attr("height", (d) => height - y(d.length))
+          .attr("y", (d) => y(d.length));
   }
 
   redraw = () => {
