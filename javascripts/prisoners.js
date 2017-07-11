@@ -1,4 +1,5 @@
 var data = [];
+var simulations = 0;
 
 function update(n = 500) {
   simulation(n);
@@ -43,7 +44,9 @@ function simulation(n = 500) {
     return steps;
   }))
 
-  console.log(`After ${n} simulations, the expected value is ${avg(data)}`)
+  simulations = data.length;
+
+  console.log(`After ${simulations} simulations, the expected value is ${avg(data)}`)
 }
 
 function drawchart() {
@@ -64,6 +67,11 @@ function drawchart() {
       .attr("class", "axis")
       .attr("transform", `translate(0,${height})`)
       .call(d3.axisBottom(x));
+
+  g.append("text")
+    .attr("class", "axis n-simulations")
+    .attr("x", 10).attr("y", 10)
+    .text("n = " + simulations);
 
   clearChart = () => {
     var bars = svg.selectAll('.bar').remove();
@@ -96,10 +104,13 @@ function drawchart() {
           .duration(1000)
           .attr("height", (d) => height - y(d.length))
           .attr("y", (d) => y(d.length));
+
+    g.select(".n-simulations")
+      .text("n = " + simulations);
   }
 
   redraw = () => {
-    console.log("Rwdrawing...");
+    console.log("Redrawing...");
 
     const bins = d3.histogram()
         .domain(x.domain())
@@ -127,7 +138,10 @@ function drawchart() {
     g.append("line")
       .attr("class", "x-marker")
       .attr("x1", x(10417.74)).attr("x2", x(10417))
-      .attr("y1", 0).attr("y2", height)
+      .attr("y1", 0).attr("y2", height);
+
+    g.select(".n-simulations")
+      .text("n = " + simulations);
   }
 
   redraw();
