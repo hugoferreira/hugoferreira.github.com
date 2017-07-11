@@ -1,15 +1,21 @@
 var data = [];
 
-function update() {
-  simulation();
+function update(n = 500) {
+  simulation(n);
   updateChart();
 }
 
-function simulation() {
+function restart() {
+  data.length = 0;
+  simulation();
+  clearChart();
+  redraw();
+}
+
+function simulation(n = 500) {
   const random = (min, max) => Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min)
   const avg = (r) => r.reduce((a, b) => a+b) / r.length
 
-  let n = 500
   let counterGuy = random(1, 100)
 
   Array.prototype.push.apply(data, [...Array(n).keys()].map(() => {
@@ -60,13 +66,10 @@ function drawchart() {
       .call(d3.axisBottom(x));
 
   clearChart = () => {
-    console.log("Clearing...");
     var bars = svg.selectAll('.bar').remove();
   }
 
   updateChart = () => {
-    console.log("Updating...");
-
     const bins = d3.histogram()
         .domain(x.domain())
         .thresholds(x.ticks(50))
@@ -96,7 +99,7 @@ function drawchart() {
   }
 
   redraw = () => {
-    console.log("Updating...");
+    console.log("Rwdrawing...");
 
     const bins = d3.histogram()
         .domain(x.domain())
@@ -120,14 +123,14 @@ function drawchart() {
               .duration(1000)
               .attr("height", (d) => height - y(d.length))
               .attr("y", (d) => y(d.length));
+
+    g.append("line")
+      .attr("class", "x-marker")
+      .attr("x1", x(10417.74)).attr("x2", x(10417))
+      .attr("y1", 0).attr("y2", height)
   }
 
   redraw();
-
-  g.append("line")
-    .attr("class", "x-marker")
-    .attr("x1", x(10417.74)).attr("x2", x(10417))
-    .attr("y1", 0).attr("y2", height)
 }
 
 $(() => { simulation(); drawchart(); });
