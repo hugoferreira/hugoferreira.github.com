@@ -1,19 +1,19 @@
 var data = [];
-var updateChart;
 
 function update() {
   simulation();
-  updateChart();
+  clearChart();
+  redraw();
 }
 
 function simulation() {
   const random = (min, max) => Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min)
   const avg = (r) => r.reduce((a, b) => a+b) / r.length
 
-  let n = 5000
+  let n = 500
   let counterGuy = random(1, 100)
 
-  data = [...Array(n).keys()].map(() => {
+  Array.prototype.push.apply(data, [...Array(n).keys()].map(() => {
     let counter = 0
     let sw = false
     let steps = 0
@@ -36,7 +36,7 @@ function simulation() {
     }
 
     return steps;
-  })
+  }))
 
   console.log(`After ${n} simulations, the expected value is ${avg(data)}`)
 }
@@ -55,57 +55,81 @@ function drawchart() {
       .domain([5000, 15000])
       .rangeRound([0, width]);
 
-  const bins = d3.histogram()
-      .domain(x.domain())
-      .thresholds(x.ticks(50))
-      (data);
-
-  const y = d3.scaleLinear()
-      .domain([0, d3.max(bins, (d) => d.length)])
-      .range([height, 0]);
-
   g.append("g")
       .attr("class", "axis")
       .attr("transform", `translate(0,${height})`)
       .call(d3.axisBottom(x));
 
-  updateChart = () => {
-    console.log("Updating...");
+  clearChart = () => {
+    console.log("Clearing...");
+    var bars = svg.selectAll('.bar').remove();
+  }
 
-    const x = d3.scaleLinear()
-        .domain([5000, 15000])
-        .rangeRound([0, width]);
+  updateChart = () => {
+    console.log("Clearing...");
 
     const bins = d3.histogram()
         .domain(x.domain())
         .thresholds(x.ticks(50))
         (data);
 
-    const bar = g.selectAll(".bar")
+    var bars = svg.selectAll('.bar').data(bins);
+
+    // Remove
+    bars.exit().remove();
+
+    const bar = bars.enter().append("g")
+      .attr("class", "bar")
+      .attr("transform", (d) => `translate(${x(d.x0)}, 0)`);
+
+    g.selectAll(".bar")
       .data(bins)
       .enter().append("g")
         .attr("class", "bar")
-        .attr("transform", (d) => `translate(${x(d.x0)}, 0)`);
-
-    bar.append("rect")
-        .attr("x", 1)
-        .attr("width", x(bins[0].x1) - x(bins[0].x0) + 1)
-        .attr("y", height)
-        .transition()
-            .duration(1000)
-            .attr("height", (d) => height - y(d.length))
-            .attr("y", (d) => y(d.length));
+        .attr("transform", (d) => `translate(${x(d.x0)}, 0)`)
+          .append("rect")
+          .attr("x", 1)
+          .attr("width", x(bins[0].x1) - x(bins[0].x0) + 1)
+          .attr("y", height)
+          .transition()
+              .duration(1000)
+              .attr("height", (d) => height - y(d.length))
+              .attr("y", (d) => y(d.length));
   }
 
-  updateChart();
+  redraw = () => {
+    console.log("Updating...");
+
+    const bins = d3.histogram()
+        .domain(x.domain())
+        .thresholds(x.ticks(50))
+        (data);
+
+    const y = d3.scaleLinear()
+        .domain([0, d3.max(bins, (d) => d.length)])
+        .range([height, 0]);
+
+    g.selectAll(".bar")
+      .data(bins)
+      .enter().append("g")
+        .attr("class", "bar")
+        .attr("transform", (d) => `translate(${x(d.x0)}, 0)`)
+          .append("rect")
+          .attr("x", 1)
+          .attr("width", x(bins[0].x1) - x(bins[0].x0) + 1)
+          .attr("y", height)
+          .transition()
+              .duration(1000)
+              .attr("height", (d) => height - y(d.length))
+              .attr("y", (d) => y(d.length));
+  }
+
+  redraw();
 
   g.append("line")
+    .attr("class", "x-marker")
     .attr("x1", x(10417.74)).attr("x2", x(10417))
     .attr("y1", 0).attr("y2", height)
-    .attr("stroke", "black")
-    .attr("stroke-width", "1")
-    .attr("stroke-dasharray", "5, 5")
-    .attr("stroke-opacity", "0.4")
 }
 
 $(() => { simulation(); drawchart(); });

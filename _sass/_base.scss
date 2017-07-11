@@ -295,4 +295,11 @@ table {
   .axis {
     font-family: 'PT Serif';
   }
+
+  .x-marker {
+    stroke: darken($alt-color, 50%);
+    stroke-width: 1;
+    stroke-dasharray: "5, 5";
+    stroke-opacity: 0.4;
+  }
 }
