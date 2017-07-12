@@ -1,16 +1,16 @@
-const data = [];
-let simulations = 0;
+const data = []
+let simulations = 0
 
 function update(n = 500) {
-  simulation(n);
-  updateChart(data);
+  simulation(n)
+  updateChart()
 }
 
 function restart() {
-  data.length = 0;
-  simulation();
-  clearChart();
-  updateChart(data);
+  data.length = 0
+  simulation()
+  clearChart()
+  updateChart()
 }
 
 function simulation(n = 500) {
@@ -24,7 +24,7 @@ function simulation(n = 500) {
     let counter = 0
     let sw = false
     let steps = 0
-    let mem = new Set()
+    const mem = new Set()
 
     while(counter < 99) {
       steps++
@@ -56,27 +56,25 @@ function drawchart() {
   const width = +parseInt(svg.style("width")) - margin.left - margin.right;
   const height = +parseInt(svg.style("height")) - margin.top - margin.bottom;
 
-  const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+  const chart = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
   const x = d3.scaleLinear()
       .domain([5000, 15000])
       .rangeRound([0, width]);
 
-  g.append("g")
+  chart.append("g")
       .attr("class", "axis")
       .attr("transform", `translate(0,${height})`)
       .call(d3.axisBottom(x));
 
-  g.append("text")
+  chart.append("text")
     .attr("class", "axis n-simulations")
     .attr("x", 0).attr("y", 10)
     .text("n = " + simulations);
 
-  clearChart = () => {
-    svg.selectAll('.bar').remove();
-  }
+  clearChart = () => { svg.selectAll('.bar').remove(); }
 
-  updateChart = (data) => {
+  updateChart = () => {
     const bins = d3.histogram()
         .domain(x.domain())
         .thresholds(x.ticks(50))
@@ -107,13 +105,13 @@ function drawchart() {
           .attr("height", (d) => height - y(d.length))
           .attr("y", (d) => y(d.length));
 
-    g.select(".n-simulations")
+    chart.select(".n-simulations")
       .text("n = " + simulations);
   }
 
-  updateChart(data);
+  updateChart();
 
-  g.append("line")
+  chart.append("line")
     .attr("class", "x-marker")
     .attr("x1", x(10417.74)).attr("x2", x(10417))
     .attr("y1", 0).attr("y2", height);
