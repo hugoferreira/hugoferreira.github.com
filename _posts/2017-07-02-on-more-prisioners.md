@@ -9,11 +9,11 @@ custom_js:
 - prisoners
 ---
 
-> 100 prisoners are imprisoned in solitary cells. Each cell is windowless and soundproof (i.e., there's absolutely no way to exchange information among them once they are imprisoned). There's a central room with one light bulb; the bulb is initially off. No prisoner can see the light bulb from his or her own cell. Each day, the warden picks a prisoner equally at random, and that prisoner visits the central living room; at the end of the day the prisoner is returned to his cell. While in the living room, the prisoner can toggle the bulb if he or she wishes. Also, the prisoner has the option of asserting the claim that all 100 prisoners have been to the living room. If this assertion is false (that is, some prisoners still haven't been to the living room), all 100 prisoners will be shot for their stupidity. However, if it is indeed true, all prisoners are set free and inducted into MENSA, since the world can always use more smart people. Thus, the assertion should only be made if the prisoner is 100% certain of its validity.
+> 100 prisoners are imprisoned in solitary cells. Each cell is windowless and soundproof (i.e., there's absolutely no way to exchange information among them once they are imprisoned). There's a central room with one light bulb; the bulb is initially off. No prisoner can see the light bulb from his or her own cell. Each day, the warden picks a prisoner equally at random, and that prisoner visits the central room; at the end of the day the prisoner is returned to his cell. While in the room, the prisoner can toggle the bulb if he or she wishes. Also, the prisoner has the option of asserting the claim that all 100 prisoners have been to the room. If this assertion is false (that is, some prisoners still haven't been to the room), they loose. If it is indeed true, all prisoners are set free. Thus, the assertion should only be made if the prisoner is 100% certain of its validity.
 
-The solution to this puzzle is well known. Before being imprisoned, they agree on a protocol. Here, a *counter* is elected: a special prisoner that behaves differently from everyone else. Whenever someone (who's not the counter) goes into the room, and find the switch in the *off* position, it turns it *on*. But it only does this once. And whenever the *counter* goes into the room, and finds the switch in the *on* position, it turns it *off*, ands counts plus one. When the counter reaches 99, then he knows for certainty that everyone was called before. Now here's the real question we want to tackle:
+The solution to this puzzle is well known. Before being imprisoned, they agree on a protocol. Here, a *counter* is elected: a special prisoner that behaves differently from everyone else. Whenever someone (who's not the counter) goes into the room, and find the switch in the *off* position, it turns it *on*. But it only does this once. And whenever the *counter* goes into the room and finds the switch in the *on* position, it turns it *off*, and counts plus one. When the counter reaches 99, then he knows for certain that everyone was called before. Now here's the real question we want to tackle:
 
-> How long would it take on average, using the aforementioned strategy, for the prisioners to be released?
+> How long would it take on average, using the aforementioned strategy, for the prisoners to be released?
 
 ## First approach
 
@@ -56,15 +56,15 @@ Hence, considering $q = (1-p)$:
 
 $$1p + 2pq + 3pq^2 + \cdots + npq^{n-1} = \sum_{i=1}^{\infty} np(1-p)^{n-1} = \frac{1}{p}$$
 
-It is easy to that the infinite sum converges, and we get a closed form probability function. And since $p=\frac{1}{100}$, then $\mathbb{E}[C] = \class{bghighlight}{100}$. The conclusion is actually very intuitive: on average, one has to call 100 prisioners before our *counter* is selected.
+It is easy to see that the infinite sum converges. And since $p=\frac{1}{100}$, then $\mathbb{E}[C] = \class{bghighlight}{100}$. The conclusion is actually very intuitive: on average, one has to call 100 prisoners before our *counter* is selected.
 
-## I heard something about "distributions" ...
+## I heard something about "distributions"...
 
 Alternatively, we also know that the expected value of a random variable following a [negative binomial distribution](https://en.wikipedia.org/wiki/Negative_binomial_distribution), up to and including the success event happening ($r = 1$, where $r$ is the number of successes that need to happen), is:
 
 $$\mathbb{E}[C] = r\frac{1-p}{p} +1= 1\frac{1-\frac{1}{100}}{\frac{1}{100}} + 1 = \class{bghighlight}{100}$$
 
-Similarly, the expected value for a prisioner that has never turned on the switch, and considering that the probability depends on how many prisioners still have that property[^2]:
+Similarly, the expected value for a prisioner that has never turned on the switch, and considering that the probability depends on how many prisoners still have that property[^2]:
 
 [^2]: Expressing the same using linearity of expectation is left as an exercise to the reader.
 
