@@ -89,19 +89,19 @@ I like to solve the same problem using more than one technique; so, as always, w
 ```javascript
 const random = (min, max) => Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min)
 const avg = (r) => r.reduce((a, b) => a+b) / r.length
+const counterGuy = random(1, 100)
+const n = 500
 
-let n = 500
-let counterGuy = random(1, 100)
+const results = [...Array(n).keys()].map(() => {
+  const mem = new Set()
 
-let results = [...Array(n).keys()].map(() => {
   let counter = 0
   let sw = false
   let steps = 0
-  let mem = new Set()
 
   while(counter < 99) {
     steps++
-    var p = random(1, 100)
+    const p = random(1, 100)
     if (p == counterGuy) {
       if (sw == true) {
         counter++

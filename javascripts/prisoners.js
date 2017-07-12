@@ -1,34 +1,20 @@
+const avg = (r) => r.reduce((a, b) => a+b) / r.length
 const data = []
-let simulations = 0
+const simIter = simulation()
 
-function update(n = 500) {
-  simulation(n)
-  updateChart()
-}
-
-function restart() {
-  data.length = 0
-  simulation()
-  clearChart()
-  updateChart()
-}
-
-function simulation(n = 500) {
+function *simulation() {
   const random = (min, max) => Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min)
-  const avg = (r) => r.reduce((a, b) => a+b) / r.length
-  const counterGuy = random(1, 100)
 
-  Array.prototype.push.apply(data, [...Array(n).keys()].map(() => {
-    simulations++
-
+  while(true) {
+    const mem = new Set()
+    const counterGuy = random(1, 100)
     let counter = 0
     let sw = false
     let steps = 0
-    const mem = new Set()
 
     while(counter < 99) {
       steps++
-      var p = random(1, 100)
+      const p = random(1, 100)
       if (p == counterGuy) {
         if (sw == true) {
           counter++
@@ -42,10 +28,8 @@ function simulation(n = 500) {
       }
     }
 
-    return steps;
-  }))
-
-  console.log(`After ${simulations} simulations, the expected value is ${avg(data)}`)
+    yield steps;
+  }
 }
 
 function drawchart() {
@@ -70,7 +54,7 @@ function drawchart() {
   chart.append("text")
     .attr("class", "axis n-simulations")
     .attr("x", 0).attr("y", 10)
-    .text("n = " + simulations);
+    .text("n = " + data.length);
 
   clearChart = () => { svg.selectAll('.bar').remove(); }
 
@@ -84,7 +68,7 @@ function drawchart() {
         .domain([0, d3.max(bins, (d) => d.length)])
         .range([height, 0]);
 
-    const bars = svg.selectAll('.bar').data(bins);
+    const bars = chart.selectAll('.bar').data(bins);
 
     bars.exit().remove();
     bars.enter().append("g")
@@ -106,7 +90,7 @@ function drawchart() {
           .attr("y", (d) => y(d.length));
 
     chart.select(".n-simulations")
-      .text("n = " + simulations);
+      .text("n = " + data.length);
   }
 
   updateChart();
@@ -117,4 +101,17 @@ function drawchart() {
     .attr("y1", 0).attr("y2", height);
 }
 
-$(() => { simulation(); drawchart(); });
+function update(n = 500) {
+  const samples = Array.from(Array(n), simIter.next, simIter).map(o => o.value)
+  Array.prototype.push.apply(data, samples)
+  console.log(`After ${data.length} simulations, the expected value is ${avg(data)}`);
+  updateChart()
+}
+
+function restart() {
+  data.length = 0
+  clearChart()
+  update()
+}
+
+$(() => { drawchart(); update(); });
