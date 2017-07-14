@@ -87,38 +87,40 @@ $\phantom{\equiv}~9900 + 517.74 = \class{bghighlight}{10417.74}$
 I like to solve the same problem using more than one technique; so, as always, we shall simulate it:
 
 ```javascript
-const random = (min, max) => Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min)
 const avg = (r) => r.reduce((a, b) => a+b) / r.length
-const counterGuy = random(1, 100)
-const n = 500
+const simIter = simulation()
+const random = (min, max) => Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min)
 
-const results = [...Array(n).keys()].map(() => {
-  const mem = new Set()
+function *simulation() {
+  while(true) {
+    const mem = new Set()
+    const counterGuy = random(1, 100)
+    let counter = 0
+    let sw = false
+    let steps = 0
 
-  let counter = 0
-  let sw = false
-  let steps = 0
-
-  while(counter < 99) {
-    steps++
-    const p = random(1, 100)
-    if (p == counterGuy) {
-      if (sw == true) {
-        counter++
-        sw = false
-      }
-    } else {
-      if (sw == false && !mem.has(p)) {
-        sw = true
-        mem.add(p)
+    while(counter < 99) {
+      steps++
+      const p = random(1, 100)
+      if (p == counterGuy) {
+        if (sw == true) {
+          counter++
+          sw = false
+        }
+      } else {
+        if (sw == false && !mem.has(p)) {
+          sw = true
+          mem.add(p)
+        }
       }
     }
+
+    yield steps;
   }
+}
 
-  return steps;
-})
-
-console.log(`After ${n} simulations, the expected value is ${avg(results)}`)
+const samples = Array.from(Array(500), simIter.next, simIter).map(o => o.value)
+console.log(`After ${samples.length} simulations, the expected value is ${avg(samples)}`);
 ```
 
 ## Fancy chart

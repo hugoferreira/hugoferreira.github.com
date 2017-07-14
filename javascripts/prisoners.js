@@ -75,7 +75,7 @@ function drawchart() {
       .attr("class", "bar")
       .attr("transform", (d) => `translate(${x(d.x0)}, 0)`)
         .append("rect")
-        .attr("x", 1)
+        .attr("x", 0)
         .attr("width", x(bins[0].x1) - x(bins[0].x0) + 1)
         .attr("y", height)
         .transition()

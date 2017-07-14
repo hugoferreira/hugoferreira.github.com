@@ -282,7 +282,6 @@ table {
   svg {
     width: 100%;
     height: 100%;
-    shape-rendering: crispEdges;
 
     .x-marker {
       stroke: darken($alt-color, 50%);
@@ -306,6 +305,7 @@ table {
 
   .bar rect {
     fill: $alt-color;
+    shape-rendering: crispEdges;
   }
 
   .bar rect:hover {
