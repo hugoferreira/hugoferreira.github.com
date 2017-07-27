@@ -20,7 +20,7 @@ body {
   -o-font-feature-settings: "kern", "liga", "dlig", "salt";
   font-feature-settings: "kern", "liga", "dlig", "salt";
   text-rendering: optimizeLegibility;
-
+  
   background-color: $background-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -84,15 +84,18 @@ body {
 
   h1 {
     font-weight: 600;
+    font-family: $title-font-family;
   }
 
   h2 {
     margin-top: 1em;
     font-size: 1.6em;
     margin-bottom: 0.6em;
+    font-family: $title-font-family;
   }
 
   h3 {
+    font-family: $title-font-family;
     font-size: 1.2em;
     font-variant: small-caps;
     text-transform: lowercase;
@@ -102,13 +105,20 @@ body {
 }
 
 article {
-  ul li {
+  ol li, ul li {
     padding-left: 0em;
-    margin-bottom: 0;
-    list-style: none;
   }
 
-  ul {
+  ul li {
+    list-style: none;  
+    margin-bottom: 0;
+  }
+
+  ol li {
+    margin-bottom: 1em;
+  }
+
+  ol, ul {
     position: relative;
     padding: 0;
     margin-left: 0;
@@ -198,6 +208,13 @@ header {
   }
 }
 
+abbr {
+  font-size: 1.1em;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
+}
+
 footer {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -269,8 +286,12 @@ table {
   }
 }
 
+.oldstyle {
+  font-family: 'Crimson'
+}
+
 #histogram {
-  font-family: 'PT Serif';
+  font-family: $base-font-family;
   background-color: $background-color;
   padding: 1em;
   margin-top: 1em;
@@ -294,13 +315,13 @@ table {
   .n-simulations {
     fill: black;
     font-size: 13px;
-    font-family: 'PT Serif';
+    font-family: $base-font-family;
   }
 
   .bar text {
     fill: $background-color;
     font-size: 10px;
-    font-family: 'PT Serif';
+    font-family: $base-font-family;
   }
 
   .bar rect {
@@ -313,6 +334,6 @@ table {
   }
 
   .axis {
-    font-family: 'PT Serif';
+    font-family: $base-font-family;
   }
 }

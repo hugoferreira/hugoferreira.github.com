@@ -46,7 +46,7 @@ console.log(`Probability of SB being correct: ${correct/questions}`)
 console.log(`Probability of Heads being tossed: ${heads/trials}`)
 ```
 
-Here's the result, with <a href="javascript:simulate(1000)">1000</a>, <a href="javascript:simulate(10000)">10000</a> and <a href="javascript:simulate(100000)">100000</a> runs:
+Here's the result with <a href="javascript:simulate(1000)">1000</a>, <a href="javascript:simulate(10000)">10000</a>, and <a href="javascript:simulate(100000)">100000</a> runs:
 
 ```
 Probability of SB being correct: 0.33636242148870776
