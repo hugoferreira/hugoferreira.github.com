@@ -15,7 +15,7 @@ It's amazing how a simple puzzle installs chaos among mathematicians and philoso
 
 As many things in life, it's all a matter of perspective. And the conundrum here lies in the way the problem is phrased. But before going into maths and probability theory, we shall **simulate**:
 
-```javascript
+{% highlight javascript linenos %}
 const toss = () => Math.random() >= 0.5
 
 let correct = 0
@@ -44,7 +44,7 @@ for (let i = 0; i < trials; i++) trial()
 
 console.log(`Probability of SB being correct: ${correct/questions}`)
 console.log(`Probability of Heads being tossed: ${heads/trials}`)
-```
+{% endhighlight %}
 
 Here's the result with <a href="javascript:simulate(1000)">1000</a>, <a href="javascript:simulate(10000)">10000</a>, and <a href="javascript:simulate(100000)">100000</a> runs:
 

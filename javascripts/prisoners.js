@@ -48,7 +48,7 @@ function drawchart() {
 
   chart.append("g")
     .attr("class", "axis")
-    .attr("transform", `translate(0,${height})`)
+    .attr("transform", `translate(0,${height+2})`)
     .call(d3.axisBottom(x));
 
   chart.append("text")
@@ -65,7 +65,7 @@ function drawchart() {
       (data);
 
     const y = d3.scaleLinear()
-      .domain([0, d3.max(bins, (d) => d.length)])
+      .domain([0, d3.max(bins, d => d.length)])
       .range([height, 0]);
 
     const bars = chart.selectAll('.bar').data(bins);
@@ -73,10 +73,10 @@ function drawchart() {
     // bars.exit().remove();
     bars.enter().append("g")
       .attr("class", "bar")
-      .attr("transform", (d) => `translate(${x(d.x0)}, 0)`)
+      .attr("transform", d => `translate(${Math.ceil(x(d.x0))}, 0)`)
         .append("rect")
         .attr("x", 0)
-        .attr("width", x(bins[0].x1) - x(bins[0].x0) + 1)
+        .attr("width", Math.floor(x(bins[0].x1) - Math.ceil(x(bins[0].x0))))
         .attr("y", height)
         .transition()
           .duration(500)

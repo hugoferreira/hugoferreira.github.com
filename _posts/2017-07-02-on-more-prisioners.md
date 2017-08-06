@@ -5,8 +5,8 @@ date: 2017-07-02 11:30
 comments: true
 external-url:
 categories: Mathematics
-custom_js:
-- prisoners
+custom_js: prisoners
+custom_css: prisoners
 ---
 
 > 100 prisoners are imprisoned in solitary cells. Each cell is windowless and soundproof (i.e., there's absolutely no way to exchange information among them once they are imprisoned). There's a central room with one light bulb; the bulb is initially off. No prisoner can see the light bulb from his or her own cell. Each day, the warden picks a prisoner equally at random, and that prisoner visits the central room; at the end of the day the prisoner is returned to his cell. While in the room, the prisoner can toggle the bulb if he or she wishes. Also, the prisoner has the option of asserting the claim that all 100 prisoners have been to the room. If this assertion is false (that is, some prisoners still haven't been to the room), they loose. If it is indeed true, all prisoners are set free. Thus, the assertion should only be made if the prisoner is 100% certain of its validity.
@@ -86,10 +86,12 @@ $\phantom{\equiv}~9900 + 517.74 = \class{bghighlight}{10417.74}$
 
 I like to solve the same problem using more than one technique; so, as always, we shall simulate it:
 
-```javascript
+{% highlight javascript linenos %}
 const avg = (r) => r.reduce((a, b) => a+b) / r.length
 const simIter = simulation()
-const random = (min, max) => Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min)
+const random = (min, max) => Math.floor(Math.random() * 
+                            (Math.floor(max) - Math.ceil(min) + 1)) + 
+                             Math.ceil(min)
 
 function *simulation() {
   while(true) {
@@ -120,8 +122,8 @@ function *simulation() {
 }
 
 const samples = Array.from(Array(500), simIter.next, simIter).map(o => o.value)
-console.log(`After ${samples.length} simulations, the expected value is ${avg(samples)}`);
-```
+console.log(`[${samples.length} simulations] Expected value = ${avg(samples)}`);
+{% endhighlight %}
 
 ## Fancy chart
 

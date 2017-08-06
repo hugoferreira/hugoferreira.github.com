@@ -1,0 +1,113 @@
+---
+---
+
+#ratio, #estimated-area, #outer-ring {
+    color: hsl(0, 70%, 46%);
+}
+
+#hitmap {
+    display: inline-flex;
+    width: 300px;
+    height: 300px;
+
+    g.normal {
+        opacity: 0.4;
+        fill: hsl(0, 0%, 46%);
+    }
+
+    g.highlighted {
+        opacity: 0.4;
+        fill: hsl(0, 70%, 46%);
+    }
+
+    circle.border {
+        fill: hsl(200, 0%, 46%);
+        stroke-width: 1px;
+        stroke: hsl(200, 0%, 24%);
+        transition: opacity 0.5s;
+        opacity: 0.2;
+
+        &:hover {
+            transition: opacity 0.5s;
+            opacity: 0.8
+        }
+    }
+
+    circle.outer-circle {
+        fill: none;
+        stroke-width: 1px;
+        stroke: hsl(200, 0%, 24%);
+        stroke-dasharray: 4px;
+        opacity: 0.3;
+    }
+
+    .axis {
+        transition: opacity 0.5s;
+        opacity: 0.2;
+
+        &:hover {
+            transition: opacity 0.5s;
+            opacity: 0.5
+        }
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#histogram {
+    display: inline-flex;
+    width: 320px;
+    height: 150px;
+    background-color: none;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .axis {
+        transition: opacity 0.5s;
+        opacity: 0.2;
+
+        &:hover {
+            transition: opacity 0.5s;
+            opacity: 0.5
+        }
+    }
+
+    .bar rect {
+        fill: hsl(0, 70%, 46%);
+    }
+}
+
+#statistics {
+    width: 320px;
+    height: 150px;
+    color: hsla(0, 0%, 0%, 0.5);
+    padding: 25px;
+    padding-top: 15px;
+    font-size: 12px;
+}
+
+.h-vis {
+    width: 300px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.visualization {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: rgb(225, 225, 225);
+    margin-bottom: 1em;
+}

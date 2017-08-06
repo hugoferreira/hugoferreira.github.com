@@ -105,6 +105,12 @@ body {
 }
 
 article {
+  br {
+    display: block;
+    margin: 0.2em 0;
+    content: " ";
+  }
+
   ol li, ul li {
     padding-left: 0em;
   }
@@ -142,6 +148,25 @@ article {
 
   code {
     font-family: $mono-font-family;
+    
+    table {
+      border: 0px;
+      margin: 0px;
+      padding: 0px;
+      
+      pre {
+        margin: 0px;
+        border-radius: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+
+      .lineno {
+        padding-left: 0px;
+        border-right: 1px solid transparentize(black, 0.8);
+        color: transparentize(black, 0.8);
+      }
+    }
   }
 }
 
@@ -215,6 +240,7 @@ abbr {
   letter-spacing: 0.05em;
 }
 
+
 footer {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -261,6 +287,14 @@ sup > .footnote {
   font-style: normal;
 }
 
+.small-table {
+  font-size: $small-font-size;
+
+  td {
+    vertical-align: text-top;
+  }
+}
+
 table {
   margin: 0 auto;
   margin-top: 1.25em;
@@ -281,6 +315,11 @@ table {
   }
 
   th {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: 700;
+    font-size: $base-font-size * 1.1;
+    letter-spacing: 0.1em;
     padding-bottom: 0.6em;
     // border-bottom: 2px solid $alt-color;
   }
@@ -288,52 +327,4 @@ table {
 
 .oldstyle {
   font-family: 'Crimson'
-}
-
-#histogram {
-  font-family: $base-font-family;
-  background-color: $background-color;
-  padding: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  border-radius: 10px;
-  width: 100%;
-  height: 300px;
-
-  svg {
-    width: 100%;
-    height: 100%;
-
-    .x-marker {
-      stroke: darken($alt-color, 50%);
-      stroke-width: 1;
-      stroke-dasharray: 5;
-      stroke-opacity: 0.4;
-    }
-  }
-
-  .n-simulations {
-    fill: black;
-    font-size: 13px;
-    font-family: $base-font-family;
-  }
-
-  .bar text {
-    fill: $background-color;
-    font-size: 10px;
-    font-family: $base-font-family;
-  }
-
-  .bar rect {
-    fill: $alt-color;
-    shape-rendering: crispEdges;
-  }
-
-  .bar rect:hover {
-    fill: darken($alt-color, 10%);
-  }
-
-  .axis {
-    font-family: $base-font-family;
-  }
 }

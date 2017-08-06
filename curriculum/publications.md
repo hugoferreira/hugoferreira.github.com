@@ -17,7 +17,7 @@ date: July 2017
 
 Since 2008, I have co-authored **{{ refereedconfs }} articles in conferences** with scientic referee, **{{ periodics }} articles in periodics**, and **{{ others }} other** articles. In total, these **{{ total }} publications** have attracted over **{{ site.data.bibliometrics.citations }} citations**, resulting in an **h-index of {{ site.data.bibliometrics.hindex }}** and an **i10-index of {{ site.data.bibliometrics.i10index }}**, thus averaging **{{ site.data.bibliometrics.citations | divided_by: total }} citations per paper**. A summary of the eight most cited publications the complete can be found below. Indexed articles by the ISI Web of Science ({{ isi }}), SCOPUS ({{ scopus }}) and The DBLP Computer Science Bibliography ({{ dblp }}) are identified by the tags ISI, SCOPUS and DBLP respectively. More recent articles are still waiting for proper indexation, but all PLoP publications are indexed by SCOPUS.
 
-
+{:.small-table}
 | Title | Citations | Year |
 |-------|-----------|------|
 {% for pub in toppubs %}{% if pub.citations %}| {{ pub.name }} | {{ pub.citations }} | {{ pub.year }} |
