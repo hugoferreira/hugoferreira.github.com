@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/bytter
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://hugosereno.eu
+  * I am bytter (https://keybase.io/bytter) on keybase.
+  * I have a public key ASAz1G4VIwbwfm-lnSNPhYbj4NNO2_YMTGFH1v2y4qFfZgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012033d46e152306f07e6fa59d234f8586e3e0d34edbf60c4c6147d6fdb2e2a15f660a",
+      "host": "keybase.io",
+      "kid": "012033d46e152306f07e6fa59d234f8586e3e0d34edbf60c4c6147d6fdb2e2a15f660a",
+      "uid": "3a0ea953778c7349b3d861ff87ba8919",
+      "username": "bytter"
+    },
+    "merkle_root": {
+      "ctime": 1502389931,
+      "hash": "93b84ae24c68d6f8175bb475940bda956516f6325f72964121dd5cd33c44bd63ce3ba82216519c7ffc05de7871a31295dc3ae53173ef81c270db00828259afd7",
+      "hash_meta": "ea6f632e6080728d6a15f208daa861e8f6b2db4bfea32bd1de57bfa955bb3f2c",
+      "seqno": 1318237
+    },
+    "service": {
+      "hostname": "hugosereno.eu",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.27"
+  },
+  "ctime": 1502390105,
+  "expire_in": 504576000,
+  "prev": "af0c81ed515cb1f152df0e066c7dcf5d34e53bf9edcd673b89c297f5a399a5bc",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgM9RuFSMG8H5vpZ0jT4WG4+DTTtv2DExhR9b9suKhX2YKp3BheWxvYWTFA0J7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzNkNDZlMTUyMzA2ZjA3ZTZmYTU5ZDIzNGY4NTg2ZTNlMGQzNGVkYmY2MGM0YzYxNDdkNmZkYjJlMmExNWY2NjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzNkNDZlMTUyMzA2ZjA3ZTZmYTU5ZDIzNGY4NTg2ZTNlMGQzNGVkYmY2MGM0YzYxNDdkNmZkYjJlMmExNWY2NjBhIiwidWlkIjoiM2EwZWE5NTM3NzhjNzM0OWIzZDg2MWZmODdiYTg5MTkiLCJ1c2VybmFtZSI6ImJ5dHRlciJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUwMjM4OTkzMSwiaGFzaCI6IjkzYjg0YWUyNGM2OGQ2ZjgxNzViYjQ3NTk0MGJkYTk1NjUxNmY2MzI1ZjcyOTY0MTIxZGQ1Y2QzM2M0NGJkNjNjZTNiYTgyMjE2NTE5YzdmZmMwNWRlNzg3MWEzMTI5NWRjM2FlNTMxNzNlZjgxYzI3MGRiMDA4MjgyNTlhZmQ3IiwiaGFzaF9tZXRhIjoiZWE2ZjYzMmU2MDgwNzI4ZDZhMTVmMjA4ZGFhODYxZThmNmIyZGI0YmZlYTMyYmQxZGU1N2JmYTk1NWJiM2YyYyIsInNlcW5vIjoxMzE4MjM3fSwic2VydmljZSI6eyJob3N0bmFtZSI6Imh1Z29zZXJlbm8uZXUiLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjI3In0sImN0aW1lIjoxNTAyMzkwMTA1LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6ImFmMGM4MWVkNTE1Y2IxZjE1MmRmMGUwNjZjN2RjZjVkMzRlNTNiZjllZGNkNjczYjg5YzI5N2Y1YTM5OWE1YmMiLCJzZXFubyI6OSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDnSBdngmh1vUzglPgXOI0gNPtl4gkcq4/xsxRO4TOi4/Fu0f3xP/JqGmRQ2y8zGLCdGbxhu0s7r1CL5XpF/XUHqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgEeYtyVVSgDzhHhDkjJuGiVfU6rlgLfOk9sU0blhgdL6jdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bytter
+
+==================================================================
