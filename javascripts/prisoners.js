@@ -1,6 +1,11 @@
+/*eslint-env browser, jquery, es6*/
+/*global d3*/
+
 const avg = r => r.reduce((a, b) => a+b) / r.length
 const data = []
 const simIter = simulation()
+
+let updateChart, clearChart
 
 function *simulation() {
 	const random = (min, max) => Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min)
@@ -15,13 +20,13 @@ function *simulation() {
 		while(counter < 99) {
 			steps++
 			const p = random(1, 100)
-			if (p == counterGuy) {
-				if (sw == true) {
+			if (p === counterGuy) {
+				if (sw === true) {
 					counter++
 					sw = false
 				}
 			} else {
-				if (sw == false && !mem.has(p)) {
+				if (sw === false && !mem.has(p)) {
 					sw = true
 					mem.add(p)
 				}
@@ -54,7 +59,7 @@ function drawchart() {
 	chart.append('text')
 		.attr('class', 'axis n-simulations')
 		.attr('x', 0).attr('y', margin.top)
-		.text('n = ' + data.length)
+		.text(`n = ${data.length}`)
 
 	clearChart = () => { svg.selectAll('.bar').remove() }
 
@@ -89,7 +94,7 @@ function drawchart() {
 			.attr('y', d => y(d.length))
 
 		chart.select('.n-simulations')
-			.text('n = ' + data.length)
+			.text(`n = ${data.length}`)
 	}
 
 	updateChart()

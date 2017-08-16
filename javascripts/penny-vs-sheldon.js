@@ -1,3 +1,6 @@
+/*eslint-env browser, jquery, es6*/
+/*global d3*/
+
 const toss = () => Math.random() >= 0.5
 
 function simulate(trials = 10000) {

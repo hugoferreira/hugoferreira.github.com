@@ -7,7 +7,7 @@ external-url:
 categories: Mathematics
 ---
 
-> Let $a_0, a_1, a_2, ...$ be a sequence of integers, where $a_{m+n} + a_{m-n} = ½(a_{2m}+a_{2n})$. If $a_1 = 1$, what would be the value of $a_{1997}$? [^1]
+> Let $a_0, a_1, a_2, ...$ be a sequence of integers, where $a_{m+n} + a_{m-n} = ½(a_{2m}+a_{2n})$. If $a_1 = 1$, what would be the value of $a_{1997}$?[^1]
 
 [^1]: I first read about this puzzle on "[*The Art and Craft of Problem Solving*](https://www.amazon.com/Art-Craft-Problem-Solving/dp/0471789011/ref=sr_1_1?ie=UTF8&qid=1498345535&sr=8-1&keywords=art+craft+problem+solving)" by Paul Zeitz.
 
@@ -39,7 +39,7 @@ a_m + a_m = \frac{1}{2}(a_{2m}+a_0) ⇔ 2a_m = \frac{1}{2}a_{2m} ⇔ \class{bghi
 \end{equation}
 $$
 
-This equation [^2] is neat for two things: (i) it no longer depends on two variables ($n$ and $m$), and thus can provide a solution given the exact index we want to compute; and (ii) if we multiply the current value by 4, we get the solution for the current index $\times$ 2.
+This equation[^2] is neat for two things: (i) it no longer depends on two variables ($n$ and $m$), and thus can provide a solution given the exact index we want to compute; and (ii) if we multiply the current value by 4, we get the solution for the current index $\times$ 2.
 
 With this result in mind, let's calculate a few more values:
 

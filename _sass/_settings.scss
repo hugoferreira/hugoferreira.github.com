@@ -1,10 +1,17 @@
-$base-font-family:  'PT Serif', Georgia, Times, 'Times New Roman', serif;
+$base-font-family:  'Merriweather', Georgia, Times, 'Times New Roman', serif;
+$base-font-size:    10.4pt;
+$base-font-weight:  400;
+$bold-font-weight:  700;
+$base-line-height:  1.7;
+
 $title-font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
-$base-font-size:   12pt;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$header-font-family: 'Merriweather', Georgia, Times, 'Times New Roman', serif;
+$header-font-weight: 700;
+
+$small-font-size:   $base-font-size * 0.875;
 
 $mono-font-family: 'Fira Code';
+$mono-font-size:   11pt;
 
 $text-color:       hsl(0, 0%, 25%);
 

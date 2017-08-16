@@ -1,3 +1,4 @@
+/* Fira Code */
 @font-face {
   font-family: 'Fira Code';
   src: url('/assets/FiraCode-Regular.woff2') format("woff2");
@@ -11,6 +12,201 @@
   font-weight: 500;
 }
 
+/* Merriweather */
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Merriweather Light'), local('Merriweather-Light'), url(https://fonts.gstatic.com/s/merriweather/v15/ZvcMqxEwPfh2qDWBPxn6nrMRY-O9-Xp5ppZeqcQcMH8.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Merriweather Light'), local('Merriweather-Light'), url(https://fonts.gstatic.com/s/merriweather/v15/ZvcMqxEwPfh2qDWBPxn6nhBw1OMgj265uIpoXHqn6zY.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Merriweather Light'), local('Merriweather-Light'), url(https://fonts.gstatic.com/s/merriweather/v15/ZvcMqxEwPfh2qDWBPxn6nrsKtFnhOiVZh9MDlvO1Vys.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Merriweather Light'), local('Merriweather-Light'), url(https://fonts.gstatic.com/s/merriweather/v15/ZvcMqxEwPfh2qDWBPxn6nkZRWJQ0UjzR2Uv6RollX_g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v15/RFda8w1V0eDZheqfcyQ4EA7aC6SjiAOpAWOKfJDfVRY.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v15/RFda8w1V0eDZheqfcyQ4EBdwxCXfZpKo5kWAx_74bHs.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v15/RFda8w1V0eDZheqfcyQ4EIjoYw3YTyktCCer_ilOlhE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v15/RFda8w1V0eDZheqfcyQ4EBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v15/ZvcMqxEwPfh2qDWBPxn6nlPfeBX0b_nUXzRxYCltCF0.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v15/ZvcMqxEwPfh2qDWBPxn6noS3435hDhFFCA6hA_HcfZQ.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v15/ZvcMqxEwPfh2qDWBPxn6nkqWMeizceScn2Xpn1ZpsKI.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v15/ZvcMqxEwPfh2qDWBPxn6nshHwsiXhsDb0smKjAA7Bek.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Merriweather Light Italic'), local('Merriweather-LightItalic'), url(https://fonts.gstatic.com/s/merriweather/v15/EYh7Vl4ywhowqULgRdYwIOSpGJ4w-gNJD-QsPl9sQ7A.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Merriweather Light Italic'), local('Merriweather-LightItalic'), url(https://fonts.gstatic.com/s/merriweather/v15/EYh7Vl4ywhowqULgRdYwIN_zqiEjrF2cHwM7WvhO-L4.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Merriweather Light Italic'), local('Merriweather-LightItalic'), url(https://fonts.gstatic.com/s/merriweather/v15/EYh7Vl4ywhowqULgRdYwIFPx9KgpCoczUSdnmwUGkhk.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Merriweather Light Italic'), local('Merriweather-LightItalic'), url(https://fonts.gstatic.com/s/merriweather/v15/EYh7Vl4ywhowqULgRdYwIB0ue0Sk5cwvYx5tGiUAApw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Merriweather Italic'), local('Merriweather-Italic'), url(https://fonts.gstatic.com/s/merriweather/v15/So5lHxHT37p2SS4-t60SlFmiNVhTT4pGO2rD6GgBClg.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Merriweather Italic'), local('Merriweather-Italic'), url(https://fonts.gstatic.com/s/merriweather/v15/So5lHxHT37p2SS4-t60SlBzuU9CtEpZd10JFi14MKmk.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Merriweather Italic'), local('Merriweather-Italic'), url(https://fonts.gstatic.com/s/merriweather/v15/So5lHxHT37p2SS4-t60SlLbeiSZn9gAT0uu8FgUa5kU.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Merriweather Italic'), local('Merriweather-Italic'), url(https://fonts.gstatic.com/s/merriweather/v15/So5lHxHT37p2SS4-t60SlGfrnYWAzH6tTbHZfcsRIsM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Merriweather Bold Italic'), local('Merriweather-BoldItalic'), url(https://fonts.gstatic.com/s/merriweather/v15/EYh7Vl4ywhowqULgRdYwIEaMaGruFzDoK1PiuIKwL_s.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Merriweather Bold Italic'), local('Merriweather-BoldItalic'), url(https://fonts.gstatic.com/s/merriweather/v15/EYh7Vl4ywhowqULgRdYwICOtRYHl1nVlqBVEsBD5gbM.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Merriweather Bold Italic'), local('Merriweather-BoldItalic'), url(https://fonts.gstatic.com/s/merriweather/v15/EYh7Vl4ywhowqULgRdYwIFMxop41rUAeuGQqDMZDGyg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Merriweather Bold Italic'), local('Merriweather-BoldItalic'), url(https://fonts.gstatic.com/s/merriweather/v15/EYh7Vl4ywhowqULgRdYwIFh3o8VkC1exAYQ700cRowo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
 body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -20,78 +216,42 @@ body {
   -o-font-feature-settings: "kern", "liga", "dlig", "salt";
   font-feature-settings: "kern", "liga", "dlig", "salt";
   text-rendering: optimizeLegibility;
-  
+
   background-color: $background-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  font-weight: $base-font-weight;
   color: $text-color;
 
   a {
     color: $alt-color;
-    white-space: nowrap;
-    padding-bottom: 0px; position: relative;
     text-decoration: none;
   }
 
   a:hover {
     color: $alt-color;
+    background-color: lighten($alt-color, 48%);
     text-decoration: none;
-  }
-
-  a:after {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: $alt-color;
-      content: '';
-      opacity: 0;
-      -webkit-transition: opacity 0.5s, -webkit-transform 0.4s;
-      -moz-transition: opacity 0.5s, -moz-transform 0.4s;
-      transition: opacity 0.5s, transform 0.4s;
-      -webkit-transform: scaleX(0);
-      -moz-transform: scaleX(0);
-      transform: scaleX(0);
-  }
-
-  a:hover::after,
-  a:focus::after {
-      opacity: 1;
-      -webkit-transform: scaleX(1);
-      -moz-transform: scaleX(1);
-      transform: scaleX(1);
   }
 
   p {
     line-height: $base-line-height;
   }
 
-  article > :first-child {
-    &:first-letter {
-      color: $alt-color-darker;
-      display: inline-block;
-      float: left;
-      font-size: 3.2em;
-      line-height: 0.7em;
-      font-style: normal;
-      font-weight: bold;
-      margin: 0.12em 0.15em 0 -0.01em;
-    }
-
-    min-height: 2em + $base-line-height;
+  h1, h2, h3 {
+    font-family: $header-font-weight;
   }
 
   h1 {
-    font-weight: 600;
-    font-family: $title-font-family;
+    font-weight: bold;
+    line-height: 1.4em;
   }
 
   h2 {
-    margin-top: 1em;
+    font-weight: bold;
     font-size: 1.6em;
-    margin-bottom: 0.6em;
-    font-family: $title-font-family;
+    margin-top: 2em;
+    margin-bottom: 1em;
   }
 
   h3 {
@@ -102,12 +262,31 @@ body {
     font-weight: bold;
     letter-spacing: 0.15em;
   }
+
+  strong {
+    font-weight: $bold-font-weight;
+  }
 }
 
 article {
+  > :first-child {
+    &:first-letter {
+      color: $alt-color-darker;
+      float: left;
+      font-size: 3.4em;
+      line-height: 0.7em;
+      font-family: $title-font-family;
+      font-style: normal;
+      font-weight: bold;
+      margin: 0.12em 0.15em 0 -0.02em;
+    }
+
+    min-height: 2em + $base-line-height;
+  }
+
   br {
     display: block;
-    margin: 0.2em 0;
+    margin: 0.3em 0;
     content: " ";
   }
 
@@ -116,7 +295,7 @@ article {
   }
 
   ul li {
-    list-style: none;  
+    list-style: none;
     margin-bottom: 0;
   }
 
@@ -148,12 +327,13 @@ article {
 
   code {
     font-family: $mono-font-family;
-    
+    font-size: $mono-font-size;
+
     table {
       border: 0px;
       margin: 0px;
       padding: 0px;
-      
+
       pre {
         margin: 0px;
         border-radius: 0px;
@@ -283,8 +463,11 @@ footer {
 }
 
 sup > .footnote {
-  margin-left: -0.2em;
+  margin-left: 0.1em;
   font-style: normal;
+
+  &:before { content: "{" }
+  &:after  { content: "}" }
 }
 
 .small-table {
@@ -323,8 +506,4 @@ table {
     padding-bottom: 0.6em;
     // border-bottom: 2px solid $alt-color;
   }
-}
-
-.oldstyle {
-  font-family: 'Crimson'
 }

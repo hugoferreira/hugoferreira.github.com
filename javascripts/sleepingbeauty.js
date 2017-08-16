@@ -1,3 +1,6 @@
+/*eslint-env browser, jquery, es6*/
+/*global d3*/
+
 const toss = () => Math.random() >= 0.5
 
 function simulate(trials = 10000) {
@@ -24,5 +27,5 @@ function simulate(trials = 10000) {
 
   for (let i = 0; i < trials; i++) trial()
 
-  $("#output code").html(`Probability of SB being correct: ${correct/questions}\nProbability of Heads being tossed: ${heads/trials}`)
+  $('#output code').html(`Probability of SB being correct: ${correct/questions}\nProbability of Heads being tossed: ${heads/trials}`)
 }

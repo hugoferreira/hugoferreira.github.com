@@ -46,6 +46,13 @@
   }
 
   .axis {
-    font-family: $base-font-family;
-  }
+        font-family: $base-font-family;
+        transition: opacity 0.5s;
+        opacity: 0.3;
+
+        &:hover {
+            transition: opacity 0.5s;
+            opacity: 0.5
+        }
+    }
 }

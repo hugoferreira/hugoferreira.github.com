@@ -1,8 +1,9 @@
 ---
 ---
+@import "settings";
 
-#ratio, #estimated-area, #outer-ring {
-    color: hsl(0, 70%, 46%);
+#statistics span {
+    color: $alt-color;
 }
 
 #hitmap {
@@ -10,14 +11,16 @@
     width: 300px;
     height: 300px;
 
-    g.normal {
-        opacity: 0.4;
-        fill: hsl(0, 0%, 46%);
-    }
+    .bin {
+        &.normal {
+            opacity: 0.4;
+            fill: hsl(0, 0%, 46%);
+        }
 
-    g.highlighted {
-        opacity: 0.4;
-        fill: hsl(0, 70%, 46%);
+        &.highlighted {
+            opacity: 0.6;
+            fill: $alt-color;
+        }
     }
 
     circle.border {
@@ -42,8 +45,9 @@
     }
 
     .axis {
+        font-family: $base-font-family;
         transition: opacity 0.5s;
-        opacity: 0.2;
+        opacity: 0.3;
 
         &:hover {
             transition: opacity 0.5s;
@@ -69,17 +73,28 @@
     }
 
     .axis {
+        font-family: $base-font-family;
+
         transition: opacity 0.5s;
-        opacity: 0.2;
+        opacity: 0.3;
 
         &:hover {
             transition: opacity 0.5s;
-            opacity: 0.5
+            opacity: 0.5;
         }
     }
 
     .bar rect {
-        fill: hsl(0, 70%, 46%);
+        fill: $alt-color;
+    }
+
+    .bar rect:hover {
+        fill: darken($alt-color, 10%);
+    }
+
+    .bar text {
+        font-size: 6pt;
+        opacity: 0.5;
     }
 }
 
@@ -88,7 +103,7 @@
     height: 150px;
     color: hsla(0, 0%, 0%, 0.5);
     padding: 25px;
-    padding-top: 15px;
+    padding-top: 25px;
     font-size: 12px;
 }
 
@@ -107,7 +122,8 @@
     padding: 1em;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 30px;
     border-radius: 10px;
-    background-color: rgb(225, 225, 225);
+    background-color: $background-color;
     margin-bottom: 1em;
 }

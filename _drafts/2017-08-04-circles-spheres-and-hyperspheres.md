@@ -52,18 +52,19 @@ If intuition is failing you, or you think there might be something wrong with ou
   <span id="hitmap"></span>
   <div class="h-vis">
     <span id="statistics">
-      Ratio is <span id="ratio">00</span>%<br>
+      Number of points <span id="iterations">0</span><br>
+      Ratio is <span id="ratio">00.00</span>% (real 78.54%)<br>
       Estimated area is <span id="estimated-area">0.000</span> (real 3.141)<br>
-      Outer 0.2 ring contains <span id="outer-ring">00</span>% of total area 
+      Outer 0.2 ring area is <span id="outer-ring">00</span>% (real 36%)<br>
     </span>
     <span id="histogram"></span>
   </div>
 </div>
 
-Just <a href="javascript:simulate()">click ahead</a> to add 100 points to the simulation. 
+Click to add <a href="javascript:simulate(100)">100 points</a>, <a href="javascript:simulate(1000)">1000 points</a>, <a href="javascript:simulate(10000)">10000 points</a>, or <a href="javascript:reset()">reset</a> the simulation.
 
 ## We shall now go 3D...
 
 > Consider a unitary sphere. How much of its volume (in %) lies in the last 0.01 of its radius?
 
-Let $V_r$ be the volume of a sphere of radius $r$, given by $V_r = \frac{4}{3}\pi\cdot r^3$.  
+Let $V_r$ be the volume of a sphere of radius $r$, given by $V_r = \frac{4}{3}\pi\cdot r^3$.
