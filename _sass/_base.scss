@@ -231,6 +231,10 @@ body {
   font-weight: $base-font-weight;
   color: $text-color;
 
+  .alt-color {
+    color: $alt-color;
+  }
+
   a {
     color: $alt-color;
     text-decoration: none;
