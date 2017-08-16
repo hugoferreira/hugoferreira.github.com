@@ -12,14 +12,6 @@
   font-weight: 500;
 }
 
-// Calendas Plus
-@font-face {
-  font-family: 'Calendas Plus';
-  src: url('/assets/Calendas-Plus.woff2') format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* Merriweather */
 /* cyrillic-ext */
 @font-face {
@@ -232,8 +224,19 @@ body {
   color: $text-color;
 
   .et-symbol {
-    font-family: "Calendas Plus";
-    color: $alt-color-darker;
+    svg {
+      height: 0.95em;
+      position: relative;
+      top: 0.15em;
+      image-rendering: optimizeQuality;
+
+      path {
+          fill: $alt-color-darker;
+          fill-rule: evenodd;
+          stroke: $alt-color-darker;
+          stroke-width: 2px;
+      }
+    }
   }
 
   a {
