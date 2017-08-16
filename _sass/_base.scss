@@ -12,6 +12,14 @@
   font-weight: 500;
 }
 
+// Calendas Plus
+@font-face {
+  font-family: 'Calendas Plus';
+  src: url('/assets/Calendas-Plus.woff2') format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Merriweather */
 /* cyrillic-ext */
 @font-face {
@@ -226,12 +234,12 @@ body {
   a {
     color: $alt-color;
     text-decoration: none;
-  }
 
-  a:hover {
-    color: $alt-color;
-    background-color: lighten($alt-color, 48%);
-    text-decoration: none;
+    &:hover {
+      color: $alt-color;
+      background-color: lighten($alt-color, 48%);
+      text-decoration: none;
+    }
   }
 
   p {
@@ -240,15 +248,11 @@ body {
 
   h1, h2, h3 {
     font-family: $header-font-weight;
-  }
-
-  h1 {
-    font-weight: bold;
     line-height: 1.4em;
+    font-weight: bold;
   }
 
   h2 {
-    font-weight: bold;
     font-size: 1.6em;
     margin-top: 2em;
     margin-bottom: 1em;
@@ -259,7 +263,6 @@ body {
     font-size: 1.2em;
     font-variant: small-caps;
     text-transform: lowercase;
-    font-weight: bold;
     letter-spacing: 0.15em;
   }
 
@@ -270,28 +273,28 @@ body {
 
 article {
   > :first-child {
-    &:first-letter {
+    min-height: 2em + $base-line-height;
+
+    &::first-letter {
       color: $alt-color-darker;
       float: left;
       font-size: 3.4em;
-      line-height: 0.7em;
+      line-height: .7em;
       font-family: $title-font-family;
       font-style: normal;
       font-weight: bold;
-      margin: 0.12em 0.15em 0 -0.02em;
+      margin: .12em .15em 0 -.02em;
     }
-
-    min-height: 2em + $base-line-height;
   }
 
   br {
     display: block;
-    margin: 0.3em 0;
-    content: " ";
+    margin: .3em 0;
+    content: ' ';
   }
 
   ol li, ul li {
-    padding-left: 0em;
+    padding-left: 0;
   }
 
   ul li {
@@ -309,9 +312,9 @@ article {
     margin-left: 0;
   }
 
-  ul > li:before {
+  ul > li::before {
     position: absolute;
-    content: "▪";
+    content: '▪';
     color: $alt-color;
     left: -1.15em;
   }
@@ -330,21 +333,21 @@ article {
     font-size: $mono-font-size;
 
     table {
-      border: 0px;
-      margin: 0px;
-      padding: 0px;
+      border: 0;
+      margin: 0;
+      padding: 0;
 
       pre {
-        margin: 0px;
-        border-radius: 0px;
-        padding-top: 0px;
-        padding-bottom: 0px;
+        margin: 0;
+        border-radius: 0;
+        padding-top: 0;
+        padding-bottom: 0;
       }
 
       .lineno {
-        padding-left: 0px;
-        border-right: 1px solid transparentize(black, 0.8);
-        color: transparentize(black, 0.8);
+        padding-left: 0;
+        border-right: 1px solid transparentize(black, .8);
+        color: transparentize(black, .8);
       }
     }
   }
@@ -354,7 +357,7 @@ blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
   border-left: 2pt solid $alt-color;
-  padding-left: 0.9em;
+  padding-left: .9em;
   margin-left: -1em;
   font-style: oblique;
 
@@ -417,9 +420,8 @@ abbr {
   font-size: 1.1em;
   font-variant: small-caps;
   text-transform: lowercase;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
 }
-
 
 footer {
   margin-top: 1em;
@@ -440,7 +442,7 @@ footer {
     font-variant: small-caps;
     text-transform: lowercase;
     font-weight: bold;
-    letter-spacing: 0.15em;
+    letter-spacing: .15em;
   }
 
   a, a:hover {
@@ -463,11 +465,11 @@ footer {
 }
 
 sup > .footnote {
-  margin-left: 0.1em;
+  margin-left: .1em;
   font-style: normal;
 
-  &:before { content: "{" }
-  &:after  { content: "}" }
+  &::before { content: '{'; }
+  &::after  { content: '}'; }
 }
 
 .small-table {
@@ -482,9 +484,9 @@ table {
   margin: 0 auto;
   margin-top: 1.25em;
   margin-bottom: 1.25em;
-  border-spacing: 2em 0.1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  border-spacing: 2em .1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
   border-collapse: separate;
   background-color: $background-color;
   border-left: 2.5pt solid $alt-color;
@@ -502,8 +504,7 @@ table {
     text-transform: lowercase;
     font-weight: 700;
     font-size: $base-font-size * 1.1;
-    letter-spacing: 0.1em;
-    padding-bottom: 0.6em;
-    // border-bottom: 2px solid $alt-color;
+    letter-spacing: .1em;
+    padding-bottom: .6em;
   }
 }

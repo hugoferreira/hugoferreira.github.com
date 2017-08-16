@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "settings";
 
 #statistics span {
@@ -18,7 +19,7 @@
         }
 
         &.highlighted {
-            opacity: 0.6;
+            opacity: .6;
             fill: $alt-color;
         }
     }
@@ -27,12 +28,12 @@
         fill: hsl(200, 0%, 46%);
         stroke-width: 1px;
         stroke: hsl(200, 0%, 24%);
-        transition: opacity 0.5s;
-        opacity: 0.2;
+        transition: opacity .5s;
+        opacity: .2;
 
         &:hover {
-            transition: opacity 0.5s;
-            opacity: 0.8
+            transition: opacity .5s;
+            opacity: .8;
         }
     }
 
@@ -41,17 +42,17 @@
         stroke-width: 1px;
         stroke: hsl(200, 0%, 24%);
         stroke-dasharray: 4px;
-        opacity: 0.3;
+        opacity: .3;
     }
 
     .axis {
         font-family: $base-font-family;
-        transition: opacity 0.5s;
-        opacity: 0.3;
+        transition: opacity .5s;
+        opacity: .3;
 
         &:hover {
-            transition: opacity 0.5s;
-            opacity: 0.5
+            transition: opacity .5s;
+            opacity: .5
         }
     }
 
@@ -75,12 +76,12 @@
     .axis {
         font-family: $base-font-family;
 
-        transition: opacity 0.5s;
-        opacity: 0.3;
+        transition: opacity .5s;
+        opacity: .3;
 
         &:hover {
-            transition: opacity 0.5s;
-            opacity: 0.5;
+            transition: opacity .5s;
+            opacity: .5;
         }
     }
 
@@ -101,7 +102,7 @@
 #statistics {
     width: 320px;
     height: 150px;
-    color: hsla(0, 0%, 0%, 0.5);
+    color: hsla(0, 0%, 0%, .5);
     padding: 25px;
     padding-top: 25px;
     font-size: 12px;
