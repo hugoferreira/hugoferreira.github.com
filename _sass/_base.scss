@@ -225,16 +225,16 @@ body {
 
   .et-symbol {
     svg {
-      height: 0.95em;
+      height: 0.98em;
       position: relative;
-      top: 0.15em;
-      image-rendering: optimizeQuality;
+      top: 0.145em;
+      image-rendering: auto;
 
       path {
           fill: $alt-color-darker;
           fill-rule: evenodd;
           stroke: $alt-color-darker;
-          stroke-width: 2px;
+          stroke-width: 3px;
       }
     }
   }
@@ -308,7 +308,7 @@ article {
     content: ' ';
   }
 
-  ul li {
+  ol li, ul li {
     padding-left: 0;
   }
 
