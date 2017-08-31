@@ -465,8 +465,16 @@ footer {
     letter-spacing: .15em;
   }
 
-  a, a:hover {
-    color: $alt-color-darker;
+  a.fa {
+    color: $text-color !important;
+    margin-right: .25em;
+    margin-left: .25em;
+    margin-bottom: .8em;
+
+    &:hover {
+      color: $alt-color !important;
+      background-color: transparent !important;
+    }
   }
 }
 

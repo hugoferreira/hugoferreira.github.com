@@ -1,51 +1,36 @@
 <footer>
   <div class="container">
     <div class="row biography">
-      <div class="col-sm-4">
+      <div class="col-sm-2">
+        <center><h2>&nbsp;</h2></center>
+        <center>
+          {% if site.github_username %}
+          <a class="fa fa-github fa-lg" href="https://github.com/{{ site.github_username }}"></a>
+          {% endif %}
+          {% if site.twitter_username %}
+          <a class="fa fa-twitter fa-lg" href="https://twitter.com/{{ site.twitter_username }}"></a>
+          {% endif %}
+          {% if site.linkedin_username %}
+          <a class="fa fa-linkedin fa-lg" href="https://id.linkedin.com/in/{{ site.linkedin_username }}"></a>
+          {% endif %}
+          {% if site.facebook_username %}
+          <a class="fa fa-facebook fa-lg" href="https://www.facebook.com/{{ site.facebook_username }}"></a>
+          {% endif %}
+          {% if site.500px_username %}
+          <a class="fa fa-500px fa-lg" href="https://500px.com/{{ site.500px_username }}"></a>
+          {% endif %}
+          {% if site.instagram_username %}
+          <a class="fa fa-instagram fa-lg" href="https://www.instagram.com/{{ site.instagram_username }}"></a>
+          {% endif %}
+        </center>
+      </div>
+      <div class="col-sm-5">
         <h2>who am i</h2>
         <p>{{ site.biography }}</p>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-5">
         <h2>what is this</h2>
         <p>{{ site.description }}</p>
-      </div>
-      <div class="col-sm-4">
-        <h2>where am i</h2>
-          {% if site.email %}
-          <div>
-            <a href="mailto:{{ site.email }}">
-              <span class="username">{{ site.email }}</span>
-            </a>
-          </div>
-          {% endif %}
-          {% if site.github_username %}
-          <div>
-            <a href="https://github.com/{{ site.github_username }}">
-              <span class="username">github//{{ site.github_username }}</span>
-            </a>
-          </div>
-          {% endif %}
-          {% if site.twitter_username %}
-          <div>
-            <a href="https://twitter.com/{{ site.twitter_username }}">
-              <span class="username">twitter//{{ site.twitter_username }}</span>
-            </a>
-          </div>
-          {% endif %}
-          {% if site.linkedin_username %}
-          <div>
-            <a href="https://id.linkedin.com/in/{{ site.linkedin_username }}">
-              <span class="username">linkedin//{{ site.linkedin_username }}</span>
-            </a>
-          </div>
-          {% endif %}
-          {% if site.facebook_username %}
-          <div>
-            <a href="https://www.facebook.com/{{ site.facebook_username }}">
-              <span class="username">facebook//{{ site.facebook_username }}</span>
-            </a>
-          </div>
-          {% endif %}
       </div>
     </div>
     {% if site.colophon %}
