@@ -79,7 +79,7 @@ $\phantom{\equiv}~\frac{\frac{4}{3}\pi - \frac{4}{3}\pi\cdot 0.8^3}{\frac{4}{3}\
 $\equiv$ { since $\frac{ab-ac}{a} = b-c$ }<br>
 $\phantom{\equiv}~1 - 0.8^3 = \class{bghighlight}{0.512}$
 
-This is getting interesting: more than 50% of its volume lies within the last 20% of a sphere!
+This is getting interesting: **more than 50% of its volume lies within the last 20% of a sphere!**
 
 ## Hyper-Spheres
 
@@ -87,5 +87,7 @@ I'm skipping the mathematical apparatus of integrating in higher dimensions (som
 
 It now may be evident to the reader that the volume of a $d$-sphere of radius $r$ is always proportional to $r^d$ (we may write this as $V_r^d \propto r^d$) and so the percentage of volume that lies within the last shell of thickness $q$ is given by $1 - q^d$.
 
-What is thus the percentage of the volume that lies within the last 0.2 of a 100-dimensional hypersphere? $1 - 0.8^{100} = \class{bghighlight}{99.99999997963\%}$.
+What is thus the percentage of the volume that lies within the last 0.2 of a 100-dimensional hypersphere? $1 - 0.8^{100} = \class{bghighlight}{99.99999997963\%}$. **And within the last 0.01? 63.4%...** Wow!
+
+In fact, if we solve the equation for $1 - x^{100} = 0.99 \equiv x ≈ 0.95$, we conclude that **99% of the volume of a 100-dimensional hypersphere lies within the outer shell of 0.05 thickness.**
 
