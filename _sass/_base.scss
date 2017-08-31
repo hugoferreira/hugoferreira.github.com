@@ -245,8 +245,13 @@ body {
 
     &:hover {
       color: $alt-color;
-      background-color: lighten($alt-color, 48%);
+      background-color: transparentize($alt-color, 0.93);
       text-decoration: none;
+    }
+
+    &:visited {
+      color: $alt-color !important;
+      text-decoration: none !important;
     }
   }
 
