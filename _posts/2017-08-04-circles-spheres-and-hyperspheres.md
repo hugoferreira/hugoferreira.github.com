@@ -87,5 +87,5 @@ I'm skipping the mathematical apparatus of integrating in higher dimensions (som
 
 It now may be evident to the reader that the volume of a $d$-sphere of radius $r$ is always proportional to $r^d$ (we may write this as $V_r^d \propto r^d$) and so the percentage of volume that lies within the last shell of thickness $q$ is given by $1 - q^d$.
 
-What is thus the percantage of the volume that lies within the last 0.2 of a 100-dimensional hypersphere? $1 - 0.8^{100} = 99.99999997963\%$
+What is thus the percentage of the volume that lies within the last 0.2 of a 100-dimensional hypersphere? $1 - 0.8^{100} = \class{bghighlight}{99.99999997963\%}$.
 
