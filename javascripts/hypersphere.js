@@ -6,7 +6,7 @@
 // ------------------------------------------
 const random = () => Math.random() * 2 - 1;
 const dist = (x, y) => Math.sqrt(x * x + y * y);
-let data = [], distance = [], chart, hist;
+let data = [], distance = [], chart, hist, animationTimer;
 // ------------------------------------------
 //  Hit map
 // ------------------------------------------
@@ -163,7 +163,13 @@ function simulate(n = 100) {
 }
 function reset() {
     data = [];
-    simulate();
+    simulate(0);
+}
+function startAnimation(n = 10, t = 1000) {
+    animationTimer = d3.interval(_ => simulate(10), t);
+}
+function stopAnimation() {
+    animationTimer.stop();
 }
 $(document).ready(() => {
     chart = drawHitMapHex();

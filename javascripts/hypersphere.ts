@@ -9,8 +9,9 @@ const random = () => Math.random() * 2 - 1
 const dist = (x, y) => Math.sqrt(x * x + y * y)
 
 let data = [],
-  	distance = [],
-  	chart, hist
+  distance = [],
+  chart, hist,
+  animationTimer
 
 // ------------------------------------------
 //  Hit map
@@ -24,35 +25,35 @@ function drawHitMap() {
   const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`)
 
   g.append('circle')
-		.attr('class', 'border')
-		.attr('r', edge / 2)
-		.attr('transform', `translate(${edge / 2},${edge / 2})`)
+    .attr('class', 'border')
+    .attr('r', edge / 2)
+    .attr('transform', `translate(${edge / 2},${edge / 2})`)
 
   g.append('circle')
-		.attr('class', 'outer-circle')
-		.attr('r', edge * 0.4)
-		.attr('transform', `translate(${edge / 2},${edge / 2})`)
+    .attr('class', 'outer-circle')
+    .attr('r', edge * 0.4)
+    .attr('transform', `translate(${edge / 2},${edge / 2})`)
 
   const x = d3.scaleLinear().domain([-1, 1]).range([0, edge])
   const y = d3.scaleLinear().domain([-1, 1]).range([edge, 0])
 
   g.append('g').attr('class', 'axis')
-		.attr('transform', 'translate(-10,0)')
-		.call(d3.axisLeft(y))
+    .attr('transform', 'translate(-10,0)')
+    .call(d3.axisLeft(y))
 
   g.append('g').attr('class', 'axis')
-		.attr('transform', `translate(0,${height - 10})`)
-		.call(d3.axisBottom(x))
+    .attr('transform', `translate(0,${height - 10})`)
+    .call(d3.axisBottom(x))
 
   return function updateChart() {
     console.log('Updating...')
 
     g.selectAll('.point')
-			.data(data)
-			.enter().append('g')
-			.attr('class', d => d[0] * d[0] + d[1] * d[1] <= 1 ? 'point highlighted' : 'point normal')
-			.attr('transform', d => `translate(${x(d[0])}, ${y(d[1])})`)
-			.append('circle').attr('r', 0).transition().duration(500).attr('r', 4)
+      .data(data)
+      .enter().append('g')
+      .attr('class', d => d[0] * d[0] + d[1] * d[1] <= 1 ? 'point highlighted' : 'point normal')
+      .attr('transform', d => `translate(${x(d[0])}, ${y(d[1])})`)
+      .append('circle').attr('r', 0).transition().duration(500).attr('r', 4)
   }
 }
 
@@ -74,14 +75,14 @@ function drawHitMapHex() {
   const y = d3.scaleLinear().domain([-height / 2, height / 2]).range([height, 0])
 
   g.append('g')
-		.attr('class', 'axis axis--y')
-		.attr('transform', d => `translate(-${1.5 * binsize}, 0)`)
-		.call(d3.axisLeft(d3.scaleLinear().domain([-1, 1]).range([height - 1.5 * binsize, 1.5 * binsize])))
+    .attr('class', 'axis axis--y')
+    .attr('transform', d => `translate(-${1.5 * binsize}, 0)`)
+    .call(d3.axisLeft(d3.scaleLinear().domain([-1, 1]).range([height - 1.5 * binsize, 1.5 * binsize])))
 
   g.append('g')
-		.attr('class', 'axis axis--x')
-		.attr('transform', d => `translate(${-.5 * binsize}, ${height + binsize * .5})`)
-		.call(d3.axisBottom(d3.scaleLinear().domain([-1, 1]).range([0, width + .5 * binsize])))
+    .attr('class', 'axis axis--x')
+    .attr('transform', d => `translate(${-.5 * binsize}, ${height + binsize * .5})`)
+    .call(d3.axisBottom(d3.scaleLinear().domain([-1, 1]).range([0, width + .5 * binsize])))
 
   return function updateChart() {
     const binned = hexbin(data.map(d => [d[0] * width / 2, d[1] * width / 2])),
@@ -93,21 +94,21 @@ function drawHitMapHex() {
     heatmap.exit().remove()
 
     heatmap.enter().append('g')
-            .attr('class', d => dist(d.x, d.y) <= width / 2 ? 'bin highlighted' : 'bin normal')
-			.attr('transform', d => `translate(${x(d.x)}, ${y(d.y)})`)
-			.append('circle')
-                .attr('r', 0)
-                .attr('opacity', 0)
-                .transition()
-                .duration(500)
-                .attr('r', d => size(d.length))
-                .attr('opacity', d => opacity(d.length))
+      .attr('class', d => dist(d.x, d.y) <= width / 2 ? 'bin highlighted' : 'bin normal')
+      .attr('transform', d => `translate(${x(d.x)}, ${y(d.y)})`)
+      .append('circle')
+      .attr('r', 0)
+      .attr('opacity', 0)
+      .transition()
+      .duration(500)
+      .attr('r', d => size(d.length))
+      .attr('opacity', d => opacity(d.length))
 
     heatmap.select('circle')
-			.transition()
-			.duration(500)
-			.attr('r', d => size(d.length))
-			.attr('opacity', d => opacity(d.length))
+      .transition()
+      .duration(500)
+      .attr('r', d => size(d.length))
+      .attr('opacity', d => opacity(d.length))
   }
 }
 
@@ -127,53 +128,53 @@ function drawHistogram() {
   const x = d3.scaleLinear().domain([0, 1]).range([0, width])
 
   chart.append('g')
-		.attr('class', 'axis')
-		.attr('transform', `translate(0,${height})`)
-		.call(d3.axisBottom(x))
+    .attr('class', 'axis')
+    .attr('transform', `translate(0,${height})`)
+    .call(d3.axisBottom(x))
 
   return function updateHistogram() {
     const bins = d3.histogram()
-			.domain(x.domain())
-			.thresholds(x.ticks(10))(distance)
+      .domain(x.domain())
+      .thresholds(x.ticks(10))(distance)
 
     const y = d3.scaleLinear()
-			.domain([0, d3.max(bins, d => d.length)])
-			.range([height, 0])
+      .domain([0, d3.max(bins, d => d.length)])
+      .range([height, 0])
 
     const bars = chart.selectAll('.bar').data(bins)
 
     bars.exit().remove()
 
     const bar = bars.enter().append('g')
-			.attr('class', 'bar')
-			.attr('transform', d => `translate(${Math.ceil(x(d.x0))}, -2)`)
+      .attr('class', 'bar')
+      .attr('transform', d => `translate(${Math.ceil(x(d.x0))}, -2)`)
 
     bar.append('rect')
-			.attr('x', 0)
-			.attr('width', Math.floor(x(bins[0].x1) - x(bins[0].x0)))
-			.attr('y', height)
-			.transition().duration(500)
-			.attr('height', d => height - y(d.length))
-			.attr('y', d => y(d.length))
+      .attr('x', 0)
+      .attr('width', Math.floor(x(bins[0].x1) - x(bins[0].x0)))
+      .attr('y', height)
+      .transition().duration(500)
+      .attr('height', d => height - y(d.length))
+      .attr('y', d => y(d.length))
 
     bar.append('text')
-			.attr('dy', '-0.5em')
-			.attr('x', Math.floor(x(bins[0].x1) - x(bins[0].x0)) / 2)
-			.attr('text-anchor', 'middle')
-			.attr('y', height)
-			.text(d => d.length === 0 ? '' : d.length)
-			.transition().duration(500)
-			.attr('y', d => y(d.length))
+      .attr('dy', '-0.5em')
+      .attr('x', Math.floor(x(bins[0].x1) - x(bins[0].x0)) / 2)
+      .attr('text-anchor', 'middle')
+      .attr('y', height)
+      .text(d => d.length === 0 ? '' : d.length)
+      .transition().duration(500)
+      .attr('y', d => y(d.length))
 
     bars.select('rect')
-			.transition().duration(500)
-			.attr('height', d => height - y(d.length))
-			.attr('y', d => y(d.length))
+      .transition().duration(500)
+      .attr('height', d => height - y(d.length))
+      .attr('y', d => y(d.length))
 
     bars.select('text')
-			.text(d => d.length === 0 ? '' : d.length)
-			.transition().duration(500)
-			.attr('y', d => y(d.length))
+      .text(d => d.length === 0 ? '' : d.length)
+      .transition().duration(500)
+      .attr('y', d => y(d.length))
   }
 }
 
@@ -206,7 +207,15 @@ function simulate(n = 100) {
 
 function reset() {
   data = []
-  simulate()
+  simulate(0)
+}
+
+function startAnimation(n = 10, t = 1000) {
+  animationTimer = d3.interval(_ => simulate(10), t)
+}
+
+function stopAnimation() {
+  animationTimer.stop()
 }
 
 $(document).ready(() => {

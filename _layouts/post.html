@@ -4,7 +4,7 @@ layout: default
 <div class="post">
   <div class="container main">
     <div class="row">
-      <header>
+      <header class="col-md-12">
         <center><span itemprop="name"><h1>{{ page.title }}</h1></span></center>
         <center><p>{{ page.date | date: "%B %-d, %Y" }} in {{ page.categories | first }}</p></center>
         <center><span class="small-ornament"><svg viewBox="0 100 290 220">
@@ -13,8 +13,7 @@ layout: default
       </header>
     </div>
     <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-8 offset-md-1">
+      <div class="col-md-8 offset-md-2">
         <article lang="en">
           {% if page.abstract %} <b>Abstract.</b> {{ page.abstract }}<br><br>{% endif %}
           {{ content | replace: '&#8617;', '&#8617;&#xfe0e;' }}

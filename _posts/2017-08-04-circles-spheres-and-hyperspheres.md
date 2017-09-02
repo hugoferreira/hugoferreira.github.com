@@ -63,7 +63,7 @@ If intuition is failing you, or you think there might be something wrong with ou
   </div>
 </div>
 
-Click to add <a href="javascript:simulate(100)">100 points</a>, <a href="javascript:simulate(1000)">1000 points</a>, <a href="javascript:simulate(10000)">10000 points</a>, or <a href="javascript:reset()">reset</a> the simulation.
+Click to add <a href="javascript:simulate(100)">100</a>, <a href="javascript:simulate(1000)">1000</a>, or <a href="javascript:simulate(10000)">10000</a> points, <a href="javascript:startAnimation()">start</a> or <a href="javascript:stopAnimation()">stop</a> the animation, or <a href="javascript:reset()">reset</a> the simulation.
 
 ## We shall now go 3D...
 
