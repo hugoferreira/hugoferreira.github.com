@@ -152,7 +152,7 @@ $\phantom{\equiv}~\mu_X = \frac{nK}{N}$ <br>
 
 Ufff!
 
-[^3]: Here I am, showing off with mathematical proofs, and I just conjured an unproven identity by classifying it as *known*.
+[^3]: Here I am, showing off with mathematical proofs, and I just conjured an unproven identity by classifying it as *known*. The proof uses [Vandermonde's Identity](https://en.wikipedia.org/wiki/Vandermonde%27s_identity), where $\sum_{x=0}^n\binom{a}{x}\binom{b}{n-x}$ = $\binom{a+b}{n}$. Since $1/\binom{N}{n}$ is a constant in the summation, it follows that $1/\binom{N}{n}\sum_{x=0}^n\binom{K}{x}\binom{N-K}{n-x}$ = $1/\binom{N}{n}\cdot\binom{K+N-K}{n}$ = $\frac{\binom{N}{n}}{\binom{N}{n}}$ = $1$. I leave as an exercise to the reader to prove Vandermonde's Identity.
 
 ## We were talking about cards...
 
