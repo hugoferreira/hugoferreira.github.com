@@ -292,6 +292,12 @@ article {
     -ms-hyphens: auto;
   }
 
+  .mjx-mtext span {
+    font-family: $base-font-family !important;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+  }
+
   > :first-child {
     min-height: 2em + $base-line-height;
 
@@ -339,11 +345,11 @@ article {
     left: -1.15em;
   }
 
-  pre, code {
+  pre, code, aside {
     background-color: $background-color;
   }
 
-  pre {
+  pre, aside {
     padding: 1em;
     border-radius: 5px;
   }
