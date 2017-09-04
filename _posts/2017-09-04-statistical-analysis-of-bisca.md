@@ -145,7 +145,9 @@ $\equiv$ { since $ \frac{1}{a/b} = {b/a} $ }<br>
 $\phantom{\equiv}~\sum_{x = 0}^{k} K\frac{n}{N}\frac{\binom{K-1}{x-1}\binom{N-K}{n-x}}{\binom{N-1}{n-1}}$ <br>
 $\equiv$ { since $ \sum C\cdot a = C\sum a $ }<br>
 $\phantom{\equiv}~K\frac{n}{N}\sum_{x = 0}^{k} \frac{\binom{K-1}{x-1}\binom{N-K}{n-x}}{\binom{N-1}{n-1}}$ <br>
-$\equiv$ { apply third identity }<br>
+$\equiv$ { since $ a-b = (a-1)-(b-1) $ }<br>
+$\phantom{\equiv}~K\frac{n}{N}\sum_{x = 0}^{k} \frac{\binom{K-1}{x-1}\binom{(N-1)-(K-1)}{(n-1)-(x-1)}}{\binom{N-1}{n-1}}$ <br>
+$\equiv$ { basic substitution to apply third identity }<br>
 $\phantom{\equiv}~\mu_X = \frac{nK}{N}$ <br>
 
 Ufff!
