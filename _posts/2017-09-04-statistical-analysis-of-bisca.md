@@ -102,6 +102,8 @@ $$
 P(\text{draw}~k~\text{cards of a certain rank})=f(k; 40, 4, n)=\frac{\binom{4}{k}\binom{36}{n-k}}{\binom{40}{n}}
 $$
 
+## Back to cards...
+
 **6. What's the expected number of Aces in the initial hand?**
 
 Well:

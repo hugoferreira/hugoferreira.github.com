@@ -333,16 +333,25 @@ article {
   }
 
   ol, ul {
-    position: relative;
-    padding: 0;
-    margin-left: 0;
+    @media (max-width: 572px) {
+      padding-left: 1.1rem;
+    }
+
+    @media (min-width: 572px) {
+      position: relative;
+      padding: 0;
+      margin-left: 0;
+    }
   }
 
   ul > li::before {
     position: absolute;
     content: '▪';
     color: $alt-color;
-    left: -1.15em;
+
+    @media (min-width: 572px) {
+      left: -1.15em;
+    }
   }
 
   pre, code, aside {
