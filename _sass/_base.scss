@@ -202,11 +202,10 @@ blockquote {
 
 .main {
   background-color: $article-bg-color;
-  border: 1px solid $bg-color-darker;
+  box-shadow: 0 0 5px 5px rgba(160,160,160,.05);
   margin-top: 16px;
   padding: 16px;
-  border-radius: 4px;
-  border-top: 3px solid $alt-color;
+  border-radius: 10px;
 }
 
 .small-ornament, .big-ornament {
@@ -256,7 +255,6 @@ footer {
   color: $alt-text-color;
 
   .biography {
-    margin-top: 2em;
     padding-bottom: 1em;
     border-bottom: 1px solid $subdued-border;
     margin-bottom: 1em;
