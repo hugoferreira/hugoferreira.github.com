@@ -30,9 +30,9 @@ And thus $p_C~p_K~(1-p_C) + p_C~p_K~(1-p_C) + p_C~p_K~p_C = p_K~p_C~(2 - p_C)$. 
 Where $p_K~p_C~(1-p_K) + p_K~p_C~(1-p_K) + p_K~p_K~p_C = p_K~p_C~(2 - p_K)$. Hence:
 
 $$
-\begin{align}
+\begin{align*}
 p_K~p_C~(2 - p_K) & \stackrel{?}{=} p_K~p_C~(2 - p_K) \\
 2 - p_C & \stackrel{?}{=} 2 - p_K \\
 p_C & < p_K
-\end{align}
+\end{align*}
 $$
