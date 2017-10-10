@@ -280,6 +280,10 @@ footer, .navbar {
   }
 }
 
+.navbar {
+  font-size: $small-font-size * 1.1;
+}
+
 .footnotes {
   border-top: 1px solid $subdued-border;
   padding-top: 1em;
