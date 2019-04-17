@@ -42,15 +42,17 @@ You see, doing things require *time*[^1]. We might be doing CPU-heavy stuff or I
 
 [^1]: Actually, it requires two *types* of time: the time to *do* it, and the time to *communicate* it. For all purposes of this rant, the *total time* is the sum of these two things.
 
-A single-thread application can only be doing one thing at a time: either it is waiting (blocked) for a resource to become available (like downloading 3Mb from a server in CA), or it is computing some fancy animation of the screen. But *not* both. Do you see the pickle?
+A single-thread application can only be doing one thing at a time: either it is waiting (blocked) for a resource to become available (like downloading 3Mb from a server in CA), or it is computing some fancy animation on the screen. But *not* both. Do you see the pickle?
 
 Fast-forward a few potential discussions in committees and mailing-lists, and a simple solution emerged: if most of the things Javascript is doing is bound by I/O, then abstract I/O away from the user (and possibly make it take advantage of multithreading) while keeping the user's application single-threaded. In other words, make I/O non-blocking. 
 
-If you are *really* paying attention, this *per se* solves absolutely nothing. One can abstract away I/O, in the sense that one can say *"fetch this for me while I go on with my life"* but the application still needs a way to know that a resource has become available: *"here it is what you requested, my lord"*. If the application's single-thread is busy, 100% focused, on doing other stuff, how can it be disturbed by the I/O subsystem?
+If you are *really* paying attention, this *per se* solves absolutely nothing. One can abstract away I/O, in the sense that one can say *"fetch this for me while I go on with my life"* but the application still needs a way to know that a resource has become available[^9]: *"here it is what you requested, my lord"*. If the application's single-thread is busy, 100% focused, on doing other stuff, how can it be disturbed by the I/O subsystem?
+
+[^9]: Unless you consider [polling](https://en.wikipedia.org/wiki/Polling_(computer_science)) and [busy-waiting](https://en.wikipedia.org/wiki/Busy_waiting) as a solution.
 
 Well, it can't...
 
-To solve this second pickle, one must recognise that most Javascript scripts (pun intended), are not always doing stuff. They *may* be doing stuff when the user clicks something, or scrolls the page, or 60 times per second if there's an animation occurring at 60fps. Otherwise, the script is (usually) supposed to be idle. And it is during this idleness that the I/O subsystem can take advantage to interrupt the flow. *Lo and behold* the [Event Loop](https://nodejs.org/es/docs/guides/event-loop-timers-and-nexttick/) is born.
+To solve this second pickle, one must recognise that most Javascript scripts (pun intended), are not always doing stuff. They *might* be doing stuff when the user clicks something; or scrolls the page; or 60 times per second if there's an animation occurring at 60fps. Otherwise, the script is (usually) supposed to be idle. And it is during this idleness that the I/O subsystem can take advantage to interrupt the flow. *Lo and behold* the [Event Loop](https://nodejs.org/es/docs/guides/event-loop-timers-and-nexttick/) is born.
 
 ## The Event Loop
 
@@ -91,7 +93,7 @@ Each of these phases has a [FIFO queue](https://en.wikipedia.org/wiki/FIFO_(comp
 setInterval(function() { console.log("Another one bites the dust") }, 1000)
 ```
 
-The `function() {}` part is our callback, and what `setInterval` essentialy do is to add it to the FIFO of timers. Here's another one:
+The `function() {...}` part is our callback, and what `setInterval` essentialy does is to add it to the FIFO of timers. Here's another one:
 
 ```javascript
 document.getElementById("myBtn").onclick = function() { console.log("We Click ^.^" ) }
@@ -111,7 +113,7 @@ As an exercise for the reader, think about what you are expecting to appear on t
 
 ## And your point is...
 
-Indeed, I digress. So, early 2018, I was [trying to understand](https://stackoverflow.com/questions/50382553/asynchronous-bounded-queue-in-js-ts-using-async-await) how non-blocking single-threaded event-loop based javascript worked. My desiderata was simple: (a) to have a pair of producer/consumers exchanging messages, (b) via a bounded buffer, (c) where the consumer would block if there was no message available to consume, and (d) the producer would block if the buffer was full. Which meant implementing something like:
+Indeed, I digress. So, early 2018, I was [trying to understand](https://stackoverflow.com/questions/50382553/asynchronous-bounded-queue-in-js-ts-using-async-await) how non-blocking single-threaded event-loop based javascript worked. My desiderata was simple: (a) to have a pair of producer/consumers exchanging messages, (b) via a bounded buffer, (c) where the consumer would *only* block if there was no message available to consume, and (d) the producer would *only* block if the buffer was full. This meant implementing something like:
 
 ```typescript
 class AsyncQueue<T> {
@@ -141,7 +143,7 @@ The first rule of the Developer's Club is: you don't talk about the Developer's 
 
 ## The Producer-Consumer problem
 
-And this was no exception, as one can easily find the [Producer-Consumer problem](https://en.wikipedia.org/wiki/Producer–consumer_problem) in Wikipedia. Probably someone already had a library in `npm` readily available. But I was trying to *learn*, not just getting on with my life. So, after studying the problem, I learned two things:
+This was no exception, as one can easily find the [Producer-Consumer problem](https://en.wikipedia.org/wiki/Producer–consumer_problem) in Wikipedia. Probably someone already had a library in `npm` readily available. But I was trying to *learn*, not just getting on with my life. So, after studying the problem, I learned two things:
 
 1. That it is very easy (no shit, sherlock) to write wrong implementations. Indeed, *"an [inadequate solution](https://en.wikipedia.org/wiki/Producer–consumer_problem#Inadequate_implementation) could result in a deadlock where both processes are waiting to be awakened"*;
 
@@ -162,7 +164,7 @@ interface AsyncSemaphore {
 }
 ```
 
-Why is the `wait()` marked as `async` you ask? Well, because I don't want to block my code *until* the semaphore says there are now free parking spaces. Remember: we are living on a **single threaded** universe, and all *userland code*, including our implementation of a Semaphore, is treated the same way, running in the same thread. There's no possible way for the semaphore to *even check* if there are free spaces, since we are *blocked* in the line waiting. So, yes, a deadlock would occur. The solution is to pass a callback saying: *"hey, once there's a permit I can use, call me"*. If you don't understand the relationship between Callbacks, [Promises](https://en.wikipedia.org/wiki/Futures_and_promises) and [Async/Awaits](https://en.wikipedia.org/wiki/Async/await), it's study time. And thus, I found my first solution to the AsyncSemaphore challenge:
+Why is the `wait()` marked as `async` you ask? Well, because I don't want to block my code *until* the semaphore says there are now free parking spaces. Remember: we are living on a **single threaded** universe, and all *userland code*, including our implementation of a Semaphore, is treated the same way, running in the same thread. There's no possible way for the semaphore to *even check* if there are free spaces, since we are *blocked* in the line waiting for such thing to happen. So, yes, a deadlock would occur. The solution is to pass a callback saying: *"hey, once there's a permit I can use, call me"*. If you don't understand the relationship between Callbacks, [Promises](https://en.wikipedia.org/wiki/Futures_and_promises) and [Async/Awaits](https://en.wikipedia.org/wiki/Async/await), it's study time. Thus, I found my first solution to the AsyncSemaphore challenge:
 
 ```typescript
 class AsyncSemaphore {
@@ -256,11 +258,11 @@ async function testAsyncQueueBehavior(nOps: number): Promise<Boolean> {
 }
 ```
 
-As far as I knew, my code passed these tests... Repeatedly. My students used this for their own implementations until they eventually found my code. They used it, and up until now no-one has ever complained.
+As far as I knew, my code passed these tests... Repeatedly. My students used this for their own implementations until they eventually found my code. They used it, and up until now no-one has complained.
 
 ## On Human Intuition
 
-Sometimes I think our brain has a working mode akin to a [Generative adversarial network (GAN)](https://en.wikipedia.org/wiki/Generative_adversarial_network). Part of my mind (the *code-monkey*) is generating solutions; sometimes faster than my fingers can type. The IDE, the REPL, the compiler's type-system, the tests... All those systems are there to guide the *code-monkey* in ensuring he is doing his *thing right*. This is my "generative" neural network.
+I like to think our brain has a working mode akin to a [Generative adversarial network (GAN)](https://en.wikipedia.org/wiki/Generative_adversarial_network). Part of my mind (the *code-monkey*) is generating solutions; sometimes faster than my fingers can type. The IDE, the REPL, the compiler's type-system, the tests... All those systems are there to guide the *code-monkey* in ensuring he is doing his *thing right*. This is my "generative" neural network.
 
 Then there's a second part which has no control of my fingers. It sits in the background, glances over the code, and provides me a faint signal — more like a feeling, actually — if I am doing the *right thing*. This is my "discriminative" network.
 
@@ -270,7 +272,7 @@ All this time, my *discriminative* system kept telling me: there might be someth
 
 ## A Tale of Fools
 
-Then I gave the exact same problem to my friend and colleague [André Restivo](https://web.fe.up.pt/~arestivo/page/). He grabbed his trusty ThinkPad and started coding away. Until he thought to have arrived at a solution that didn't made usage of Semaphores. I claimed that, somewhere, somehow, he would be emulating the same logic of a Semaphore; just disguised as something else. I provided my testing function, and as expected — expected by me, that is — it failed.
+Eventually I gave the exact same problem to my friend and colleague [André Restivo](https://web.fe.up.pt/~arestivo/page/). He grabbed his trusty ThinkPad and started coding away. At some point, he thought to have arrived at a solution that didn't made usage of Semaphores. I claimed that, somewhere, somehow, he would be emulating the same logic of a Semaphore; just disguised as something else. I provided my testing function, and as expected — expected by me, that is — it failed.
 
 The thing is that we didn't just wanted it to fail. We wanted to know *how* it failed, and so we started tracing to the console the particular permutation that lead to the failure: one freaking hundred invocations of `enqueue()` and `dequeue()`. This is stupid, we thought. Well, just try and shrink the number of maximum operations to four (because... reasons), and run the test until it fails. And fail it did, with the following sequence of operations:
 
@@ -283,9 +285,9 @@ Dequeue() // #3
 
 The particular problem at hand was that his implementation was not blocking `#2` as expected, but instead triggering both the callbacks of `#1` and `#2`. André joked away: *"Well, the problem is in your test!"*
 
-Such hypothesis didn't make his implementation work any better, in my defense. We meticulously pinned out why it was failing. But it made me think: *how certain was I that this particular permutation happened before when testing my own code? What other buggy permutations may be lurking around without my awareness?*
+Such hypothesis didn't make his implementation work any better, in my defense. We meticulously pinned out why it was failing. But it made me think: *how certain was I that this particular permutation happened before while testing my own code? What other buggy permutations may be lurking around without my awareness?*
 
-I have taught *"Formal Methods in Software Engineering"* for some years. One of the tools we used was Daniel Jackson's [Alloy Analyzer](http://alloytools.org), that *"provides a declarative specification language for expressing structural constraints and behavior of software systems"*. Implementing a full system in Alloy is a pain in the ass, but there was something that I always enjoyed when using it: it gave me concrete *counter-examples*. 
+I have taught *"Formal Methods in Software Engineering"* for some years. One of the tools we used was Daniel Jackson's [Alloy Analyzer](http://alloytools.org), which *"provides a declarative specification language for expressing structural constraints and behavior of software systems"*. Implementing a full system in Alloy is a pain in the ass, but there was something that I always enjoyed when using it: it gave me concrete *counter-examples*. 
 
 Moreover, Daniel allured to this *"small-scope hypothesis"* as underlying the confidence in Alloy's results. In essence, it claims that *"most inconsistent models have counterexamples within small bounds"*. Remember our strategy of *shrinking* the counter-example? It seems our intuition also believes the hypothesis to be true.
 
@@ -321,13 +323,13 @@ const fc = require('fast-check')
 fc.assert(fc.property(fc.string(), text => contains(text, text)))
 ```
 
-Fast-check bases itself on the notion of *arbitraries*. An `Arbitrary<T>` is a generator of `T`'s. How does it know how to generate `T`'s? Well, someone (which might have been you) coded it in such a way that given a random number, it would produce a deterministic uniform distribution of random `T`'s. Fast-check already provides us with built-in arbitraries to generate natural numbers, booleans, strings and arrays of stuff... amongst others. Then, it is up to its internal engine (which is called using `property()`) to check that our property remains valid for any arbitrary input.
+Fast-check bases itself on the notion of *arbitraries*. An `Arbitrary<T>` is a generator of `T`'s. How does it know how to generate `T`'s? Well, someone (which might have been you) coded it in such a way that given a random number, it would produce a deterministic uniform distribution of random `T`'s. Fast-check already provides us with [built-in arbitraries](https://github.com/dubzzz/fast-check/blob/master/documentation/1-Guides/Arbitraries.md) to generate natural numbers, booleans, strings and arrays of stuff... amongst others. Then, it is up to its internal engine (which is called using `property()`) to check that our property remains valid for any arbitrary input.
 
 If all it did was generate random stuff, it wouldn't be any better than my "statistical test". So it does some additional clever things. First, fast-check also believes in the *small-scope hypothesis*: arbitraries may be *statistically biased* towards typical problematic situations. In the case of integers, you know the drill: `0`, `1`, `-1`, `-Infinity` and `+Infinity` are the usual suspects. Second, values generated by an `Arbitrary<T>` may also provide a `shrink(prev: Ts): Stream<Ts>` function, which may be used to *shrink* a counter-example once it has been found.
 
 ## A Test for AsyncSemaphore
 
-First, let's implement a test for the AsyncSemaphore. We start by specifying how to generate a test:
+Let's implement a test for the AsyncSemaphore. We start by specifying how to generate a test:
 
 ```typescript
 import { assert, asyncProperty, nat as aNat, array as anArray, boolean as aBoolean } from 'fast-check'
@@ -340,7 +342,7 @@ assert(
         { numRuns: 1000 })   
 ```
 
-So what we are basically saying is that we want to generate arbitrary semaphores with permits up to 10, and arbitrary sequences of `wait()` and `signal()`. The sequence can be easily derived from an arbitrary array of booleans (up to size 100), where `true` is mapped to `signal()` and `false` to `wait()`. Then, we test our semaphore for *well-behaveness*:
+What we are basically saying is that we want to generate arbitrary semaphores with permits up to 10, and arbitrary sequences of `wait()` and `signal()`. The sequence can be easily derived from an arbitrary array of booleans (up to size 100), where `true` is mapped to `signal()` and `false` to `wait()`. Then, we test our semaphore for *well-behaveness*:
 
 ```typescript
 async function testSemaphore(size: number, ops: Array<'S' | 'W'>) {
@@ -380,19 +382,19 @@ Shrunk 9 time(s) 
 Got error: Property failed by returning false 
 ```
 
-So, not only my semaphore doesn't work as expected (!) but the counter-example is embarassingly simple: `wait()`, `signal()`, `wait()`. Why!? 
+So, not only my semaphore doesn't work as expected (!) but the counter-example is embarassingly simple: `wait()`, `signal()`, `wait()`, on a semaphore initialized with `permits = 0`. Why!? 
 
 ## Sherlock, your services are required
 
-The culprit is on the event-loop. Thank you, next...
+The culprit is the Event Loop. Thank you, next...
 
-Oh, you want more details? Well, let's start by analysing the `result` array for this particular example. It's size is two when it should be only one. That means that this promise:
+Oh, you want more details? Well, let's start by analysing the `result` array for this particular example. Its size is two when it should be only one. That means that these promises:
 
 ```typescript
 promises.push(sem.wait().then(() => { res.push(true) }))
 ```
 
-...found a way to be executed twice; which in turn means that this line:
+...found a way to be both executed; which in turn means that this line:
 
 ```typescript
 if (this.promises.length > 0) this.promises.pop()!()
@@ -423,7 +425,7 @@ if (this.permits == 0 || this.promises.length > 0) {
 this.permits -= 1 
 ```
 
-There's only one promise created in this example, and the `await` keyword has the result of pushing the rest of the program as a `callback` that went to some Event Loop phase's FIFO. And this includes the critical `this.permits -= 1`. The program proceeds sequentially, and the fact that the promise is solved by `signal()` doesn't mean that the previous callback is solved right away. In fact, it doesn't... the code continues it's execution straight into the second `wait()` where `permits` hasn't been decreased yet.
+There's only one promise created in this example, and the `await` keyword has the result of pushing the rest of the program as a `callback` that went to some Event Loop phase's FIFO. And this includes the critical `this.permits -= 1`. The program proceeds sequentially, and the fact that the promise is solved by `signal()` doesn't mean that the previous callback is solved right away. In fact, it doesn't... the code continues its execution straight into the second `wait()` where `permits` hasn't been decreased yet.
 
 There, you've been bitten by the Event Loop monster.
 
@@ -486,10 +488,12 @@ async function testAsyncQueueBehavior(ops: Array<'E' | 'D'>): Promise<boolean> {
 }
 ```
 
-Here we are testing two properties instead of one: 
+Here we are looking for two properties instead of one: 
 
 1. That the number of successful `dequeues()` is equal to the minimum between `enqueues` and `dequeues`; and
 2. That all `dequeues()` are solved in order (thus preserving the FIFO property).
+
+Fast-check finds no counter-examples.
 
 ## Epilogue
 
