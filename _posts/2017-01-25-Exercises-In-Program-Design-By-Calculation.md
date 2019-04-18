@@ -4,7 +4,7 @@ title: Exercises in Program Design by Calculation
 date: 2017-01-25 18:28
 comments: true
 external-url:
-categories: Mathematics
+categories: Software
 ---
 
 Below you can find some examples on correctness checking and derivation through calculation of simple programs. These exercises are part of the _Formal Methods in Software Engineering_ course given at the _Masters in Informatics Engineering_ at the _Faculty of Engineering, University of Porto_.
