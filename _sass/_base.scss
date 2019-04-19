@@ -153,6 +153,13 @@ article {
     border-radius: 5px;
   }
 
+  :not(pre) > code {
+    color: $alt-color;
+    font-size: $mono-font-size * 0.95;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+  }
+
   code {
     font-family: $mono-font-family;
     font-size: $mono-font-size;
@@ -306,11 +313,14 @@ sup > .footnote {
   }
 }
 
+:not(code) > table {
+  border-spacing: 2em .1em;
+}
+
 table {
   margin: 0 auto;
   margin-top: 1.25em;
   margin-bottom: 1.25em;
-  border-spacing: 2em .1em;
   padding-top: .5em;
   padding-bottom: .5em;
   border-collapse: separate;

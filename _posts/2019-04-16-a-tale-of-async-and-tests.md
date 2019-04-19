@@ -115,7 +115,7 @@ As an exercise for the reader, think about what you are expecting to appear on t
 
 Indeed, I digress. So, early 2018, I was [trying to understand](https://stackoverflow.com/questions/50382553/asynchronous-bounded-queue-in-js-ts-using-async-await) how non-blocking single-threaded event-loop based javascript worked. My desiderata was simple: (a) to have a pair of producer/consumers exchanging messages, (b) via a bounded buffer, (c) where the consumer would *only* block if there was no message available to consume, and (d) the producer would *only* block if the buffer was full. This meant implementing something like:
 
-```typescript
+{% highlight typescript linenos %}
 class AsyncQueue<T> {
     private queue = Array<T>()
     
@@ -137,7 +137,7 @@ class AsyncQueue<T> {
         return this.queue.pop()!
     }
 }
-```
+{% endhighlight %}
 
 The first rule of the Developer's Club is: you don't talk about the Developer's Club. The second rule is: **whatever the problem you have at hand, someone else already tried to do it... Better than you... Deal with it!**
 
@@ -166,7 +166,7 @@ interface AsyncSemaphore {
 
 Why is the `wait()` marked as `async` you ask? Well, because I don't want to block my code *until* the semaphore says there are now free parking spaces. Remember: we are living on a **single threaded** universe, and all *userland code*, including our implementation of a Semaphore, is treated the same way, running in the same thread. There's no possible way for the semaphore to *even check* if there are free spaces, since we are *blocked* in the line waiting for such thing to happen. So, yes, a deadlock would occur. The solution is to pass a callback saying: *"hey, once there's a permit I can use, call me"*. If you don't understand the relationship between Callbacks, [Promises](https://en.wikipedia.org/wiki/Futures_and_promises) and [Async/Awaits](https://en.wikipedia.org/wiki/Async/await), it's study time. Thus, I found my first solution to the AsyncSemaphore challenge:
 
-```typescript
+{% highlight typescript linenos %}
 class AsyncSemaphore {
     private promises = Array<() => void>()
 
@@ -183,13 +183,13 @@ class AsyncSemaphore {
         this.permits -= 1
     }
 }
-```
+{% endhighlight %}
 
 ## The Producer-Consumer: Part II
 
 The subsequent solution to the producer–consumer problem simply tracks the state of the queue with two semaphores: `emptyCount`, the number of empty places in the queue, and `fullCount`, the number of elements in the queue. Two invariants must be preserved: (1) `emptyCount` must always to be lower or equal to the actual number of empty places in the queue, and (2) `fullCount` must always be lower or equal to the actual number of items in the queue. If one wants to relax on the size of the buffer (thus allowing an infinite-length queue), then a single semaphore would be more than enough. And that's exactly where I started from:
 
-```typescript
+{% highlight typescript linenos %}
 class AsyncQueue<T> {
     private queue = Array<T>()
     private waitingEnqueue: AsyncSemaphore
@@ -208,7 +208,7 @@ class AsyncQueue<T> {
         return this.queue.pop()!
     }
 }
-```
+{% endhighlight %}
 
 Proud of my code, I made some tests, answered my own question on Stackoverflow[^5], and all was good. I finished my post with the following sentence: *"I'm still not sure this doesn't reintroduce subtle bugs, without extensive testing"*.
 
@@ -222,7 +222,7 @@ Back to our main story: how do we know that the implementation is correct? As of
 
 Did I tested it? I surely did! At some point, I even provided a "statistical test" that generated random permutations at will of `enqueues()` and `dequeues()`:
 
-```typescript
+{% highlight typescript linenos %}
 async function testAsyncQueueBehavior(nOps: number): Promise<Boolean> {
     const result = new Array<number>()
     const q = new AsyncQueue<number>()
@@ -256,7 +256,7 @@ async function testAsyncQueueBehavior(nOps: number): Promise<Boolean> {
 
     return isLengthOk && isSorted
 }
-```
+{% endhighlight %}
 
 As far as I knew, my code passed these tests... Repeatedly. My students used this for their own implementations until they eventually found my code. They used it, and up until now no-one has complained.
 
@@ -319,7 +319,6 @@ With property-based testing, you would write:
 
 ```javascript
 const fc = require('fast-check')
-
 fc.assert(fc.property(fc.string(), text => contains(text, text)))
 ```
 
@@ -331,7 +330,7 @@ If all it did was generate random stuff, it wouldn't be any better than my "stat
 
 Let's implement a test for the AsyncSemaphore. We start by specifying how to generate a test:
 
-```typescript
+{% highlight typescript linenos %}
 import { assert, asyncProperty, nat as aNat, array as anArray, boolean as aBoolean } from 'fast-check'
 
 assert(
@@ -340,11 +339,11 @@ assert(
         anArray(aBoolean().map(b => b ? 'S' : 'W'), 100),
         async (size, ops) => testSemaphore(size, ops)),
         { numRuns: 1000 })   
-```
+{% endhighlight %}
 
 What we are basically saying is that we want to generate arbitrary semaphores with permits up to 10, and arbitrary sequences of `wait()` and `signal()`. The sequence can be easily derived from an arbitrary array of booleans (up to size 100), where `true` is mapped to `signal()` and `false` to `wait()`. Then, we test our semaphore for *well-behaveness*:
 
-```typescript
+{% highlight typescript linenos %}
 async function testSemaphore(size: number, ops: Array<'S' | 'W'>) {
     const sem = new AsyncSemaphore(size)
     const res = Array<boolean>()
@@ -366,7 +365,7 @@ async function testSemaphore(size: number, ops: Array<'S' | 'W'>) {
     
     return res.length === Math.min(signals + size, waits)
 }
-```
+{% endhighlight %}
 
 In other words, given any sequence of `signal()` and `wait()` operations, there can only be as many `wait()`'s solved as there was `signal()`'s, plus the initial permits.
 
@@ -433,13 +432,13 @@ There, you've been bitten by the Event Loop monster.
 
 With our property-based test in place, it's easy to change the code and see what happens. It is not without some irony that the bug is solved by a "permutation" of two lines of code:
 
-```typescript
+{% highlight typescript linenos %}
 async wait() {
     this.permits -= 1
     if (this.permits < 0 || this.promises.length > 0)
         await new Promise(r => this.promises.unshift(r))
 }
-```
+{% endhighlight %}
 
 The first thing we do as soon as `wait()` is called, is to decrease the permit. We also change the condition to `permits < 0` for obvious reasons. Fast-check finds no remaining counter-examples to our specified property. Everything is awesome™!
 
@@ -447,17 +446,17 @@ The first thing we do as soon as `wait()` is called, is to decrease the permit. 
 
 We start by writing how to generate a test:
 
-```typescript
+{% highlight typescript linenos %}
 assert(
     asyncProperty(
         anArray(aBoolean().map(b => b ? 'E' : 'D'), 1000), 
         async (ns) => testAsyncQueueBehavior(ns)), 
         { numRuns: 100 }) 
-```
+{% endhighlight %}
 
 And proceed similarly:
 
-```typescript
+{% highlight typescript linenos %}
 async function testAsyncQueueBehavior(ops: Array<'E' | 'D'>): Promise<boolean> {
     const result = new Array<number>()
     const q = new AsyncQueue<number>()
@@ -486,7 +485,7 @@ async function testAsyncQueueBehavior(ops: Array<'E' | 'D'>): Promise<boolean> {
 
     return isLengthOk && isSorted
 }
-```
+{% endhighlight %}
 
 Here we are looking for two properties instead of one: 
 
