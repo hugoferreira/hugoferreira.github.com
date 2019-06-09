@@ -71,11 +71,11 @@ FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAEcA7YDAREA
 "lter"]+[])[3]+(!0+[]["f"+([!1]+[][[]])["10"]+"lter"])["10"]+([][[]]+[])[1]+"str"+([][[]]+[])[0]+([]["f"+([!1]+[][[]])["10"]+"lter"]+[])[3]+"t"+(!0+[]["f"+([!1]+[][[]])["10"]+"lter"])["10"]+"r"])["20"]+(!1+[]["f"+([!1]+[][[]])["10"]+"lter"])["20"]+[2]+"+2"+(!0+[]["f"+([!1]+[][[]])["10"]+"lter"])["20"])();
 ```
 
-I am not a security researcher; in fact, despite I know my way around Verilog and FPGAs, wrote emulators for a couple of toy CPUs, and designed a couple of toy programming languages, I consider myself an *high-level* guy. But, you know, challenge accepted.
+I am not a security researcher; in fact, despite knowing my way around Verilog and FPGAs, have written emulators for a couple of vintage/toy CPUs, and designed a couple of weekend programming languages, I consider myself an *high-level* guy. But, you know, challenge accepted!
 
 ---
 
-Type EML extension is well-known and easy to decode, even if you do it by hand. In this case,  there's clearly an image encoded in Base64, so let's start there:
+Type [.EML extension](https://en.wikipedia.org/wiki/Email#Filename_extensions) is well-known and easy to decode, even if you do it by hand. Here is clearly an image encoded in Base64, so let's start there:
 
 ```
 $> munpack analise.eml
@@ -87,7 +87,7 @@ Which gives us:
 
 <img src="/assets/banner.jpg" alt="banner" style="width:100%;"/>
 
-If you have a plain, ordinary image, then you are most probably using plain, ordinary steganography. There's plenty of steg tools out there, but I was in *laf-mode*, so I just googled for [something-as-a-service™](https://futureboy.us/stegano/decinput.html) with `guess the payload` option selected:
+If you have a plain, ordinary image, then you are most probably using plain, ordinary [steganography](https://en.wikipedia.org/wiki/Steganography). There's plenty of steg tools out there, but I was in *laf*-mode, so I just googled for [something-as-a-service™](https://futureboy.us/stegano/decinput.html) and trusted the almighty `guess the payload` option:
 
 ```
 The payload may be:
@@ -105,7 +105,7 @@ To display, I might suggest using a MIME type of:
     compressed: yes
 ```
 
-Encrypted, compressed; I don't care... computer, just do the work for me please:
+Encrypted, compressed; I don't care. *Computer*, do the work for me... please:
 
 ```
 0c60fd56872251909cb07a749b03a34a56e1edac  memdmp.zip
@@ -119,7 +119,7 @@ $> du -h memdmp
 521M	memdmp
 ```
 
-So this is probably a memory dump file of a 512M RAM machine. Is there a an flag here?
+So this is probably a memory dump file of a 512M RAM machine. Is there an easy flag here?
 
 ```
 $> strings memdmp | grep FLAG
@@ -134,13 +134,13 @@ PROCESS_FLAG_HIDEUI
 ...
 ```
 
-Ok, too much information; we are going to to this the hardway. Up until this point, I thought that the sentence *"A VOLATILIDADE é a constante da vida!"* was something hinting to a password:
+Nope, too much information; we are going to to this the hardway. Up until this point, I thought that the sentence *"A VOLATILIDADE é a constante da vida!"* was something hinting to a password:
 
 ```
 $> strings memdmp | grep volatilidade
 ```
 
-Nope, nothing to see here. However, JP quickly pointed out there is a forensics tool called [volatility](https://www.volatilityfoundation.org). Perfect:
+But no, nothing relevant. Soon after, JP pointed out there is a forensics tool called [volatility](https://www.volatilityfoundation.org); perfect:
 
 ```
 $> vol.py -f memdmp imageinfo
@@ -193,7 +193,7 @@ Name                                                  Pid   PPid   Thds   Hnds T
 . 0x820348f8:ctfmon.exe                              1012   1488      1     69 2019-06-09 16:02:30 UTC+0000
 ```
 
-Hmmm... There's a couple of interesting processes there. Notepad, VirtualBox, something on the command line. But before we dive into the processes, let inspect easy things like the clipboard:
+Hmmm... There's a couple of interesting processes there. Notepad, VirtualBox, something on the command line. Before we dive into the processes, let inspect easy things like the clipboard:
 
 ```
 $> vol.py -f memdmp --profile WinXPSP2x86 clipboard
@@ -208,7 +208,7 @@ Session    WindowStation Format                 Handle Object     Data
 
 ```
 
-Uh! So something from notepad resides on the clipboard. What could it be? A password pasted on some input box of a webpage?
+Uh! So something from `notepad` resides on the clipboard. What could it be? A password pasted on some input box of a webpage?
 
 ```
 $> vol.py -f memdmp --profile WinXPSP2x86 editbox
@@ -251,6 +251,4 @@ $> echo "synt{Z8Z%QHZC%E5PXF!}" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 flag{M8M%DUMP%R5CKS!}
 ```
 
-If you are wondering, `tr 'A-Za-z' 'N-ZA-Mn-za-m'` applies a [ROT13](https://en.wikipedia.org/wiki/ROT13) on the string, a simple letter substitution cipher that replaces a letter with the 13th letter after it.
-
-And that was it. We started working on this at 21:22 and finished at 22:47; all while having dinner. Not bad for two amateur hackers :)
+If you are wondering, `tr 'A-Za-z' 'N-ZA-Mn-za-m'` applies a [ROT13](https://en.wikipedia.org/wiki/ROT13) on the string, a simple letter substitution cipher that replaces a letter with the 13th letter after it. And that was it. We started working on this at 21:22 and finished at 22:47; all while having dinner. Not bad for two amateur hackers :)
