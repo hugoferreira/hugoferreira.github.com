@@ -7,7 +7,9 @@ external-url:
 categories: Software
 ---
 
-So, yesterday, my friend and PhD student JP Dias, decided to send me [this .eml file](/assets/analise.eml) (I'll just put a snippet here; you can download the file using the provided link):
+So, yesterday, my friend and PhD student [JP Dias](https://jpdias.me), decided to send me [this .eml file](/assets/analise.eml) [^1] (I'll just put a snippet here; you can download the file using the provided link):
+
+[^1]: For those that complain he should be working on his thesis, I should stress that he has published nothing less than 15 peer-reviewed papers in international avenues during his first two-years o.O 
 
 ```
 Delivered-To: steg@gmail.com
@@ -236,7 +238,7 @@ https://bit.ly/31uALei
 NOTEPAD
 ```
 
-Wait a minute. Could that URL mean something?
+Wait a minute. Could that URL contain something? Well, but of course:
 
 ```
 synt{Z8Z%QHZC%E5PXF!}
