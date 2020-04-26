@@ -42,25 +42,36 @@ niven←{⍸({0=(+/10⊥⍣¯1⊢⍵)|⍵}¨⍳⍵)}
 niven←{⍸{0=(+/10⊥⍣¯1⊢⍵)|⍵}¨⍳⍵}
 ```
 
-$\equiv$ { since `1⊥V = +/V` }<br>
-```
-niven←{⍸{0=(1⊥10⊥⍣¯1⊢⍵)|⍵}¨⍳⍵}
-```
+We want to get rid of that extra `()`'s, but the way to get there is not that obvious:
 
 $\equiv$ { since `A|B = B|⍨A` }<br>
 ```
-niven←{⍸{0=⍵|⍨(1⊥10⊥⍣¯1⊢⍵)}¨⍳⍵}
-niven←{⍸{0=⍵|⍨1⊥10⊥⍣¯1⊢⍵}¨⍳⍵}
+niven←{⍸{0=⍵|⍨(+/10⊥⍣¯1⊢⍵)}¨⍳⍵}
+niven←{⍸{0=⍵|⍨+/10⊥⍣¯1⊢⍵}¨⍳⍵}
 ```
 
-$\equiv$ { distribute modulo, and get rid of map as `1⊥10⊥⍣¯1⍳ = {1⊥10⊥⍣¯1⊢⍵}¨⍳⍵` }<br>
+$\equiv$ { distribute modulo, and get rid of map `¨`}<br>
+```
+niven←{⍸0=(⍳⍵)|⍨+/10⊥⍣¯1⍳⍵}
+```
+
+... but this would result in a `LENGTH ERROR` due to the way `+/` is evaluated. One trick is to realise that:
+
+$\equiv$ { since `1⊥V = +/V` }<br>
 ```
 niven←{⍸0=(⍳⍵)|⍨1⊥10⊥⍣¯1⍳⍵}
 ```
 
-$\equiv$ { tacit form to get rid of `⍵` }
+$\equiv$ { tacit form to get rid of `⍵`, by factoring it out }
 ```
+niven←{(⍸0=⍳|⍨1⊥10⊥⍣¯1⍳)⍵}
 niven←⍸0=⍳|⍨1⊥10⊥⍣¯1⍳
+```
+
+Are here's the result:
+```
+      niven 100
+1 2 3 4 5 6 7 8 9 10 12 18 20 21 24 27 30 36 40 42 45 48 50 54 60 63 70 72 80 81 84 90 100
 ```
 
 [^1]: Opinions diverge if this was a valid way to preserve our mental health.
