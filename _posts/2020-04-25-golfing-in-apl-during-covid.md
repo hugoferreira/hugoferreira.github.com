@@ -50,7 +50,7 @@ niven←{({0=(+/(⌊10|⍵∘÷)¨(10∘*¨(⍳⌈10⍟⍵+1)-1))|⍵}¨⍳⍵)/
 niven←{({0=(+/(⌊10|⍵∘÷)¨10*(⍳⌈10⍟⍵+1)-1)|⍵}¨⍳⍵)/⍳⍵}
 ```
 
-At this point the internet taught be about `f⍣¯1`, which calculates the inverse function of `f`. How can this help? Well, another interesting thing is the _mixed radix conversion_ by dyadic `⊥`. For example `24 60 60 ⊥ 2 5 5` $= 7505 = 2\times60^2 + 5\times60^2 + 5$. This allows to specify the radix for each vector member, and it sums all up. For our case, we have something very similar, but the _mixed radix_ is always 10; for example `10 10 10 ⊥ 1 2 3 = 123`. This can be generalized to `(10⊥⍣3⊢) 1 2 3 = 123`. In our case, we want to go in the other direction. Enter the inverse, with `10⊥⍣¯1⊢ 123 = 1 2 3`.
+At this point the internet taught be about `f⍣¯1`, which calculates the inverse function of `f`. How can this help? Well, another interesting thing is the _mixed radix conversion_ by dyadic `⊥`. For example `24 60 60 ⊥ 2 5 5` $= 7505 = 2\times60^2 + 5\times60^2 + 5$. This allows to specify the radix for each vector member, and it sums all up. For our case, we have something very similar, but the _mixed radix_ is always 10; for example `10 10 10 ⊥ 1 2 3 ↔ 123`. This can be generalized to `(10⊥⍣3⊢) 1 2 3 ↔ 123`. In our case, we want to go in the other direction. Enter the inverse, with `10⊥⍣¯1⊢ 123 ↔ 1 2 3`.
 
 $\equiv$ { changed strategy to get digits } <br>
 ```
@@ -58,7 +58,7 @@ niven←{({0=(+/(10⊥⍣¯1⊢)⍵)|⍵}¨⍳⍵)/⍳⍵}
 niven←{({0=(+/10⊥⍣¯1⊢⍵)|⍵}¨⍳⍵)/⍳⍵}
 ```
 
-$\equiv$ { since monadic `⍸` helps in `(f¨⍳⍵)/⍳⍵ = ⍸f¨⍳⍵` }<br>
+$\equiv$ { since monadic `⍸` helps in `(f¨⍳⍵)/⍳⍵ ↔ ⍸f¨⍳⍵` }<br>
 ```
 niven←{⍸({0=(+/10⊥⍣¯1⊢⍵)|⍵}¨⍳⍵)}
 niven←{⍸{0=(+/10⊥⍣¯1⊢⍵)|⍵}¨⍳⍵}
@@ -66,7 +66,7 @@ niven←{⍸{0=(+/10⊥⍣¯1⊢⍵)|⍵}¨⍳⍵}
 
 We want to get rid of that extra `()`'s, but the way to get there is not that obvious:
 
-$\equiv$ { since `A|B = B|⍨A` }<br>
+$\equiv$ { since `A|B ↔ B|⍨A` }<br>
 ```
 niven←{⍸{0=⍵|⍨(+/10⊥⍣¯1⊢⍵)}¨⍳⍵}
 niven←{⍸{0=⍵|⍨+/10⊥⍣¯1⊢⍵}¨⍳⍵}
@@ -79,7 +79,7 @@ niven←{⍸0=(⍳⍵)|⍨+/10⊥⍣¯1⍳⍵}
 
 ... but this would result in a `LENGTH ERROR` due to the way `+/` is evaluated. One trick is to realise that:
 
-$\equiv$ { since `1⊥V = +/V` }<br>
+$\equiv$ { since `1⊥V ↔ +/V` }<br>
 ```
 niven←{⍸0=(⍳⍵)|⍨1⊥10⊥⍣¯1⍳⍵}
 ```
