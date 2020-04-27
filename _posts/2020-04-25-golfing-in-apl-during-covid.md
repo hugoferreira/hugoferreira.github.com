@@ -17,7 +17,9 @@ The channel started to grow in participants, and everyone was hating Haskell. Th
 
 For this problem, my first solution was to get the digits of each number, sum them up, and find if they are divisible by checking the modulos to be zero (0). I flirted with using `∧` since it returns the greatest common divisor (GCD) between two numbers, and would allow me to check divisibility by comparing the GCD to the original number. This turned out to be more verbose. So I ended up with the following expression:
 
-`({0=(+/(⌊10|⍵∘÷)¨((10∘*)¨(⍳(⌈10⍟⍵+1))-1))|⍵}¨⍳100)/(⍳100)`
+```
+({0=(+/(⌊10|⍵∘÷)¨((10∘*)¨(⍳(⌈10⍟⍵+1))-1))|⍵}¨⍳100)/(⍳100)
+```
 
 The explanation is that `⍳(⌈10⍟⍵+1))-1)` generates a zero-based array $[0..]$ with length equal to the number of digits. Then, maping `(10∘*)` would generate the powers of 10, as $[1, 10, 100, 1000..]$. This was used to get test each digit $a$ since:
 
@@ -27,7 +29,19 @@ $$\left(\sum_{n=0}^{\lfloor log_{10}a \rfloor}\frac{a}{10^n}\text{ mod }10\right
 \end{cases}
 $$
 
-... for which `⌊` gives the floor and `+/` the sum. The first part `({0=(+/(⌊10|⍵∘÷)¨((10∘*)¨(⍳(⌈10⍟⍵+1))-1))|⍵}¨⍳100)` thus returns a mask array `1 1 1 1 1 1 1 1 1 1 0 1 0 0 0 0 0 1 0 1 1 0 0 1...` and the replicate (dyadic `/`) filters out the elements in `⍳100` given that mask. Now that I had a working solution, it was time to:
+...for which `⌊` gives the floor and `+/` the sum. The first part:
+
+```
+({0=(+/(⌊10|⍵∘÷)¨((10∘*)¨(⍳(⌈10⍟⍵+1))-1))|⍵}¨⍳100)
+``` 
+
+...thus returns a mask array:
+
+```
+1 1 1 1 1 1 1 1 1 1 0 1 0 0 0 0 0 1 0 1 1 0 0 1 ...
+``` 
+
+...and the replicate (dyadic `/`) filters out the elements in `⍳100` given that mask. Now that I had a working solution, it was time to:
 
 $\equiv$ { transform into a function and simplify operators precedence }<br>
 ```apl
