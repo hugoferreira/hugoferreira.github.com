@@ -1,3 +1,14 @@
+- name: "A Preliminary Study on Mesh Networks and IoT"
+  year: 2018
+  authors:
+    - Filipa Barros
+    - Luís Sousa
+    - João Pedro Dias
+    - Hugo Sereno Ferreira
+  conference: "11ª Edição Encontro Investigação Jovem"
+  acronym: ijup
+  city: Porto, Portugal
+
 - name: "Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites"
   year: 2017
   authors:

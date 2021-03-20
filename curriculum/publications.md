@@ -10,12 +10,12 @@ date: July 2017
 {% assign nationals = site.data.nationalpubs.size %}
 {% assign refereedconfs = proceedings | plus: nationals %}
 {% assign others = site.data.otherpubs.size %}
-{% assign total = refereedconfs | plus: periodics | plus: others %}
+{% assign total = allpubs.size %}
 {% assign isi = allpubs | where_exp:"item","item.index contains 'isi'" | size %}
 {% assign scopus = allpubs | where_exp:"item","item.index contains 'scopus'" | size %}
 {% assign dblp = allpubs | where_exp:"item","item.index contains 'dblp'" | size %}
 
-Since 2008, I have co-authored **{{ refereedconfs }} articles in conferences** with scientic referee, **{{ periodics }} articles in periodics**, and **{{ others }} other** articles. In total, these **{{ total }} publications** have attracted over **{{ site.data.bibliometrics.citations }} citations**, resulting in an **h-index of {{ site.data.bibliometrics.hindex }}** and an **i10-index of {{ site.data.bibliometrics.i10index }}**, thus averaging **{{ site.data.bibliometrics.citations | divided_by: total }} citations per paper**. A summary of the most cited publications can be found below. Indexed articles by the ISI Web of Science ({{ isi }}), SCOPUS ({{ scopus }}) and The DBLP Computer Science Bibliography ({{ dblp }}) are identified by the tags ISI, SCOPUS and DBLP respectively. More recent articles are still waiting for proper indexation, but all PLoP publications are indexed by SCOPUS.
+Since 2008, I have co-authored **{{ refereedconfs }} articles in conferences** with scientific referee, **{{ periodics }} articles in periodics**, and **{{ others }} others**. In total, these **{{ total }} publications** have attracted over **{{ site.data.bibliometrics.citations }} citations**, resulting in an **h-index of {{ site.data.bibliometrics.hindex }}** and an **i10-index of {{ site.data.bibliometrics.i10index }}**, thus averaging **{{ site.data.bibliometrics.citations | divided_by: total }} citations per paper**. Indexed articles by the ISI Web of Science ({{ isi }}), SCOPUS ({{ scopus }}) and The DBLP Computer Science Bibliography ({{ dblp }}) are identified by the tags ISI, SCOPUS and DBLP respectively. More recent articles are still waiting for proper indexation. A summary of the most cited publications ({{ toppubs.size }}) can be found below:
 
 {:.small-table}
 | Title | Citations | Year |
