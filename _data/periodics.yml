@@ -1,3 +1,62 @@
+- name: "Managing Non-Trivial Internet-of-Things Systems with Conversational Assistants: A Prototype and a Feasibility Experiment"
+  year: 2021
+  authors:
+    - André Lago
+    - João Pedro Dias
+    - Hugo Sereno Ferreira
+  periodic: Journal of Computational Science 51
+  issn: 1877-7503
+  doi: 10.1016/j.jocs.2021.101324
+
+- name: "A Survey on the Adoption of Patterns for Engineering Software for the Cloud"
+  year: 2021
+  authors:
+    - Tiago Boldt Sousa
+    - Hugo Sereno Ferreira
+    - Filipe Correia
+  periodic: IEEE Transactions on Software Engineering
+  issn: 1939-3520
+  doi: 10.1109/tse.2021.3052177
+
+- name: "Live Software Development Environment Using Virtual Reality: A Prototype and Experiment"
+  year: 2019
+  authors:
+    - Diogo Amaral
+    - Gil Domingues
+    - João Pedro Dias
+    - Hugo Sereno Ferreira
+    - Ademar Aguiar
+    - Rui Nóbrega
+    - Filipe Correia
+  periodic: Communications in Computer and Information Science 1172. Springer, Cham
+  isbn: 978-3-030-40222-8
+  doi: 10.1007/978-3-030-40223-5_5
+
+- name: "Experimenting with Liveness in Cloud Infrastructure Management"
+  year: 2019
+  authors:
+    - Pedro Lourenço
+    - João Pedro Dias
+    - Ademar Aguiar
+    - Hugo Sereno Ferreira
+    - André Restivo
+  periodic: Communications in Computer and Information Science 1172. Springer, Cham
+  isbn: 978-3-030-40222-8
+  doi: 10.1007/978-3-030-40223-5_4
+
+- name: "A Blockchain-based Approach for Access Control in eHealth Scenarios"
+  year: 2018
+  authors:
+    - João Pedro Dias
+    - Ângelo Martins
+    - Hugo Sereno Ferreira
+  periodic: Journal of Information Assurance and Security 13(4)
+  pages: 125-136
+  acronym: jias
+  index: isi
+  issn: 1554-1010
+  citations: 18
+
 - name: "Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites"
   year: 2017
   authors:
@@ -11,6 +70,7 @@
   index: scopus
   issn: 1877-0509
   doi: 10.1016/j.procs.2017.05.355
+  citations: 14
   
 - name: "Market driven implementation of the eCAALYX solution"
   year: 2012
@@ -42,3 +102,4 @@
     - João Pascoal Faria
   periodic: International Journal on Advances in Software 3(1&2)
   issn: 1942-2628
+  citations: 10

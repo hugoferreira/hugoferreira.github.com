@@ -1,4 +1,378 @@
-- name: "Internet of Things Patterns on Device Interaction and Reliability"
+- name: "Programming IoT-spaces: A User-Survey on Home Automation Rules"
+  type: conference
+  authors:
+    - Danny Soares
+    - João Pedro Dias
+    - André Restivo
+    - Hugo Sereno Ferreira
+  conference: Computational Science, Lecture Notes in Computer Science
+  city: Springer, Cham
+  acronym: iccs
+  year: 2021
+
+- name: "A Review on Visual Programming for Distributed Computation in IoT"
+  type: conference
+  authors:
+    - Margarida Silva
+    - João Pedro Dias
+    - André Restivo
+    - Hugo Sereno Ferreira
+  conference: Computational Science, Lecture Notes in Computer Science
+  city: Springer, Cham
+  acronym: iccs
+  year: 2021
+
+- name: "Empowering Visual Internet-of-Things Mashups with Self-Healing Capabilities"
+  type: conference
+  authors:
+    - João Pedro Dias
+    - André Restivo
+    - Hugo Sereno Ferreira
+  conference: Proceedings of 3rd International Workshop on Software Engineering Research & Practices for the Internet of Things, at the 43rd ACM/IEEE International Conference on Software Engineering
+  city: N/A, Cyberspace
+  acronym: icse
+  year: 2021
+
+- name: "Live Automatic Program Repair using Tests as Specifications"
+  type: conference
+  authors:
+    - Diogo Campos
+    - André Restivo
+    - Hugo Sereno Ferreira
+    - Afonso Ramos
+  conference: Proceedings of the IEEE International Conference on Software Testing, Verification and Validation
+  city: N/A, Cyberspace
+  acronym: icst
+  year: 2021
+
+- name: "Automatically Generating Websites From Hand-Drawn Mockups"
+  type: conference
+  authors:
+    - João Carlos Ferreira
+    - André Restivo
+    - Hugo Sereno Ferreira
+  conference: Proceedings of the 16th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications
+  city: Darmstadt, Germany
+  acronym: visapp
+  year: 2021
+  doi: 10.5220/0010193600480058
+  isbn: 978-989-758-488-6
+
+- name: "Visually-defined Real-Time Orchestration of IoT Systems"
+  type: conference
+  authors:
+    - Margarida Silva
+    - João Pedro Dias
+    - André Restivo
+    - Hugo Sereno Ferreira
+  conference: "Proceedings of the 17th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services"
+  city: Darmstadt, Germany
+  acronym: mobiquitous
+  year: 2020
+  doi: 10.1145/3448891.3448938
+
+- name: "A Pattern-Language for Self-Healing Internet-of-Things Systems"
+  type: conference
+  authors:
+    - João Pedro Dias
+    - Tiago Boldt Sousa
+    - André Restivo
+    - Hugo Sereno Ferreira
+  conference: Proceedings of the 25th European Conference on Pattern Languages of Programs
+  city: N/A, Cyberspace
+  acronym: europlop
+  year: 2020
+  doi: 10.1145/3424771.3424804
+
+- name: "Real-time Feedback in Node-RED for IoT Development: An Empirical Study"
+  type: conference
+  authors:
+    - Diogo Torres
+    - João Pedro Dias
+    - André Restivo
+    - Hugo Sereno Ferreira
+  conference: IEEE/ACM 24th International Symposium on Distributed Simulation and Real Time Applications 
+  city: N/A, Cyberspace
+  acronym: ds-rt
+  year: 2020
+  doi: 10.1109/ds-rt50469.2020.9213544
+  issn: 1550-6525
+
+- name: "Determining Microservice Boundaries: A Case Study Using Static and Dynamic Software Analysis"
+  type: conference
+  authors:
+    - Tiago Matias
+    - Filipe Correia
+    - Jonas Fritzsch
+    - Justus Bogner
+    - Hugo Ferreira
+    - André Restivo
+  conference: Proceedings of the 14th European Conference on Software Architecture 
+  city: L’Aquila, Italy
+  acronym: ecsa
+  year: 2020
+  doi: 10.1007/978-3-030-58923-3_21
+
+- name: "Helping Software Developers through Live Software Metrics Visualization"
+  type: conference
+  authors:
+    - Sara Fernandes
+    - André Restivo
+    - Hugo Sereno Ferreira
+    - Ademar Aguiar
+  conference: Conference Companion of the 4th International Conference on Art, Science, and Engineering of Programming 
+  acronym: px
+  city: Porto, Portugal
+  year: 2020
+  doi: 10.1145/3397537.3397539
+  isbn: 9781450375078
+
+- name: "Conversational Interface for Managing Non-trivial Internet-of-Things Systems"
+  type: conference
+  authors:
+    - André Lago
+    - João Pedro Dias
+    - Hugo Sereno Ferreira
+  conference: Computational Science, Lecture Notes in Computer Science 12141
+  city: Springer, Cham 
+  acronym: iccs
+  year: 2020
+  doi: 10.1007/978-3-030-50426-7_29
+  isbn: 978-3-030-50425-0
+
+- name: "Visual Self-healing Modelling for Reliable Internet-of-Things Systems"
+  type: conference
+  authors:
+    - João Pedro Dias
+    - Bruno Lima
+    - João Pascoal Faria
+    - André Restivo
+    - Hugo Sereno Ferreira
+  conference: Computational Science, Lecture Notes in Computer Science 12141. 
+  city: Springer, Cham 
+  acronym: iccs
+  year: 2020
+  doi: 10.1007/978-3-030-50426-7_27
+  isbn: 978-3-030-50425-0
+
+- name: "Towards a Pattern Language for Master’s Students"
+  type: conference
+  authors:
+    - Hugo Sereno Ferreira
+    - André Restivo
+    - Tiago Boldt
+  conference: Proceedings of the 24th European Conference on Pattern Languages of Programs
+  acronym: europlop
+  city: Bavaria, Germany
+  year: 2019
+  doi: 10.1145/3361149.3361165
+  isbn: 978-1-4503-6206-1
+
+- name: "Testing and Deployment Patterns for the Internet-of-Things"
+  type: conference
+  authors:
+    - João Pedro Dias
+    - Tiago Boldt
+    - Hugo Sereno Ferreira
+  conference: Proceedings of the 24th European Conference on Pattern Languages of Programs
+  acronym: europlop
+  city: Bavaria, Germany
+  year: 2019
+  doi: 10.1145/3361149.3361184
+  isbn: 978-1-4503-6206-1
+
+- name: "Live Software Development --- Tightening the feedback loops"
+  type: conference
+  authors:
+    - Ademar Aguiar
+    - André Restivo
+    - Filipe Correia
+    - Hugo Sereno Ferreira
+    - João Pedro Dias
+  conference: Proceedings of the 5th Edition of the Programming Experience Workshop
+  acronym: px
+  city: Genova, Italy
+  year: 2019
+  index: dblp
+  citations: 22
+
+- name: "CloudCity: A Live Environment for the Management of Cloud Infrastructures"
+  type: conference
+  authors:
+    - Pedro Lourenço
+    - João Pedro Dias
+    - Ademar Aguiar
+    - Hugo Sereno Ferreira
+  conference: Proceedings of the 14th International Conference on Evaluation of Novel Approaches to Software Engineering
+  acronym: enase
+  city: Heraklion, Crete, Greece
+  doi: 10.5220/0007699700270036
+  year: 2019
+  index: scopus, dblp
+
+- name: "Live Software Development Environment for Java using Virtual Reality"
+  type: conference
+  authors:
+    - Diogo Amaral
+    - Gil Domingues
+    - João Pedro Dias
+    - Hugo Sereno Ferreira
+    - Ademar Aguiar
+    - Rui Nobrega
+  conference: Proceedings of the 14th International Conference on Evaluation of Novel Approaches to Software Engineering
+  acronym: enase
+  city: Heraklion, Crete, Greece
+  doi: 10.5220/0007699800370046
+  year: 2019
+  index: scopus, dblp
+
+- name: "A Blockchain-based Scheme for Access Control in e-Health Scenarios"
+  type: conference
+  authors:
+    - João Pedro Dias
+    - Luis Reis
+    - Angelo Martins
+    - Hugo Sereno Ferreira
+  conference: Proceedings of the 14th International Conference on Information assurance and security
+  acronym: ias
+  city: Porto, Portugal
+  doi: 10.1007/978-3-030-17065-3_24
+  year: 2018
+  index: isi, scopus, dblp
+  citations: 10
+
+- name: "Blockchain-based PKI for Crowdsourced IoT Sensor Information"
+  type: conference
+  authors:
+    - Guilherme Pinto
+    - João Pedro Dias
+    - Hugo Sereno Ferreira
+  conference: Proceedings of the 14th International Conference on Information assurance and security
+  acronym: ias
+  city: Porto, Portugal
+  doi: 10.1007/978-3-030-17065-3_25
+  year: 2018
+  index: isi, scopus, dblp
+  citations: 13
+  
+- name: "Programming for Young Children using Tangible Tiles and Camera-Enabled Hanheld Devices"
+  type: conference
+  authors:
+    - Angela Cardoso
+    - Armando Sousa
+    - Hugo Sereno Ferreira
+  conference: Proceedings of the 11th annual International Conference of Education, Research and Innovation
+  acronym: iceri
+  city: Seville, Spain
+  doi: 10.21125/iceri.2018.2504
+  isbn: 978-84-09-05948-5
+  issn: 2340-1095
+  year: 2018
+  index: isi
+
+- name: "Easy Robotics with Camera Devices and Tangible Tiles"
+  type: conference
+  authors:
+    - Angela Cardoso
+    - Armando Sousa
+    - Hugo Sereno Ferreira
+  conference: Proceedings of the 11th annual International Conference of Education, Research and Innovation
+  acronym: iceri
+  city: Seville, Spain
+  doi: 10.21125/iceri.2018.2506
+  isbn: 978-84-09-05948-5
+  issn: 2340-1095
+  year: 2018
+  index: isi
+
+- name: "Dynamic allocation of serverless functions in IoT environments"
+  type: conference
+  authors:
+    - Duarte Pinto
+    - João Pedro Dias
+    - Hugo Sereno Ferreira
+  conference: Proceedings of the 16th IEEE International Conference on Embedded and Ubiquitous Computing
+  acronym: euc
+  city: Bucharest, Romania
+  doi: 10.1109/euc.2018.00008
+  year: 2018
+  index: isi, scopus, dblp
+  citations: 15
+
+- name: "Overview of A Pattern Language for Engineering Software for the Cloud"
+  type: conference
+  authors:
+    - Tiago Boldt Sousa
+    - Hugo Sereno Ferreira
+    - Filipe Correia
+  conference: Proceedings of the 25th Conference on Pattern Languages of Programs
+  acronym: plop
+  city: Portland, USA
+  year: 2018
+  citations: 8
+
+- name: "Engineering Software for the Cloud: Automated Recovery and Scheduler"
+  type: conference
+  authors:
+    - Tiago Boldt
+    - Hugo Sereno Ferreira
+    - Filipe Correia
+    - Ademar Aguiar
+  conference: Proceedings of the 23rd European Conference on Pattern Languages of Programs
+  acronym: europlop
+  city: Bavaria, Germany
+  doi: 10.1145/3282308.3282315
+  isbn: 978-1-4503-6387-7
+  year: 2018
+  index: scopus, dblp
+  citations: 7
+
+- name: "Engineering Software for the Cloud: External Monitoring and Failure Injection"
+  type: conference
+  authors:
+    - Tiago Boldt
+    - Hugo Sereno Ferreira
+    - Filipe Correia
+    - Ademar Aguiar
+  conference: Proceedings of the 23rd European Conference on Pattern Languages of Programs
+  acronym: europlop
+  city: Bavaria, Germany
+  doi: 10.1145/3282308.3282316
+  isbn: 978-1-4503-6387-7
+  year: 2018
+  index: scopus, dblp
+  citations: 7
+
+- name: "A Brief Overview of Existing Tools for Testing the Internet-of-Things"
+  type: conference
+  authors:
+    - João Pedro Dias
+    - Flávio Couto
+    - Ana Paiva
+    - Hugo Sereno Ferreira
+  conference: Proceedings of the 11th IEEE Conference on Software Testing, Validation and Verification Workshops
+  acronym: icstw
+  city: Västerås, Sweden
+  doi: 10.1109/icstw.2018.00035
+  year: 2018
+  index: isi, scopus, dblp
+  citations: 25
+
+- name: "A Reactive and Model-based Approach for Developing Internet-of-Things Systems"
+  type: conference
+  authors: 
+    - João Pedro Dias
+    - João Pascoal Faria
+    - Hugo Sereno Ferreira
+  conference: Proceedings of the 7th Software Engineering Doctoral Symposium, co-located with the 11th International Conference on the Quality of Information and Communications Technology
+  acronym: sedes
+  city: Coimbra, Portugal
+  year: 2018
+  index: isi, dblp, scopus
+  doi: 10.1109/quatic.2018.00049
+  citations: 12
+
+- name: "Patterns for Things that Fail"
   type: conference
   authors:
     - António Ramadas
@@ -10,9 +384,9 @@
   acronym: plop
   city: Vancouver, Canada
   year: 2017
-  notes: to appear
+  citations: 14
 
-- name: "Engineering Software for the Cloud: Message Queues and Logging"
+- name: "Engineering Software for the Cloud: Messaging Systems and Logging"
   type: conference
   authors:
     - Tiago Boldt Sousa
@@ -23,7 +397,9 @@
   acronym: europlop
   city: Bavaria, Germany
   year: 2017
-  notes: to appear
+  index: dblp, scopus
+  doi: 10.1145/3147704.3147720
+  citations: 10
 
 - name: "Towards a Framework for Agent-based Simulation of User Behaviour in E-Commerce Context"
   type: conference
@@ -35,8 +411,10 @@
   conference: Trends in Cyber-Physical Multi-Agent Systems. The PAAMS Collection — 15th International Conference on Practical Applications of Agents and Multi-Agent Systems
   acronym: paams
   city: Porto, Portugal
+  index: dblp, scopus
   year: 2017
   doi: 10.1007/978-3-319-61578-3_3
+  citations: 1
 
 - name: "Engineering Software for the Cloud: Pattterns and Sequences"
   type: conference
@@ -48,6 +426,7 @@
   acronym: sugerloaf plop
   city: Buenos Aires, Argentina
   year: 2016
+  citations: 8
 
 - name: "Exploring the Scala Macro System for Compile Time Model-Based Generation of Statically Type-Safe REST Services"
   type: conference
@@ -62,7 +441,7 @@
   notes: invited for extended version in journal
   isbn: 978-1-61208-458-9
 
-- name: "DevOps patterns for software orchestration on public and private clouds"
+- name: "Patterns for software orchestration on the cloud"
   type: conference
   authors: 
     - Tiago Boldt Sousa
@@ -71,7 +450,9 @@
   conference: Proceedings of the 22nd Conference on Pattern Languages of Programs
   acronym: plop
   city: Pittsburgh, Pennsylvania, USA
+  isbn: 978-1-941652-03-9
   year: 2015
+  citations: 21
 
 - name: "Collaborative Web Platform for UNIX-based Big Data Processing"
   type: conference
@@ -86,6 +467,7 @@
   book: Lecture Notes in Computer Science 8683
   index: isi, dblp, scopus
   doi: 10.1007/978-3-319-10831-5_30
+  citations: 3
 
 - name: "The Concept of Ba Applied to Software Knowledge"
   type: conference
@@ -99,6 +481,7 @@
   city: Hyderabad, India
   index: dblp, scopus
   doi: 10.1145/2593702.2593713
+  citations: 2
 
 - name: "Smartphone Based Fall Prevention Exercises"
   type: conference
@@ -112,7 +495,7 @@
   city: Lisbon, Portugal
   index: dblp, scopus
   doi: 10.1109/healthcom.2013.6720755
-  citations: 8
+  citations: 21
 
 - name: "Object-Functional Patterns: Re-Thinking Development in a Post-Functional World"
   type: conference
@@ -125,6 +508,7 @@
   city: Lisbon, Portugal
   index: isi, dblp, scopus 
   doi: 10.1109/quatic.2012.43
+  citations: 1
 
 - name: "A Ubiquitous Ambient Assisted Living Solution to Promote Safer Independent Living in Older Adults Suffering from Co-morbidity"
   type: conference
@@ -143,12 +527,12 @@
     - Hospedales Margarita
     - John Nelson
   conference: Proceedings of the 34th Annual International Conference of the IEEE Engineering in Medicine and Biology Society 
-  aronym: embc
+  acronym: embs
   city: California, USA
   index: isi, scopus
   issn: 1558-4615
   doi: 10.1109/embc.2012.6347145
-  citations: 13
+  citations: 25
 
 - name: "Scalable Integration of Multiple Health Sensor Data for Observing Medical Patterns"
   type: conference
@@ -163,6 +547,7 @@
   book: Lecture Notes in Computer Science 7467
   index: isi, dblp, scopus
   doi: 10.1007/978-3-642-32609-7_11
+  citations: 7
 
 - name: "A collaborative expandable framework for end-users and programmers"
   type: conference
@@ -193,6 +578,7 @@
   city: Oregon, USA
   index: dblp, scopus
   doi: 10.1145/2578903.2579150
+  citations: 5
 
 - name: "The Lazy Semantics Pattern on the context of Meta-Architectures"
   type: conference
@@ -205,7 +591,6 @@
   conference: 2nd Asian Conference on Pattern Languages of Programs 
   acronym: asianplop
   city: Tokyo, Japan
-  citations: 12
 
 - name: Core Patterns of Object-Oriented Meta-Architectures
   type: conference
@@ -220,6 +605,7 @@
   city: Nevada, USA
   index: dblp, scopus
   doi: 10.1145/2493288.2493290
+  citations: 13
 
 - name: "PETTool: A Pattern-Based GUI Testing Tool"
   type: conference
@@ -234,7 +620,7 @@
   city: Puerto Rico, USA
   index: scopus
   doi: 10.1109/icste.2010.5608882
-  citations: 24
+  citations: 37
 
 - name: "A Cooperative Personal Agenda in a Collaborative Team Environment"
   type: conference
@@ -273,9 +659,11 @@
     - Filipe Correia
     - Ademar Aguiar
   conference: Proceedings of the 4th International Workshop on Models@runtime
+  acronym: models
   city: Denver, Colorado, USA
   index: scopus
   issn: 16130073
+  citations: 12
 
 - name: "Patterns for Consistent Software Documentation"
   type: conference
@@ -290,7 +678,7 @@
   city: Chicago, Illinois, USA
   index: scopus
   doi: 10.1145/1943226.1943241
-  citations: 25
+  citations: 32
 
 - name: "Incremental Knowledge Acquisition in Software Development Using a Weakly-Typed Wiki"
   type: conference
@@ -302,9 +690,10 @@
     - Ademar Aguiar
   conference: Proceedings of the 5th International Symposium on Wikis and Open Collaboration
   city: Orlando, Florida, USA
+  acronym: wikisym
   index: scopus, dblp
   doi: 10.1145/1641309.1641352
-  citations: 16
+  citations: 19
 
 - name: "Adaptive Object Modelling: Patterns, Tools and Applications"
   type: conference
@@ -314,10 +703,11 @@
     - Ademar Aguiar
     - João Pascoal Faria
   conference: Proceedings of the 4th International Conference on Software Engineering Advances
+  acronym: icsea
   city: Porto, Portugal
   index: isi, dblp, scopus
   doi: 10.1109/icsea.2009.83
-  citations: 19
+  citations: 28
 
 - name: "Patterns for Data and Metadata Evolution in Adaptive Object Models"
   type: conference
@@ -331,4 +721,4 @@
   city: Nashville, Tennessee, USA
   index: scopus
   doi: 10.1145/1753196.1753203
-  citations: 22
+  citations: 29
