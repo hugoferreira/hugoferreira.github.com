@@ -9,6 +9,7 @@
   city: Springer, Cham
   acronym: iccs
   year: 2021
+  toappear: yes
 
 - name: "A Review on Visual Programming for Distributed Computation in IoT"
   type: conference
@@ -21,6 +22,7 @@
   city: Springer, Cham
   acronym: iccs
   year: 2021
+  toappear: yes
 
 - name: "Empowering Visual Internet-of-Things Mashups with Self-Healing Capabilities"
   type: conference
@@ -32,6 +34,7 @@
   city: N/A, Cyberspace
   acronym: icse
   year: 2021
+  toappear: yes
 
 - name: "Live Automatic Program Repair using Tests as Specifications"
   type: conference
@@ -44,6 +47,7 @@
   city: N/A, Cyberspace
   acronym: icst
   year: 2021
+  toappear: yes
 
 - name: "Automatically Generating Websites From Hand-Drawn Mockups"
   type: conference
@@ -70,6 +74,7 @@
   acronym: mobiquitous
   year: 2020
   doi: 10.1145/3448891.3448938
+  index: scopus, dblp
 
 - name: "A Pattern-Language for Self-Healing Internet-of-Things Systems"
   type: conference
@@ -83,6 +88,7 @@
   acronym: europlop
   year: 2020
   doi: 10.1145/3424771.3424804
+  index: scopus, dblp
 
 - name: "Real-time Feedback in Node-RED for IoT Development: An Empirical Study"
   type: conference
@@ -112,6 +118,7 @@
   acronym: ecsa
   year: 2020
   doi: 10.1007/978-3-030-58923-3_21
+  index: scopus, dblp
 
 - name: "Helping Software Developers through Live Software Metrics Visualization"
   type: conference
@@ -126,6 +133,7 @@
   year: 2020
   doi: 10.1145/3397537.3397539
   isbn: 9781450375078
+  index: scopus, dblp
 
 - name: "Conversational Interface for Managing Non-trivial Internet-of-Things Systems"
   type: conference
@@ -139,6 +147,7 @@
   year: 2020
   doi: 10.1007/978-3-030-50426-7_29
   isbn: 978-3-030-50425-0
+  index: scopus, dblp
 
 - name: "Visual Self-healing Modelling for Reliable Internet-of-Things Systems"
   type: conference
@@ -154,6 +163,7 @@
   year: 2020
   doi: 10.1007/978-3-030-50426-7_27
   isbn: 978-3-030-50425-0
+  index: scopus, dblp
 
 - name: "Towards a Pattern Language for Master’s Students"
   type: conference
@@ -167,6 +177,7 @@
   year: 2019
   doi: 10.1145/3361149.3361165
   isbn: 978-1-4503-6206-1
+  index: isi, scopus, dblp
 
 - name: "Testing and Deployment Patterns for the Internet-of-Things"
   type: conference
@@ -180,6 +191,7 @@
   year: 2019
   doi: 10.1145/3361149.3361184
   isbn: 978-1-4503-6206-1
+  index: isi, scopus, dblp
 
 - name: "Live Software Development --- Tightening the feedback loops"
   type: conference
@@ -193,7 +205,7 @@
   acronym: px
   city: Genova, Italy
   year: 2019
-  index: dblp
+  index: dblp, scopus
   citations: 22
 
 - name: "CloudCity: A Live Environment for the Management of Cloud Infrastructures"
@@ -208,7 +220,7 @@
   city: Heraklion, Crete, Greece
   doi: 10.5220/0007699700270036
   year: 2019
-  index: scopus, dblp
+  index: scopus, dblp, isi
 
 - name: "Live Software Development Environment for Java using Virtual Reality"
   type: conference
@@ -224,7 +236,7 @@
   city: Heraklion, Crete, Greece
   doi: 10.5220/0007699800370046
   year: 2019
-  index: scopus, dblp
+  index: scopus, dblp, isi
 
 - name: "A Blockchain-based Scheme for Access Control in e-Health Scenarios"
   type: conference
@@ -238,7 +250,7 @@
   city: Porto, Portugal
   doi: 10.1007/978-3-030-17065-3_24
   year: 2018
-  index: isi, scopus, dblp
+  index: scopus, dblp
   citations: 10
 
 - name: "Blockchain-based PKI for Crowdsourced IoT Sensor Information"
@@ -252,7 +264,7 @@
   city: Porto, Portugal
   doi: 10.1007/978-3-030-17065-3_25
   year: 2018
-  index: isi, scopus, dblp
+  index: scopus, dblp
   citations: 13
   
 - name: "Programming for Young Children using Tangible Tiles and Camera-Enabled Hanheld Devices"
@@ -324,7 +336,7 @@
   doi: 10.1145/3282308.3282315
   isbn: 978-1-4503-6387-7
   year: 2018
-  index: scopus, dblp
+  index: scopus, dblp, isi
   citations: 7
 
 - name: "Engineering Software for the Cloud: External Monitoring and Failure Injection"
@@ -340,7 +352,7 @@
   doi: 10.1145/3282308.3282316
   isbn: 978-1-4503-6387-7
   year: 2018
-  index: scopus, dblp
+  index: scopus, dblp, isi
   citations: 7
 
 - name: "A Brief Overview of Existing Tools for Testing the Internet-of-Things"
@@ -529,7 +541,7 @@
   conference: Proceedings of the 34th Annual International Conference of the IEEE Engineering in Medicine and Biology Society 
   acronym: embs
   city: California, USA
-  index: isi, scopus
+  index: isi, scopus, dblp
   issn: 1558-4615
   doi: 10.1109/embc.2012.6347145
   citations: 25

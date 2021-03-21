@@ -248,10 +248,20 @@ header {
 }
 
 abbr {
-  font-size: 1.1em;
+  font-family: $base-font-family;
+  font-size: 1.15em;
   font-variant: small-caps;
   text-transform: lowercase;
   letter-spacing: .05em;
+  font-weight: 600;
+
+  &.tag {
+    background-color: $background-color;
+    color: $alt-color;
+    font-size: $mono-font-size;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+  }
 }
 
 

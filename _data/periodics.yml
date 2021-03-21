@@ -7,6 +7,7 @@
   periodic: Journal of Computational Science 51
   issn: 1877-7503
   doi: 10.1016/j.jocs.2021.101324
+  index: scopus
 
 - name: "A Survey on the Adoption of Patterns for Engineering Software for the Cloud"
   year: 2021
@@ -31,6 +32,7 @@
   periodic: Communications in Computer and Information Science 1172. Springer, Cham
   isbn: 978-3-030-40222-8
   doi: 10.1007/978-3-030-40223-5_5
+  index: scopus, dblp
 
 - name: "Experimenting with Liveness in Cloud Infrastructure Management"
   year: 2019
@@ -43,6 +45,7 @@
   periodic: Communications in Computer and Information Science 1172. Springer, Cham
   isbn: 978-3-030-40222-8
   doi: 10.1007/978-3-030-40223-5_4
+  index: scopus, dblp
 
 - name: "A Blockchain-based Approach for Access Control in eHealth Scenarios"
   year: 2018
@@ -67,7 +70,7 @@
   conference: Special issue for the 8th International Conference on Ambient Systems, Networks and Technologie
   acronym: ant
   city: Madeira, Portugal
-  index: scopus
+  index: scopus, isi, dblp
   issn: 1877-0509
   doi: 10.1016/j.procs.2017.05.355
   citations: 14
