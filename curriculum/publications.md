@@ -17,11 +17,13 @@ date: July 2017
 
 Since 2008, I have co-authored **{{ refereedconfs }} articles in conferences** with scientific referee, **{{ periodics }} articles in periodics**, and **{{ others }} others**. In total, these **{{ total }} publications** have attracted over **{{ site.data.bibliometrics.citations }} citations**, resulting in an **h-index of {{ site.data.bibliometrics.hindex }}** and an **i10-index of {{ site.data.bibliometrics.i10index }}**, thus averaging **{{ site.data.bibliometrics.citations | divided_by: total }} citations per paper**. Indexed articles by the ISI Web of Science ({{ isi }}), SCOPUS ({{ scopus }}) and The DBLP Computer Science Bibliography ({{ dblp }}) are identified by the tags ISI, SCOPUS and DBLP respectively. More recent articles are still waiting for proper indexation. A summary of the most cited publications ({{ toppubs.size }}) can be found below:
 
-{:.small-table}
+{:.citations-table }
+{% assign sum = 0 %}
 | Title | Citations | Year |
-|-------|-----------|------|
-{% for pub in toppubs %}{% if pub.citations %}| {{ pub.name | truncate: 80 }} | {{ pub.citations }} | {{ pub.year }} |
-{% endif %}{% endfor %}
+|-------|----------:|-----:|
+{% for pub in toppubs %}{% if pub.citations %}| {{ pub.name | truncate: 80 }} | {{ pub.citations }} | {{ pub.year }} |{% assign sum = sum | plus: pub.citations %}
+{% endif %}{% endfor %}| <b>Total citations for top {{ toppubs.size }} publications</b> | <b>{{ sum }}</b> |
+
 
 ## Papers in periodics with scientific referee
 

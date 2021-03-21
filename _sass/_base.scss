@@ -313,6 +313,15 @@ sup > .footnote {
   }
 }
 
+.citations-table {
+  font-size: $small-font-size;
+
+  td {
+    padding-top: 0.3em;
+    vertical-align: text-top;
+  }
+}
+
 :not(code) > table {
   border-spacing: 2em .1em;
 }
