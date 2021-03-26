@@ -36,7 +36,7 @@
   year: 2021
   toappear: yes
 
-- name: "Live Automatic Program Repair using Tests as Specifications"
+- name: "Automatic Program Repair as Semantic Suggestions: An Empirical Study"
   type: conference
   authors:
     - Diogo Campos
@@ -44,7 +44,7 @@
     - Hugo Sereno Ferreira
     - Afonso Ramos
   conference: Proceedings of the IEEE International Conference on Software Testing, Verification and Validation
-  city: N/A, Cyberspace
+  city: Porto de Galinhas, Brazil
   acronym: icst
   year: 2021
   toappear: yes
