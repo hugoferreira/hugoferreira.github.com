@@ -58,7 +58,7 @@
   acronym: jias
   index: isi
   issn: 1554-1010
-  citations: 19
+  citations: 21
 
 - name: "Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites"
   year: 2017
@@ -73,7 +73,7 @@
   index: scopus, isi, dblp
   issn: 1877-0509
   doi: 10.1016/j.procs.2017.05.355
-  citations: 14
+  citations: 16
   
 - name: "Market driven implementation of the eCAALYX solution"
   year: 2012

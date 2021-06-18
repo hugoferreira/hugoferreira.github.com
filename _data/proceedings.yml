@@ -35,6 +35,7 @@
   acronym: icse
   year: 2021
   toappear: yes
+  index: dblp
 
 - name: "Automatic Program Repair as Semantic Suggestions: An Empirical Study"
   type: conference
@@ -61,6 +62,7 @@
   year: 2021
   doi: 10.5220/0010193600480058
   isbn: 978-989-758-488-6
+  index: dblp
 
 - name: "Visually-defined Real-Time Orchestration of IoT Systems"
   type: conference
@@ -103,6 +105,7 @@
   year: 2020
   doi: 10.1109/ds-rt50469.2020.9213544
   issn: 1550-6525
+  index: dblp, scopus
 
 - name: "Determining Microservice Boundaries: A Case Study Using Static and Dynamic Software Analysis"
   type: conference
@@ -206,7 +209,7 @@
   city: Genova, Italy
   year: 2019
   index: dblp, scopus
-  citations: 22
+  citations: 23
 
 - name: "CloudCity: A Live Environment for the Management of Cloud Infrastructures"
   type: conference
@@ -309,7 +312,7 @@
   doi: 10.1109/euc.2018.00008
   year: 2018
   index: isi, scopus, dblp
-  citations: 15
+  citations: 22
 
 - name: "Overview of A Pattern Language for Engineering Software for the Cloud"
   type: conference
@@ -368,7 +371,7 @@
   doi: 10.1109/icstw.2018.00035
   year: 2018
   index: isi, scopus, dblp
-  citations: 25
+  citations: 27
 
 - name: "A Reactive and Model-based Approach for Developing Internet-of-Things Systems"
   type: conference
@@ -382,7 +385,7 @@
   year: 2018
   index: isi, dblp, scopus
   doi: 10.1109/quatic.2018.00049
-  citations: 12
+  citations: 15
 
 - name: "Patterns for Things that Fail"
   type: conference
@@ -396,7 +399,7 @@
   acronym: plop
   city: Vancouver, Canada
   year: 2017
-  citations: 14
+  citations: 16
 
 - name: "Engineering Software for the Cloud: Messaging Systems and Logging"
   type: conference
@@ -507,7 +510,7 @@
   city: Lisbon, Portugal
   index: dblp, scopus
   doi: 10.1109/healthcom.2013.6720755
-  citations: 21
+  citations: 22
 
 - name: "Object-Functional Patterns: Re-Thinking Development in a Post-Functional World"
   type: conference
@@ -719,7 +722,7 @@
   city: Porto, Portugal
   index: isi, dblp, scopus
   doi: 10.1109/icsea.2009.83
-  citations: 28
+  citations: 15
 
 - name: "Patterns for Data and Metadata Evolution in Adaptive Object Models"
   type: conference
@@ -733,4 +736,4 @@
   city: Nashville, Tennessee, USA
   index: scopus
   doi: 10.1145/1753196.1753203
-  citations: 29
+  citations: 31
