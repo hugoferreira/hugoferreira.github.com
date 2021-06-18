@@ -4,7 +4,7 @@ date: July 2017
 ---
 
 {% assign allpubs = site.data.proceedings | concat: site.data.periodics | concat: site.data.nationalpubs | concat: site.data.otherpubs %}
-{% assign toppubs = allpubs | where_exp: 'item', 'item.citations >= 14' | sort: 'citations' | reverse %}
+{% assign toppubs = allpubs | where_exp: 'item', 'item.citations >= 15' | sort: 'citations' | reverse %}
 {% assign proceedings = site.data.proceedings.size %}
 {% assign periodics = site.data.periodics.size %}
 {% assign nationals = site.data.nationalpubs.size %}
