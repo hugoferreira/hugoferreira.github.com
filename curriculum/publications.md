@@ -1,6 +1,6 @@
 ---
 title: Publications
-date: July 2017
+date: June 2021
 ---
 
 {% assign allpubs = site.data.proceedings | concat: site.data.periodics | concat: site.data.nationalpubs | concat: site.data.otherpubs %}
@@ -15,7 +15,7 @@ date: July 2017
 {% assign scopus = allpubs | where_exp:"item","item.index contains 'scopus'" | size %}
 {% assign dblp = allpubs | where_exp:"item","item.index contains 'dblp'" | size %}
 
-Since 2008, I have co-authored **{{ refereedconfs }} articles in conferences** with scientific referee, **{{ periodics }} articles in periodics**, and **{{ others }} others**. In total, these **{{ total }} publications** have attracted over **{{ site.data.bibliometrics.citations }} citations**, resulting in an **h-index of {{ site.data.bibliometrics.hindex }}** and an **i10-index of {{ site.data.bibliometrics.i10index }}**, thus averaging **{{ site.data.bibliometrics.citations | divided_by: total }} citations per paper**. Indexed articles by the ISI Web of Science ({{ isi }}), SCOPUS ({{ scopus }}) and The DBLP Computer Science Bibliography ({{ dblp }}) are identified by the tags <abbr class="tag">ISI</abbr>, <abbr class="tag">SCOPUS</abbr> and <abbr class="tag">DBLP</abbr> respectively. More recent articles are still waiting for proper indexation. A summary of the most cited publications ({{ toppubs.size }}) can be found below:
+Since 2008, I have co-authored **{{ refereedconfs }} articles in conferences** with scientific referee, **{{ periodics }} articles in periodics**, and **{{ others }} others**. In total, these **{{ total }} publications** have attracted over **{{ site.data.bibliometrics.citations }} citations**, resulting in an **h-index of {{ site.data.bibliometrics.hindex }}** and an **i10-index of {{ site.data.bibliometrics.i10index }}**, thus averaging **{{ site.data.bibliometrics.citations | divided_by: total }} citations per paper**. Indexed articles by the ISI Web of Science ({{ isi }}), SCOPUS ({{ scopus }}) and The DBLP Computer Science Bibliography ({{ dblp }}) are identified by the tags <abbr class="tag">ISI</abbr>, <abbr class="tag">SCOPUS</abbr> and <abbr class="tag">DBLP</abbr> respectively. More recent articles are still waiting for proper indexation. Here's a summary of the most cited publications ({{ toppubs.size }}):
 
 {:.citations-table}
 {% assign sum = 0 %}
