@@ -1,0 +1,79 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+    "data": {
+        "url": "https://gist.githubusercontent.com/hugoferreira/02a51d3bb7745762ba9a9770254fc3d0/raw/4c0226de9f4226d3ed9c931892c838f351949cae/prisoners.json"
+    },
+    "width": 500,
+    "height": 250,
+    "mark": {
+        "type": "point",
+        "filled": true
+    },
+    "transform": [
+        {
+            "filter": {
+                "field": "win",
+                "range": [
+                    0.3,
+                    1
+                ]
+            }
+        }
+    ],
+    "encoding": {
+        "x": {
+            "field": "canopen",
+            "type": "quantitative",
+            "axis": {
+                "title": "Boxes allowed to open, for p = [0.3, 1]",
+                "zindex": 0
+            }
+        },
+        "y": {
+            "field": "boxes",
+            "type": "quantitative",
+            "axis": {
+                "title": "Total boxes",
+                "zindex": 0
+            }
+        },
+        "opacity": {
+            "field": "win",
+            "type": "quantitative",
+            "legend": false
+        },
+        "size": {
+            "value": 7
+        }
+    },
+    "config": {
+        "axis": {
+            "titleFont": "Merriweather",
+            "titleFontWeight": "normal",
+            "labelFont": "Merriweather",
+            "grid": true,
+            "gridColor": "#eee",
+            "titlePadding": 9,
+            "domain": false,
+            "labelPadding": 8
+        },
+        "axisLeft": {
+            "domain": false,
+            "ticks": false,
+            "labelPadding": 8,
+            "tickRound": true
+        },
+        "axisBottom": {
+            "ticks": false,
+            "labelOverlap": "parity"
+        },
+        "style": {
+            "point": {
+                "fill": "#a12e27"
+            },
+            "cell": {
+                "stroke": "transparent"
+            }
+        }
+    }
+}
