@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Idle Programming or The Art of (Un-)Productive Procrastination
-date: 2025-05-23 00:11
+title: "Idle Programming or The Art of (Un-)Productive Procrastination"
+date: 2025-05-22 00:11
 comments: true
 external-url:
 categories: Software
