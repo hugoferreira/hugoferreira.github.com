@@ -81,17 +81,15 @@ And so it goes. I point out the obvious flaws, the LLM apologizes (ALWAYS! EVEN 
 
 Through months of what I generously call "research" (conducted during several seasons of various streaming content), I've identified distinct patterns of collaborative self-deception:
 
-### Pattern 1: The Illusion of Efficiency
-I provide high-level architecture; the LLM fills in boilerplate. I convince myself this is "leveraging tools" rather than "avoiding actual work." Success rate: debatable, depending on how you define success.
+1. **The Illusion of Efficiency.** I provide high-level architecture; the LLM fills in boilerplate. I convince myself this is "leveraging tools" rather than "avoiding actual work." Success rate: debatable, depending on how you define success.
 
-### Pattern 2: The Iterative Delusion
-The LLM proposes solutions; I identify problems; we iterate endlessly. This feels productive: we're making progress! Except we're solving a problem I created to avoid solving actual problems. It's recursive procrastination.
+2. **The Iterative Delusion.** The LLM proposes solutions; I identify problems; we iterate endlessly. This feels productive: we're making progress! Except we're solving a problem I created to avoid solving actual problems. It's recursive procrastination.
 
-### Pattern 3: The Pedagogical Pretense
-"I'm teaching the LLM about proper software architecture," I tell myself, as if explaining stack overflow handling to a statistical model constitutes professional development. Meanwhile, real work emails accumulate unread.
+3. **The Pedagogical Pretense.** "I'm teaching the LLM about proper software architecture," I tell myself, as if explaining stack overflow handling to a statistical model constitutes professional development. Meanwhile, real work emails accumulate unread.
 
-### Pattern 4: The Research Rationalization
-"This is exploring the future of programming," I insist, while implementing my fourth useless virtual machine this month. Future historians will surely thank me for these contributions to human knowledge.
+4. **The Endless Context Reconstruction.** Mid-session, the LLM loses track of our shared context (context windows being finite and all). I must reconstruct the problem state, often re-discovering my own assumptions in the process. Surprisingly educational.
+
+5. **The Research Rationalization.** _"This is exploring the future of programming,"_ I insist, while implementing my fourth useless virtual machine this month. Future historians will surely thank me for such broad contributions to human knowledge.
 
 ## A Digression on Methodology and Self-Deception
 
