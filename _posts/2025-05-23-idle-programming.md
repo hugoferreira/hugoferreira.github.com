@@ -11,7 +11,7 @@ categories: Software
 
 This story begins on one evening in mid 2025, as I found myself simultaneously watching Ellie navigate the post-apocalyptic wasteland of ["The Last of Us"](https://www.imdb.com/title/tt3581920/) while my cursor blinked[^2] patiently in a Verilog file. The task at hand: implementing a Lua virtual machine in hardware. Not because I needed one, mind you, but because idle hands — or in this case, idle minds — tend toward increasingly esoteric forms of self-deception disguised as _engineering challenges_.
 
-[^2]: Actually, people always think about cursors blinking, but mine doesn't. It just sits there... idle..
+[^2]: People always think about cursors blinking, but mine doesn't. It just sits there... idle..
 
 ```verilog
 module lua_vm (
@@ -77,7 +77,9 @@ always @(posedge clk) begin
 
 **LLM**: "I need to handle branch instructions differently..."
 
-And so it goes. I point out the obvious flaws, the LLM apologizes (ALWAYS! EVEN WHEN I'M WRONG!) and generates a new version with different obvious flaws. This iterative process—me catching conceptual gaps, the LLM filling in implementation details—creates a peculiar form of collaborative problem-solving. A lot of people equate this to programming with an enthusiastic intern who's very good at typing and very bad at thinking. I disagree... Neither of us are _actually_ writing code in the traditional sense, nor am I merely supervising. I'm engaging in what I've come to think of as *cognitive arbitrage*: leveraging the LLM's pattern-matching capabilities while providing the conceptual oversight it lacks.
+And so it goes. I point out the obvious flaws, the LLM apologizes (ALWAYS! EVEN WHEN I'M WRONG!) and generates a new version with different obvious flaws[^4]. This iterative process — me catching conceptual gaps, the LLM filling in implementation details — creates a peculiar form of collaborative problem-solving. A lot of people equate this to programming with an enthusiastic intern who's very good at typing and very bad at thinking. I disagree... Neither of us are _actually_ writing code in the traditional sense, nor am I merely supervising. I'm engaging in what I've come to think of as *cognitive arbitrage*: leveraging the LLM's pattern-matching capabilities while providing the conceptual oversight it lacks... _en passant_.
+
+[^4]: The thing is... they are only obvious if you actually read and think about them! And LLMs are very good at generating _lots_ of content. LOTS!
 
 ## The Taxonomy of Self-Deception Patterns
 
