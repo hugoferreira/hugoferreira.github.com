@@ -11,7 +11,7 @@ categories: Software
 
 This story begins on one evening in mid 2025, as I found myself simultaneously watching Ellie navigate the post-apocalyptic wasteland of ["The Last of Us"](https://www.imdb.com/title/tt3581920/) while my cursor blinked[^2] patiently in a Verilog file. The task at hand: implementing a Lua virtual machine in hardware. Not because I needed one, mind you, but because idle hands — or in this case, idle minds — tend toward increasingly esoteric forms of self-deception disguised as _engineering challenges_.
 
-[^2] Actually, people always think about cursors blinking, but mine doesn't. It just sits there... idle..
+[^2]: Actually, people always think about cursors blinking, but mine doesn't. It just sits there... idle..
 
 ```verilog
 module lua_vm (
