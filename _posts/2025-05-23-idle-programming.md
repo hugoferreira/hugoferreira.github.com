@@ -40,6 +40,8 @@ And there it was; the LLM had elegantly sidestepped the fundamental question of 
 
 What I've come to optimistical label "idle programming" is, in essence, a form of distributed procrastination where one agent (myself) provides high-level direction and error detection, while another agent (the LLM) handles the mechanical aspects of code generation. As Edwin Hutchins demonstrated in "Cognition in the Wild," complex problem-solving often emerges from the interaction between cognitive agents[^1]. Of course, Hutchins was studying naval navigation teams with actual stakes—lives depending on getting coordinates right. I'm debugging Verilog while watching Netflix. The parallels are... limited.
 
+[^1]: Hutchins, E. (1995). *Cognition in the Wild*. MIT Press. Though comparing naval navigation to hobby programming is like comparing surgery to playing Operation—technically similar activities with vastly different stakes.
+
 Consider the debugging conversation that followed my discovery:
 
 **Me**: "You've implemented instruction fetch but completely ignored PC management. How does the VM know which instruction to execute next?"
@@ -73,7 +75,7 @@ always @(posedge clk) begin
 
 **LLM**: "I need to handle branch instructions differently..."
 
-And so it goes. I point out the obvious flaws, the LLM apologizes (ALWAYS! EVEN WHEN I'M WRONG!) and generates a new version with different obvious flaws. It's like pair programming with an enthusiastic intern who's very good at typing and very bad at thinking. The question, obviously, is who's exactly being subjected to the internship here?...
+And so it goes. I point out the obvious flaws, the LLM apologizes (ALWAYS! EVEN WHEN I'M WRONG!) and generates a new version with different obvious flaws. This iterative process—me catching conceptual gaps, the LLM filling in implementation details—creates a peculiar form of collaborative problem-solving. A lot of people equate this to programming with an enthusiastic intern who's very good at typing and very bad at thinking. I disagree... Neither of us are _actually_ writing code in the traditional sense, nor am I merely supervising. I'm engaging in what I've come to think of as *cognitive arbitrage*: leveraging the LLM's pattern-matching capabilities while providing the conceptual oversight it lacks.
 
 ## The Taxonomy of Self-Deception Patterns
 
@@ -166,10 +168,6 @@ This is the seductive danger of idle programming: it provides all the satisfacti
 
 ## The Epilogue of Rationalization
 
-Maybe I'm being too hard.. After all, humans have always found ways to avoid work while feeling productive. We know procrastinate by producing functioning code, which is more than can be said for most forms of time-wasting. And who knows? Perhaps this exploration of human-LLM collaboration will prove useful someday, in some context I haven't imagined... yet.
+Maybe I'm being too hard.. After all, humans have always found ways to avoid work while feeling productive. We now procrastinate by producing functioning code, which is more than can be said for most forms of time-wasting. And who knows? Perhaps this exploration of human-LLM collaboration will prove useful someday, in some context I haven't imagined... yet.
 
 Now, what exactly happened to Joel while I was shouting at stack management?
-
----
-
-[^1]: Hutchins, E. (1995). *Cognition in the Wild*. MIT Press. Though comparing naval navigation to hobby programming is like comparing surgery to playing Operation—technically similar activities with vastly different stakes.
