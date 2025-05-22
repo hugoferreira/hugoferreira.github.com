@@ -7,9 +7,11 @@ external-url:
 categories: Software
 ---
 
-> *"The first principle is that you must not fool yourself... or something"* — What I recall from Richard Feynman
+> _"The first principle is that you must not fool yourself... or... something"_ — What I recall from Richard Feynman
 
-This story begins on one evening in mid 2025, as I found myself simultaneously watching Ellie navigate the post-apocalyptic wasteland of "The Last of Us" while my cursor blinked patiently in a Verilog file. The task at hand: implementing a Lua virtual machine in hardware. Not because I needed one, mind you, but because idle hands — or in this case, idle minds — tend toward increasingly esoteric forms of self-deception disguised as engineering challenges.
+This story begins on one evening in mid 2025, as I found myself simultaneously watching Ellie navigate the post-apocalyptic wasteland of ["The Last of Us"](https://www.imdb.com/title/tt3581920/) while my cursor blinked[^2] patiently in a Verilog file. The task at hand: implementing a Lua virtual machine in hardware. Not because I needed one, mind you, but because idle hands — or in this case, idle minds — tend toward increasingly esoteric forms of self-deception disguised as _engineering challenges_.
+
+[^2] Actually, people always think about cursors blinking, but mine doesn't. It just sits there... idle..
 
 ```verilog
 module lua_vm (
@@ -34,7 +36,7 @@ always @(posedge clk) begin
                 // But wait, what about the program counter?
 ```
 
-And there it was; the LLM had elegantly sidestepped the fundamental question of program counter management. Again! Just like I sidestep the question of whether I'm actually being productive or just playing the world's most sophisticated idle game.
+And there it was; the LLM had elegantly sidestepped the fundamental question of program counter management. Again! Just like I sidestep the question of whether I'm actually being productive.
 
 ## The Illusion of Distributed Intelligence
 
@@ -95,11 +97,11 @@ Through months of what I generously call "research" (conducted during several se
 
 As I often do when confronting uncomfortable truths about my own productivity, my cognitive dissonance kicks in: is "idle programming" a revolutionary new development methodology, or just procrastination with better tooling?
 
-The honest answer: it's probably both, and that ambiguity is precisely what makes it so seductive. When Kent Beck introduced Test-Driven Development, he at least had the courtesy to claim it would improve code quality and reduce bugs. I can't even pretend idle programming has measurable benefits — unless you count "feeling busy while watching TV" as a KPI.
+The honest answer: it's probably both, and that ambiguity is precisely what makes it so seductive. When Kent Beck introduced Test-Driven Development, he didn't arrive with formal proofs of its superiority. He had an intuition, anecdotal evidence, and the vague sensation that the methodology "felt right." The same holds for Agile, Scrum, and most software development practices we've collectively adopted. They began as _vibes_ — educated hunches about how human creativity intersects with computational complexity. But by introducing TDD, the author, at least, had the courtesy to claim it would improve code quality and reduce bugs. I can't even pretend idle programming has measurable benefits — unless you count _"feeling busy while watching TV"_ as a KPI.
 
 Consider this dubious property I've observed: **For any given programming task T that you don't actually need to complete, the probability of "successful" completion using idle programming approaches unity, where success is defined as "having written code that compiles."**
 
-Note the careful caveats. Tasks you don't need to complete. Success measured by compilation, not utility. This is the kind of rigorous methodology that would make any consultant proud.
+Note the careful caveats; this is the kind of rigorous methodology that would make any consultant proud. But then again, how much of our software engineering knowledge rests on similarly shaky empirical foundations?
 
 ## The Event Loop of Self-Justification
 
