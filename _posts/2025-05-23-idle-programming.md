@@ -28,8 +28,8 @@ reg [7:0] stack_ptr;
 // The LLM confidently suggested this approach...
 always @(posedge clk) begin
     if (reset) begin
-        state <= FETCH;
-        stack_ptr <= 8'h00;
+        state ⇐ FETCH;
+        stack_ptr ⇐ 8'h00;
     end else begin
         case (state)
             FETCH: begin
@@ -60,15 +60,15 @@ reg [31:0] program_memory [0:1023];
 
 always @(posedge clk) begin
     if (reset) begin
-        state <= FETCH;
-        pc <= 32'h00000000;  // Starting with confidence...
-        stack_ptr <= 8'h00;
+        state ⇐ FETCH;
+        pc ⇐ 32'h00000000;  // Starting with confidence...
+        stack_ptr ⇐ 8'h00;
     end else begin
         case (state)
             FETCH: begin
                 instruction_reg <= program_memory[pc];
-                pc <= pc + 1;  // Unconditionally. Always a good sign.
-                state <= DECODE;
+                pc ⇐ pc + 1;  // Unconditionally. Always a good sign.
+                state ⇐ DECODE;
             end
             // ...
 ```
@@ -148,11 +148,11 @@ Of course, this approach has its characteristic failure patterns, not that anyon
 // LLM-generated "error handling"
 always @(posedge clk) begin
     if (push_enable) begin
-        stack[stack_ptr] <= data_in;
-        stack_ptr <= stack_ptr + 1;
+        stack[stack_ptr] ⇐ data_in;
+        stack_ptr ⇐ stack_ptr + 1;
         if (stack_ptr == 8'hFF) begin
             // Handle stack overflow gracefully
-            stack_ptr <= 8'h00;  // By ignoring it completely
+            stack_ptr ⇐ 8'h00;  // By ignoring it completely
         end
     end
 end
