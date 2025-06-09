@@ -184,4 +184,6 @@ This is the seductive danger of idle programming: it provides all the satisfacti
 
 Maybe I'm being too hard.. After all, humans have always found ways to avoid work while feeling productive. We now procrastinate by producing functioning code, which is more than can be said for most forms of time-wasting. And who knows? Perhaps this exploration of human-LLM collaboration will prove useful someday, in some context I haven't imagined... yet.
 
+> _"In the end, we must imagine the authentic engineer happy; not because they have conquered the corporate machine, but because they have refused to let it conquer them. Each day they choose, once again, to be skillfully human in an environment designed to make them efficiently mechanical. This choice, repeated daily in small acts of professional integrity, is both our burden and our freedom."_ — This blogpost, according to a LLM.
+
 Now, what exactly happened to Joel while I was shouting at stack management?
