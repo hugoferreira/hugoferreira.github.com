@@ -7,11 +7,11 @@ external-url:
 categories: Software
 ---
 
-> *"The first principle is that you must not fool yourself... or... something"* — What I recall from Richard Feynman
+> "The first principle is that you must not fool yourself... or... something" — *What I recall from Richard Feynman*
 
 This story begins on one evening in mid 2025, as I found myself simultaneously watching Ellie navigate the post-apocalyptic wasteland of ["The Last of Us"](https://www.imdb.com/title/tt3581920/) while my cursor blinked[^2] patiently in a Verilog file. The task at hand: implementing a Lua virtual machine in hardware. Not because I needed one, mind you, but because idle hands — or in this case, idle minds — tend toward increasingly esoteric forms of self-deception disguised as *engineering challenges*.
 
-[^2]: People always think about cursors blinking, but mine doesn't. It just sits there... idle..
+[^2]: People always think about cursors blinking, but mine doesn't. It just sits there... *idle*.
 
 ```verilog
 module lua_vm (
@@ -46,11 +46,11 @@ What I've come to optimistical label "idle programming" is, in essence, a form o
 
 Consider the debugging conversation that followed my discovery:
 
-**Me**: "You've implemented instruction fetch but completely ignored PC management. How does the VM know which instruction to execute next?"
+**Me**: *"You've implemented instruction fetch but completely ignored PC management. How does the VM know which instruction to execute next?"*
 
-**LLM**: "You're absolutely right. Here's the corrected version with proper PC handling..."
+**LLM**: *"You're absolutely right. Here's the corrected version with proper PC handling..."*
 
-**Me**: *[mentally pausing the show and thinking that is what passes for collaboration these days...]*
+**Me**: [mentally pausing the show and thinking that is what passes for collaboration these days]
 
 The LLM dutifully generates another attempt:
 
@@ -73,17 +73,17 @@ always @(posedge clk) begin
             // ...
 ```
 
-**Me**: "What happens with branch instructions? You're unconditionally incrementing the PC."
+**Me**: *"What happens with branch instructions? You're unconditionally incrementing the PC."*
 
-**LLM**: "I need to handle branch instructions differently..."
+**LLM**: *"I need to handle branch instructions differently..."*
 
-And so it goes. I point out the obvious flaws, the LLM apologizes (ALWAYS! EVEN WHEN I'M WRONG!) and generates a new version with different obvious flaws[^4]. This iterative process — me catching conceptual gaps, the LLM filling in implementation details — creates a peculiar form of collaborative problem-solving. A lot of people equate this to programming with an enthusiastic intern who's very good at typing and very bad at thinking. I disagree... Neither of us are *actually* writing code in the traditional sense, nor am I merely supervising. I'm engaging in what I've come to think of as *cognitive arbitrage*: leveraging the LLM's pattern-matching capabilities while providing the conceptual oversight it lacks... *en passant_*.
+And so it goes. I point out the obvious flaws, the LLM apologizes (ALWAYS! EVEN WHEN I'M WRONG!) and generates a new version with different obvious flaws[^4]. This iterative process — me catching conceptual gaps, the LLM filling in implementation details — creates a peculiar form of collaborative problem-solving. A lot of people equate this to programming with an enthusiastic intern who's very good at typing and very bad at thinking. I disagree... Neither of us are *actually* writing code in the traditional sense, nor am I merely supervising. I'm engaging in what I've come to think of as *cognitive arbitrage*: leveraging the LLM's pattern-matching capabilities while providing the conceptual oversight it lacks... *en passant*.
 
 [^4]: The thing is, they are only obvious if you actually read and think about them! And LLMs are very good at generating _lots_ of content... LOTS!
 
 ## The Taxonomy of Self-Deception Patterns
 
-Through months of what I generously call "research" (conducted during several seasons of various streaming content), I've identified distinct patterns of collaborative self-deception:
+Through months of what I generously call *"research"* (conducted during several seasons of various streaming content), I've identified distinct patterns of collaborative self-deception:
 
 1. **The Illusion of Efficiency.** I provide high-level architecture; the LLM fills in boilerplate. I convince myself this is *"leveraging tools"* rather than *"avoiding actual work."* Success rate: debatable, depending on how you define success.
 
@@ -101,9 +101,9 @@ As I often do when confronting uncomfortable truths about my own productivity, m
 
 The honest answer: it's probably both, and that ambiguity is precisely what makes it so seductive. When Kent Beck introduced Test-Driven Development, he didn't arrive with formal proofs of its superiority. He had an intuition, anecdotal evidence, and the vague sensation that the methodology "felt right." The same holds for Agile, Scrum, and most software development practices we've collectively adopted. They began as *vibes* — educated hunches about how human creativity intersects with computational complexity. But by introducing TDD, the author, at least, had the courtesy to claim it would improve code quality and reduce bugs. I can't even pretend idle programming has measurable benefits — unless you count *"feeling busy while watching TV"* as a KPI.
 
-Consider this dubious property I've observed: **For any given programming task T that you don't actually need to complete, the probability of "successful" completion using idle programming approaches unity, where success is defined as "having written code that compiles."**
+Consider this dubious property I've observed: *for any given programming task T that you don't actually need to complete, the probability of _successful_ completion using idle programming approaches unity, where success is defined as _having written code that compiles._*
 
-Note the careful caveats; this is the kind of rigorous methodology that would make any consultant proud. But then again, how much of our software engineering knowledge rests on similarly shaky empirical foundations?
+Note the careful caveats; this is the kind of rigorous methodology that would make a consultant proud. But then again, how much of our software engineering knowledge rests on similarly shaky empirical foundations?
 
 ## The Event Loop of Self-Justification
 
@@ -124,9 +124,9 @@ while (supposedly_relaxing) {
 }
 ```
 
-"Are you even watching," my girlfriend asks, "or are you just using the TV as background noise for your latest programming obsession?"
+*"Are you even watching,"* my girlfriend asks, *"or are you just using the TV as background noise for your latest programming obsession?"*
 
-She's not wrong. But here's the thing: I'm not multitasking so much as I'm **time-slicing between different forms of avoidance**. The LLM enables this beautifully; it's always ready for my next burst of pseudo-productivity, never judging the fact that we're implementing a Lua VM that will never execute actual Lua code.
+She's not wrong. But here's the thing: I'm not *multitasking* so much as I'm *time-slicing* between different forms of avoidance. The LLM enables this beautifully; it's always ready for my next burst of pseudo-productivity, never judging the fact that we're implementing a Lua VM that will never execute actual Lua code.
 
 ## The Metacognitive Implications
 
@@ -188,6 +188,6 @@ Maybe I'm being too hard.. After all, humans have always found ways to avoid wor
 
 [^5]: Again, for *some* definition of "functioning".
 
-> *"In the end, we must imagine the authentic engineer happy; not because they have conquered the corporate machine, but because they have refused to let it conquer them. Each day they choose, once again, to be skillfully human in an environment designed to make them efficiently mechanical. This choice, repeated daily in small acts of professional integrity, is both our burden and our freedom."* — This blogpost, according to a LLM.
+> "In the end, we must imagine the authentic engineer happy; not because they have conquered the corporate machine, but because they have refused to let it conquer them. Each day they choose, once again, to be skillfully human in an environment designed to make them efficiently mechanical. This choice, repeated daily in small acts of professional integrity, is both our burden and our freedom." — *This blogpost, according to a LLM.*
 
 Now, what exactly happened to Joel while I was shouting at stack management?!
