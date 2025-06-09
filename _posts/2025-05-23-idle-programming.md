@@ -7,7 +7,7 @@ external-url:
 categories: Software
 ---
 
-> "The first principle is that you must not fool yourself... or... something" — *What I recall from Richard Feynman*
+> "In the end, we must imagine the authentic engineer happy; not because they have conquered the corporate machine, but because they have refused to let it conquer them. Each day they choose, once again, to be skillfully human in an environment designed to make them efficiently mechanical. This choice, repeated daily in small acts of professional integrity, is both our burden and our freedom." — *This blogpost, according to a LLM.*
 
 This story begins on one evening in mid 2025, as I found myself simultaneously watching Ellie navigate the post-apocalyptic wasteland of ["The Last of Us"](https://www.imdb.com/title/tt3581920/) while my cursor blinked[^2] patiently in a Verilog file. The task at hand: implementing a Lua virtual machine in hardware. Not because I needed one, mind you, but because idle hands — or in this case, idle minds — tend toward increasingly esoteric forms of self-deception disguised as *engineering challenges*.
 
@@ -187,7 +187,5 @@ This is the seductive danger of idle programming: it provides all the satisfacti
 Maybe I'm being too hard.. After all, humans have always found ways to avoid work while feeling productive. We now procrastinate by producing functioning[^5] code, which is more than can be said for most forms of time-wasting. And who knows? Perhaps this exploration of human-LLM collaboration will prove useful someday, in some context I haven't imagined... yet.
 
 [^5]: Again, for *some* definition of "functioning".
-
-> "In the end, we must imagine the authentic engineer happy; not because they have conquered the corporate machine, but because they have refused to let it conquer them. Each day they choose, once again, to be skillfully human in an environment designed to make them efficiently mechanical. This choice, repeated daily in small acts of professional integrity, is both our burden and our freedom." — *This blogpost, according to a LLM.*
 
 Now, what exactly happened to Joel while I was shouting at stack management?!
