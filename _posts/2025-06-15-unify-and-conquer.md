@@ -46,7 +46,7 @@ Apparently, Alloy preceeded LLM's ability to immitate art, and personifying Dwil
 
 [^6]: It never occured to me prompt my favourite LLM to answer all my logic questions in Latham and Jaffe's style...
 
-![Grandpa](/assets/grandpa.png)
+<img src="/assets/grandpa.png" style="width: 100%;" />
 
 > "Now, many, many years ago when I was twenty-three <br>
 > I was married to a widow who was pretty as could be <br>
